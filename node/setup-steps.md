@@ -1,6 +1,6 @@
 # Deploying a web app using AWS and Node
 
-Run Through Setting up AWS (if not run before, or setting up new machine)
+*Run Through Setting up AWS (if not run before, or setting up new machine)*
 - Click on Services, EC2 (Elastic Computing Cloud)
 - Choose an Amazon Machine Image (Windows or Linux Distro)
 - Choose free version
@@ -10,13 +10,13 @@ Run Through Setting up AWS (if not run before, or setting up new machine)
 - Launch instance, once prompted to setup SSH key choose Create a new key pair
 - Once the key pair is downloaded, this will allow you to login to the server (keep it safe!!)
 
-Logging into the EC2 Server
+*Logging into the EC2 Server*
 - Make sure to place the key somewhere safe and hidden like ~/.ssh
 - Remember to set: chmod 400 ~/.ssh/name-of-key.pem
 - Get the username and address from AWS (right click on instance and click Connect)
   - Copy the bash command under Example (ex: ssh -i "~/.ssh/xyz.pem" ubuntu@name-of-aws.amazonaws.com)
 
-Setting up node and system dependencies (if not setup before)
+*Setting up node and system dependencies (if not setup before)*
 - Need to install NVM (Node version manager to install and switch Node version if needed)
 - Update bashrc right after
 - Then install node version 7
@@ -62,7 +62,7 @@ node index.js
 - Add the port number and select source to anywhere (in most cases)
 - Connect browser and test if working
 
-Quick background services tips
+*Quick background services tips*
 - You can quickly allow node to run in the background
 
 ``` bash
@@ -75,7 +75,7 @@ $ [1]+ Stopped node index.js
 bg %1
 ```
 
-Setting up nginx on the EC2 Server
+*Setting up nginx on the EC2 Server*
 - Log into server
 - Install nginx
 - Connect to IP address without any port
@@ -119,7 +119,7 @@ node tutorial/index.js
 killall -9 node
 ```
 
-Keeping node processes running without re-doing the entire process
+*Keeping node processes running without re-doing the entire process*
 - We install PM2 on the server and then execute
 
 ``` bash
@@ -141,7 +141,7 @@ pm2 delete index
 pm2 start tutorial/index.js --name "Some-new-name"
 ```
 
-Deploying code into server
+*Deploying code into server*
 - Once the above steps have been met, we can now simply clone a repo locally and then push those changes to run on the server automatically
 - Copy a git repo clone link
 - Clone the repo locally on your machine
@@ -239,7 +239,7 @@ esac
 - Commit, push changes and then run: npm run-script deploy
 - SSH into server and run to allow app restarts when server restarts: pm2 save
 
-To Server HTML Files
+*To Serve HTML Files*
 - In the index.js file, we can setup a static directory that express will use to serve static files
 
 ``` JavaScript
@@ -257,7 +257,7 @@ app.listen(3000, () => console.log('Server running on port 3000'))
 
 Quick Notes
 
-- Remember to update AWS URL!! when restarting the server 
+- Remember to update AWS URL!! when restarting the server g
   - update in ecosystem.config.js
 
 ssh -i tutorial.pem ubuntu@ec2-34-226-217-92.compute-1.amazonaws.com
