@@ -1,0 +1,147 @@
+createdAt: "2018-08-27T13:45:42.730Z"
+updatedAt: "2018-09-17T15:27:09.618Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "Notes on Previous Support Cases"
+content: '''
+  ## Notes on Previous Support Cases
+  
+  
+  - Customer Summary report not displaying misc part description, Sue Watson, #4696
+    - Do soon, apparently Misc items do not have any info in their description when generating reports
+    - Test on their server demo, then live
+    - user: swatson pass: 54321
+    - Pulled salesdecr from equipment tab using crystal reports
+    - resolved
+    - 
+  - Incorrect price on generated document, Shawn Sharp, 4620
+    - Issue with having folder labeled "20' Conduit"
+    - The issue was that the single quotation mark was causing unexpected problems due the application not recognizing that character (likely others as well)
+    - His version was running v4.xx.110 (old unsupported version)
+    - Need to test on master and their sandbox, will update after (ask arturo)
+    - Not happening on master, cant test on their sandbox without calling
+    - Will need to coordinate a time on following Thursday to upgrade system, need Rich here
+    - Sent to rich
+    
+  - Contacts not loading Job 12903-2 [TFS 8928], Andrea Fairbanks, #3826
+    - Client trying to add billing and on site contracts and it will not allow them to add contacts
+    - Susan has several test scenarios and could not replicate the issue
+    - Not able to replicate
+    - Not in queue
+    
+  - Platinum RMR Visibility issue, John Dawson, #4706
+    - Not able to see Platinum RMR in RMR>WeSuite
+    - user: jdawson pass: Callbeth2day
+    - job status not giving problem:
+    - ![1643b235.png](:storage/d053a451-26bc-4baf-a052-be92462c55cd/997b9d19.png)
+    - job status giving problem:
+    - ![5b06a08b.png](:storage/d053a451-26bc-4baf-a052-be92462c55cd/c5965c29.png)
+    - Might have to do with group rights, check whats different, pinpoint what is allowed for specific conditions
+    - Check Editors in tools
+    - Should be resolved
+  
+  - User having multiple errors, Drew Rollins, 4598
+    - "invalid length parameter" when opening up an weestimate job
+    - star assset, user: sfinegan, pass: 54321 also occurs to jhowell 54321 (apparently)
+    - Found temporary fix, but problem no longer affects their system
+    - Original problem stemmed from db msplitcomm (commissions)
+  
+  - Documents for Select Security, Karen Gentile, 4083
+    - Documents have been given signature template
+    - w-9 form returns error, waiting from eOriginal support team
+    - If problem gets resolved, test w-9 form again using the steps saved in workflow
+    - Need to redo w-9 form, apparently mine contained hidden error
+    - Looked into eoriginal competitors, maybe ask michelle over whether they might be viable options bc eoriginal seems unreliable
+    - Finished, look at xml workflow notes
+  
+  - Intraworks #4520
+    - Austin Bharad
+    - Deactivate job
+    - Report back of any issues
+    - Replication steps posted
+    - Mariuxi told to look labor data, said something about values being set to null but I did not see any critical null values in that table. Correction: taxPercentage is set to NULL
+    - Mari said she would call the job owner to fix this issue
+    - Issue has been fixed (?), told Austin that he should be able to deactivate job
+    - Follow up with other users who reported the problem
+    - Can still recreate issue, create and mark lead as sold on weopp > give null to decimal error opening job on weestimate
+    - No longer in queue
+    - user: abharadwaja pass: 1Luckeydog
+    - solution is to change null to decimal for taxlaborpercentage
+    
+  - WeOpp Loading Issue [TFS 8686], Erin McDowell 4277
+    - Erin McDowell
+    - WeOpp loading issue
+    - Already replicated and sent in TFS
+    - Waiting on further updates
+    - Considered obsolete by dev team, not 100% sure why
+    - Mari asked me to make db backup, done
+    - Apparently Mike has fixed the issue
+    - TFS for blsi made, awaiting update
+  
+  - Securadyne - error in Estimate, Erin Macauley, 4604
+    - Strange error with "invalid attempt to read when no data is present"
+    - Caused by changing quantity on some equipment part
+    - Could not recreate the issue on their system
+    - Waiting for Erin if she experiences the error again
+    - Does not seem to affect workflow or estimate
+    - Has not responded over whether it has occurred again
+    
+  - Document for 14721-2 [TFS 8690], Tanya Quist, 4298
+    - Tanya Quist
+    - Already sent in TFS
+    - Waiting for Tanya to give server access, no reply
+    - Replied, gave access. Need to run script
+    - Ran script, look at workflow for details on duplicate key error
+    - Tanya says that the script does not work for existing docs
+    - Pending, will close if no response by end of week
+    - Completed, has not reported whether issue happened again
+  
+  - Missing Lincoln, House Folder, John Dawson, 4563
+    - User reported that they could not see jobs from a particular user under their supervision
+    - In order to resolve their problem, they needed to check off the user's account from Tools>System Configuration>People Manager Tab
+    - Once user is searched and found, they need to check off their name in order to view their jobs, otherwise jobs associated with that account will not be accessible
+  
+  - WeSuite Mobile App, Andrew Johnston, 4325
+    - User not able to access mobile app
+    - If user not able to access mobile app then **it is likely that they do not have this right checked off in WeOpportunity settings**
+    - In this case, the user is granted access but there is some issue
+    - Richard spoke with Stephen who reported that Postman calls are unsuccessful both for loggin in and returning prospecting activity types
+    - Rich says its an issue related to the API
+    - Arturo reports to continue troubleshooting, check database connection and check API files, **How would I do this??**
+    - Rich reached out to Jeff (IT), could not connect to the web server
+      - Rich needs licensing point to access server
+    - Rich restarted API app pool and site to try loggin in again
+      - If steps didn't work, need to check host name and binding, how is this done?
+    - Jeff reboots the server to see if app pool can be restarted
+  
+  - Package Issue - Keeps crashing [TFS 8685], Chris Harrington, 4300
+    - User trying to add additional parts to a package, but everytime they change something (like GPM), the program crashes (has been recreated)
+    - No longer in my queue
+  
+  - Missing Lincoln, House folder and job, John Dawson 4563
+    - Looking for old job 15702-3, cannot find it, checked both current and archived folders
+    - Already tweaked date parameters, job was created by consultant no longer with SEi
+    - John already looked into his customer bin and could not find the account
+    - Need to recover job 15702 and all related jobs under Great Clips
+    - userid 155, ownerID 155, label "Great Clips Security", custID 9089 (great clips)
+    - My next guess is to reassign the job's ownerid to John's ownerid account
+    - No longer in my queue
+  
+  - WeSuite Live #3257
+    - Save As button not saving supporting documents as intended
+    - Already recreated, need to create TFS
+    - TFS created, now in development
+    - No longer in queue
+  
+  - Berkshire #4060
+    - Reproduce issue on master
+    - Use sql profiler
+    - Tried reproducing, no error received
+      - Maybe I did not use the same query?
+    - Cant access server, must email company, also uses different vpn connection
+    - No longer in my queue
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

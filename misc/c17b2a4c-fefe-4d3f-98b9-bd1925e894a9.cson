@@ -1,0 +1,26 @@
+createdAt: "2018-08-30T14:05:05.798Z"
+updatedAt: "2018-10-30T20:15:22.471Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "Meeting Notes (Week of 8/26/2018)"
+content: '''
+  Meeting Notes (Week of 8/26/2018)
+  - American Alarm
+  - Kick-off/Early phase of installing wesuite into their systems
+  - Arturo is helping provide the technical and mathematical details for the product installation
+  - Sales people typically don't know how to deal with this sort of software, therefore, clients may ask for broken down version of some of the codes
+  - Special codes (for sales team): these codes are used for different items
+    - Managers know that they should not expect sales people to go down through 100+ item codes
+    - Arturo has helped some clients break down 100+ codes into smaller 30+ subset
+  - American alarm needs formatting for different contracts, change orders, and quotes
+  - Final documents to be sent to Arturo and support team
+    - Feedback needed for offline mode
+    - WeSuite may not work on offline mode (?)
+      - No offline mode since user must be connected to the database
+  - Documents needed by American Alarm to start getting ready for programming (uploading/modifying equations)
+  - American alarm to complete all documents necessary
+  - Another meeting in 2 weeks to touch base after American Alarm completes the rest of the documents
+'''
+tags: []
+isStarred: false
+isTrashed: true

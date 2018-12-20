@@ -1,0 +1,153 @@
+createdAt: "2018-09-25T15:05:30.095Z"
+updatedAt: "2018-09-25T18:38:20.408Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "WhilePrintingRecords;"
+content: '''
+  WhilePrintingRecords;
+  
+  Shared BooleanVar Mon1;//Monitoring - Alarm.com Base 
+  Shared BooleanVar Mon2;//Monitoring - Alarm.com Z-wave 
+  Shared BooleanVar Mon3;//Monitoring - Alarm.com 
+  Shared BooleanVar Mon4;//Monitoring - Alarm.com Auto Arm 
+  Shared BooleanVar Mon5;//Monitoring - Land Line Burglar 
+  Shared BooleanVar Mon6;//Monitoring - Starlink Remote Arming 
+  Shared BooleanVar Mon7;//Monitoring - Uplink Remote Arming 
+  Shared BooleanVar Mon8;//Monitoring - Honeywell Radio Total 
+  Shared BooleanVar Mon9;//Monitoring - Honeywell Radio 
+  Shared BooleanVar Mon10;//Monitoring - Starlink 
+  Shared BooleanVar Mon11;//Monitoring - Uplink 
+  Shared BooleanVar Mon12;//Monitoring - Supervised 
+  Shared BooleanVar Mon13;//Monitoring - Weekly/Monthly Reports
+  Shared BooleanVar Mon14;//Monitoring - Napco iBridge 
+  Shared BooleanVar Mon15;//Monitoring - Napco iRemote 
+  Shared BooleanVar Mon16;//Monitoring - Starlink Connect 
+  Shared BooleanVar Mon17;//Monitoring - Land Line Fire 
+  Shared BooleanVar Mon18;//Monitoring - AES Radio Fire 
+  Shared BooleanVar Mon19;//Monitoring - Starlink Fire 
+  Shared BooleanVar Mon20;//Monitoring - Uplink Fire 
+  Shared BooleanVar Mon21;//Monitoring - Direct Connect Fire 
+  Shared BooleanVar Mon22;//Monitoring - PERS 
+  Shared BooleanVar Mon23;//Monitoring - Surveillance Commercial 
+  Shared BooleanVar Mon24;//Monitoring - Access Control 
+  Shared BooleanVar Mon25;//Monitoring - Elevator 
+  Shared BooleanVar Mon26;//Monitoring – Service Plan – Alarm 
+  Shared BooleanVar Mon27;//Monitoring – Service Plan – Acc/Cam 
+  Shared BooleanVar Mon28;//Monitoring – Service Plan – Inspection 
+  Shared BooleanVar Mon29;//Monitoring - Legacy 
+  Shared BooleanVar Mon30;//Monitoring - Life Safety - Smoke, CO & 
+  Shared BooleanVar Mon31;//Open/Close Logging 
+  Shared BooleanVar Mon32;//Open/Close Reports 
+  Shared BooleanVar Mon33;//Open/Close Supervised 
+  Shared BooleanVar Mon34;//Monitoring - Supervisory - Sump Pump. 
+  Shared BooleanVar Mon35;//Daily Test 
+  Shared BooleanVar Mon36;//Weekly Test 
+  
+  Shared CurrencyVar MonRMRTotal;//3a(i) 
+  Shared CurrencyVar SvcRMRTotal;//3d
+  Shared CurrencyVar InspRMRTotal;//3e
+  Shared CurrencyVar AccessRMRTotal;//3e
+  
+  Shared NumberVar TermLength;
+  
+  TermLength := {rep_FSMbillcode.termLength}/12;
+  
+  if {rep_FSMbillcode.billcodeid} = 'R-4180' then Mon1 := true;     
+  if {rep_FSMbillcode.billcodeid} = 'R-4190' then Mon2 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4200' then Mon3 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4210' then Mon4 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4220' then Mon5 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4230' then Mon6 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4240' then Mon7 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4250' then Mon8 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4260' then Mon9 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4270' then Mon10 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4280' then Mon11 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4290' then Mon12 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4300' then Mon13 := true; 
+  if {rep_FSMbillcode.billcodeid} = 'R-4310' then Mon14 := true; 
+  if {rep_FSMbillcode.billcodeid} = 'R-4320' then Mon15 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4330' then Mon16 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4340' then Mon17 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4350' then Mon18 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4360' then Mon19 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4370' then Mon20 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4380' then Mon21 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4390' then Mon22 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4400' then Mon23 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4410' then Mon24 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4420' then Mon25 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4430' or instr(1, {rep_FSMbillcode.descr},"Service", 1) > 0 then Mon26 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4431' then Mon27 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4432' then Mon28 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-4999' then Mon29 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-Life Safety' then Mon30 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-OCLG' then Mon31 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-OCRPT' then Mon32 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-OCSUP' then Mon33 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-Supervisory' then Mon34 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-TSTD' then Mon35 := true;
+  if {rep_FSMbillcode.billcodeid} = 'R-TSTW' then Mon36 := true;
+  
+  //Monitoring Total
+  if (
+      Mon1 or
+      Mon2 or
+      Mon3 or
+      Mon4 or
+      Mon5 or
+      Mon6 or
+      Mon7 or
+      Mon8 or
+      Mon9 or
+      Mon10 or
+      Mon11 or
+      Mon12 or
+      Mon13 or
+      Mon14 or
+      Mon15 or
+      Mon16 or
+      Mon17 or
+      Mon18 or
+      Mon19 or
+      Mon20 or
+      Mon21 or
+      Mon22 or
+      Mon23 or
+      Mon25 or
+      Mon29 or
+      Mon30 or
+      Mon31 or
+      Mon32 or
+      Mon33 or
+      Mon34 or
+      Mon35 or
+      Mon36
+      )
+  then    
+      MonRMRTotal := MonRMRTotal + {rep_FSMbillcode.total};
+  
+  //Service
+  if (
+      Mon26 or
+      Mon27 or
+      instr(1, {rep_FSMbillcode.descr},"Service", 1) > 0
+      )
+  then    
+      SvcRMRTotal := SvcRMRTotal + {rep_FSMbillcode.total};
+  
+  //Inspection
+  if Mon28
+  then    
+      InspRMRTotal := InspRMRTotal + {rep_FSMbillcode.total};
+  
+  //Access
+  if Mon24
+  then
+      AccessRMRTotal := AccessRMRTotal + {rep_FSMbillcode.total};
+  
+  ""
+'''
+tags: []
+isStarred: false
+isTrashed: true

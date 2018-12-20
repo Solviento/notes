@@ -1,0 +1,99 @@
+createdAt: "2018-08-24T13:33:53.732Z"
+updatedAt: "2018-08-24T14:28:17.505Z"
+type: "MARKDOWN_NOTE"
+folder: "8129619718e42c249151"
+title: "Basic intro notes"
+content: '''
+  Basic intro notes
+  	- What is a database? (DB)
+  		○ Any collection of related information
+  			§ Phone book
+  			§ Shopping list
+  			§ Todo list
+  		○ Databases can be stored in different ways
+  			§ On paper
+  			§ In your mind
+  			§ On computer/powerpoint
+  
+  Database Management Systems (DBMS)
+  	- A special software program that helps users create and maintain a database
+  		○ Makes it easy to manage large amounts of information
+  		○ Handles security
+  		○ Backups
+  		○ Import/export data
+  		○ Concurrency
+  	
+  CRUD
+  	- Create, Read, Update, Delete
+  
+  Two types of databases
+  	- Relational databases (SQL)
+  		○ Organize data into one or more tables
+  			§ Each table has columns and rows
+  			§ A unique key identifies each row
+  			§ Basically an excel sheet
+  	- Non relational (noSQL)
+  		○ Organize data is anything but a traditional table
+  			§ Key value stores
+  			§ Documents (JSON, XML, Etc)
+  			§ Graphs
+  			§ Flexible tables
+  
+  Relational Database Management Systems (RDBMS)
+  	- mySQL, Oracle, postgreSQL, mariaDB, etc.
+  
+  Structured Query Language (SQL)
+  	- Standardized language for interacting with RDBMS
+  	- SQL code not always portable to another RDBMS without modification
+  
+  Non relational databases (noSQL)
+  	- Key value hash
+  		○ mongoDB, dynamoDB, cassandra, firebase
+  	- Implementation specific
+  		○ Not as standardized as SQL
+  		○ No set language standard, each NRDBMS will implement their own language for performing CRUD and administrative operations on the databases
+  
+  Database Queries
+  	- Queries are requests made to the database management system for specific information
+  	- As database become more complex, it becomes difficult to get specific pieces of information
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

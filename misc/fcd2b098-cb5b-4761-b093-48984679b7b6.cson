@@ -1,0 +1,145 @@
+createdAt: "2018-08-24T13:47:49.512Z"
+updatedAt: "2018-10-30T20:15:52.938Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "Backend Database Reference"
+content: '''
+  ## Backend Database Reference
+  --- 
+  - userActivity
+    - activityid, prospectingactivityid, userid, opportunityid, note, companyid, contactid
+    - storage of all opportunity notes made by user
+  
+  - acc_bompartshours
+    - bomid
+    - Unsure, bill of materials + parts, hours?
+  
+  - acc_Category
+    - ?
+  
+  - acc_Connection
+    - ?
+  
+  - acc_Costcode
+    - ?
+  
+  - acc_CostCodeMappingCI
+    - ?
+  
+  - acc_CostCodeMappingLabor
+    - ?
+  
+  - acc_CostCodeMappingParts
+    - ?
+  
+  - acc_CSVField
+    - accXMLFieldID
+    - ?
+  
+  - acc_CSVJoinDefinition
+    - alias
+    - Contains alias labels such as "sh_customer", "SITE", "BILING", "LABORDATA", etc.
+    - Aso contains JOINCLAUSULE (some SQL query)
+  
+  - acc_DocumentsExportedAccounting
+    - ?
+  
+  - acc_KSLBranchNumber
+    - ?
+  
+  - acc_KSLCustNumber
+    - ?
+  
+  - acc_KSLExportType
+    - ?
+  
+  - acc_KSLWeSuiteNbr
+  
+  - acc_linkadvdep
+    - ?
+  
+  - acc_ContractDoc
+    - ?
+  
+  - acc_linkDocument
+    - accLinkDocumentID, docDecsription, accDocument
+    - Not sure, linked documents to account
+  
+  - acc_linkfolder
+    - acclinkfolderid, acclinkjobID, accjobname, accjobtypeID, laborUnits
+    - Account job names, unsure where it comes from
+  
+  - acc_linkinvoice
+    - ?
+  
+  - acc_linkitems
+    - acclinkitemID, itemname, amt
+    - Not sure, has to do with freight/warranty job type?
+  
+  - acc_linkjob
+    - acclinkjobID, priceinfoID, sanum
+    - Not sure, contains info on jobs but nothing stands out
+  
+  - acc_MapImportItem
+    - ?
+  
+  - acc_MapItemList
+    - accMapItemListID, descr
+    - Various term labels such as "Freight", "Warranty", "Equipment RMR"
+  
+  - acc_MapQuery
+  
+  - acc_Sage_WeItemsGroup
+  
+  - acc_SageLinkProductFamily
+  
+  - acc_SystemType
+  
+  - acc_XMLField
+  
+  - acc_XMLFile
+  
+  - acc_XMLGroup
+  
+  - activity_Notes
+  
+  - activityFollowUp
+  
+  - activityViews
+  
+  - annualRAR
+  
+  - applicationModule
+  
+  - applications
+  
+  
+  
+  
+  
+  
+  
+  - proposal
+    - sanum (serial number), pjname (project name), custID, 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true

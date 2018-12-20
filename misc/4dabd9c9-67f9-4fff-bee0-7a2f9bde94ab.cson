@@ -1,0 +1,46 @@
+createdAt: "2018-09-24T21:09:08.645Z"
+updatedAt: "2018-09-28T12:52:45.950Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "Scratch Pad"
+content: '''
+  ## Scratch Pad
+  
+  Pre-conditions:
+  - Tested on WeOpportunity Demo (Port 6097) and also happening in WeOpp systems
+  
+  Steps:
+  1. Create a New Lead in WeOpportunity
+  2. Fill out lead with sample details
+  3. Once lead has been created and opened, in the Opp Info tab fill in Job Title and then select "Sold" option for the Stage dropdown
+  4. Click to continue when prompted
+  5. Fill in the rest of the required information with sample details
+  6. Go into the Lead Management tab
+  7. In the "My Opportunities" dropdown, click on the "Sold" dropdown then find and open the lead you just created and marked as sold
+  8. Once lead has been opened, click on the "Pass Lead"
+  
+  -- Problematic behavior # 1
+  9. System will allow you to select an office to pass the lead, click on "Pass" for an office
+  
+  -- Problematic behavior # 2
+  10. Once the lead has been passed click on the Lead Management tab to search for the lead you just passed
+  
+  Expected behavior # 1:
+  - You should NOT be able to pass a sold lead to an office
+  
+  Current behavior # 1:
+  - The system will allow a user to pass a sold lead to an office
+  
+  Expected behavior # 2:
+  - User should be able to search and find a lead marked as sold
+  
+  Current behavior # 2:
+  - Once a sold lead has been passed to an office, the user will no longer be able to search and find this particular lead
+  
+  Notes:
+  [2018-09-21_15-52-57.mp4](https://www.screencast.com/t/lcAqfmFpeTNu)
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true

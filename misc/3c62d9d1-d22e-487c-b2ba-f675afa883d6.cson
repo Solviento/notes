@@ -1,0 +1,14 @@
+createdAt: "2018-08-31T20:35:58.598Z"
+updatedAt: "2018-09-24T21:08:53.128Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "the problem is eligsum, not acctmgr. It works if it is set to 0, but the original query was set to 1. Weestimate keeps setting it to 1 after updating the job manually and then reopening it. Could not resolve quickly since i was kicked out."
+content: '''
+  
+  the problem is eligsum, not acctmgr. It works if it is set to 0, but the original query was set to 1. Weestimate keeps setting it to 1 after updating the job manually and then reopening it. Could not resolve quickly since i was kicked out.
+  
+  exec cs_UPDSplit @id=4331,@userId=85,@sanum=9401,@jobnum=1,@altnum=0,@docid=0,@reviewID=0,@serviceID=0,@svalType=1,@splitcommperc=100.0000,@splitcommamt=857.7500,@actsplitcommamt=0.0000,@pvalType=1,@splitprodperc=100.0000,@splitprodamt=28591.5100,@splitprodrmramt=0.0000,@comsysId=15,@commAmt=857.7500,@commRMR=0.0000,@actCommRMR=0.0000,@prodAmt=28591.5100,@prodRMR=0.0000,@mgrOvr=0.0000,@mgrOvrRMR=0.0000,@natAcctOvr=0.0000,@natAcctOvrRMR=0.0000,@natAcctMgr=0,@paydesc='3% TS [3.0% Sliding Scale]',@jobcost=0,@jobamtmin=0.0000,@jobpaymin=0.0000,@jobstatus=0,@postappr=0,@postapprsys=8,@eligsum=0
+'''
+tags: []
+isStarred: false
+isTrashed: true

@@ -1,0 +1,39 @@
+createdAt: "2018-10-04T16:05:45.515Z"
+updatedAt: "2018-10-05T12:57:14.336Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "See the end of this message for details on invoking"
+content: '''
+  See the end of this message for details on invoking 
+  just-in-time (JIT) debugging instead of this dialog box.
+  
+  ************** Exception Text **************
+  CrystalDecisions.CrystalReports.Engine.LoadSaveReportException: Invalid report file path.
+     at CrystalDecisions.CrystalReports.Engine.EngineExceptionUtils.DoThrowException(String message, EngineExceptionErrorID id)
+     at CrystalDecisions.CrystalReports.Engine.ExceptionThrower.ThrowEngineException(String messageID, EngineExceptionErrorID id)
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(String filename, OpenReportMethod openMethod, Int16 parentJob)
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.EnsureLoadReport()
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.get_DataDefinition()
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetParameterValue(String name, Object val)
+     at Mitsic.Document.DocumentController.CreateDocument(Boolean export, String rep, String pdf, Int32 docType, String templateid, String docid, String contractid, Boolean connect, JobInfoController mJi, AllManipulation tm, CrystalReportViewer crv, String workID, String expath, String contractorID, PdfViewer preview) in D:\\TeamCity\\BuildAgent\\work\\9648197a6a125c9d\\Src\\Document\\DocumentController.cs:line 110
+     at Mitsic.frmcDocument.tsbGenRep_Click(Object sender, EventArgs e) in D:\\TeamCity\\BuildAgent\\work\\9648197a6a125c9d\\Src\\frmcDocument.cs:line 2384
+     at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+     at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+     at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+     at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+     at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+     at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+     at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+     at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+     at System.Windows.Forms.Control.WndProc(Message& m)
+     at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+     at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+     at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+     at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+     at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true
