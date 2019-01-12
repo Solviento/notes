@@ -1,0 +1,34 @@
+createdAt: "2018-10-02T15:11:36.142Z"
+updatedAt: "2018-10-04T14:37:57.738Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "Description"
+content: '''
+  Description
+  Adding a part I expect the Material Sum of the folder to change as well as the Folder Total to change
+  
+  Steps
+  Assuming job is starting from $0/new job
+  1) Create folder
+  2) Search for Part
+  3) Drag and drop part with a cost and sell price into specific folder
+  
+  Expected Results
+  1) Material Cost Price in Folder will display total cost of materials in Folder
+  2) Material Sell Price in Folder will display total sell of materials in Folder
+  3) Folder Cost will add Material Cost to 'TotalCost' Column
+  4) Folder Sell will add Material Sell to 'SellTotal' Column
+  
+  To check results:
+  Items 1 & 2
+  Result will Display on WeEstimate Estimate Screen
+  
+  Items 3 & 4
+  1) Go to SQL
+  2) select selltotal,totalcost, * from FolderSummary
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true

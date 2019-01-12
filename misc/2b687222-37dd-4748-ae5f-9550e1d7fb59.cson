@@ -1,0 +1,44 @@
+createdAt: "2018-09-27T14:46:34.462Z"
+updatedAt: "2018-10-30T20:34:52.194Z"
+type: "MARKDOWN_NOTE"
+folder: "b0ba50dc09be9361d2aa"
+title: "job 10912"
+content: '''
+  job 10912 
+  job 10909
+  job 9385
+  - pulling from sedona for customer
+  - they pull customers from sedona for all jobs
+  
+  See the end of this message for details on invoking 
+  just-in-time (JIT) debugging instead of this dialog box.
+  
+  ************** Exception Text **************
+  CrystalDecisions.CrystalReports.Engine.LoadSaveReportException: Invalid report file path.
+     at CrystalDecisions.CrystalReports.Engine.EngineExceptionUtils.DoThrowException(String message, EngineExceptionErrorID id)
+     at CrystalDecisions.CrystalReports.Engine.ExceptionThrower.ThrowEngineException(String messageID, EngineExceptionErrorID id)
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(String filename, OpenReportMethod openMethod, Int16 parentJob)
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.EnsureLoadReport()
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.get_DataDefinition()
+     at CrystalDecisions.CrystalReports.Engine.ReportDocument.SetParameterValue(String name, Object val)
+     at Mitsic.Document.DocumentController.CreateDocument(Boolean export, String rep, String pdf, Int32 docType, String templateid, String docid, String contractid, Boolean connect, JobInfoController mJi, AllManipulation tm, CrystalReportViewer crv, String workID, String expath, String contractorID, PdfViewer preview) in D:\\TeamCity\\BuildAgent\\work\\9648197a6a125c9d\\Src\\Document\\DocumentController.cs:line 110
+     at Mitsic.frmcDocument.tsbGenRep_Click(Object sender, EventArgs e) in D:\\TeamCity\\BuildAgent\\work\\9648197a6a125c9d\\Src\\frmcDocument.cs:line 2384
+     at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+     at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+     at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+     at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+     at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+     at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+     at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+     at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+     at System.Windows.Forms.Control.WndProc(Message& m)
+     at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+     at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+     at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+     at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+     at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true

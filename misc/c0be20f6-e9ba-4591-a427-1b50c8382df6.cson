@@ -1,0 +1,25 @@
+createdAt: "2018-08-24T13:52:20.467Z"
+updatedAt: "2018-08-27T13:45:07.981Z"
+type: "MARKDOWN_NOTE"
+folder: "0295d9293f4867e4a88c"
+title: "--select * from eusers where --fname like '%austin%'"
+content: '''
+  --select * from eusers where --fname like '%austin%'
+  
+  -- username abharadwaja pass 1Luckeydog
+  
+  --select * from proposal where sanum=18495
+  
+  -- select * from proposal where sanum=18495
+  
+  -- custID 2974
+  -- mpocid 931
+  -- salesid 92
+  
+  select * from acc_CostCode
+  -- custstatus, MSAccountJobs
+  
+'''
+tags: []
+isStarred: false
+isTrashed: true

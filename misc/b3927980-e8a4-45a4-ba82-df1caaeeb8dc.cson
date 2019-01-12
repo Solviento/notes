@@ -1,0 +1,26 @@
+createdAt: "2018-08-24T13:33:34.456Z"
+updatedAt: "2018-08-24T13:33:41.557Z"
+type: "MARKDOWN_NOTE"
+folder: "8129619718e42c249151"
+title: "SQL data types"
+content: '''
+  SQL data types
+  	- Binary
+  	- Bit
+  		○ True/false
+  	- Char
+  	- Datetime
+  	- Decimal
+  	- Image
+  	- Int
+  	- Money
+  	- Numeric
+  	- Real
+  	- Text
+  	- Timestamp
+  	- Varbinary
+  varchar
+'''
+tags: []
+isStarred: false
+isTrashed: false

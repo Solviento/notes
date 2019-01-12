@@ -1,25 +1,6 @@
-# Intro SQL
+# SQL
 
-## Quick Intro
-- Structured Query Language, created by IBM in 1970's
-- Used in database systems for the CIA and US Navy
-- SQL is based on relational calculus and algebra
-
-## Basic SQL Keywords
-- SELECT
-- FROM
-- WHERE
-- GROUP BY
-- ASC
-- DESC
-- AND
-- OR
-- ORDER BY
-- INSERT INTO
-- UPDATE
-- DELETE FROM
-
-## Sample SQL expressions
+Sample SQL expressions
 
 - "SELECT, ORDER BY"
 ``` SQL
