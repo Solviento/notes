@@ -1,0 +1,13 @@
+# Useful SQL Methods
+- Count()
+  - returns number of rows that match a specified criteria
+- Avg() 
+  - returns the average value of a numeric column
+- Sum()
+  - returns total sum of a numeric column
+- Min()
+  - returns smallest value of the selected column
+- Max()
+  - returns largest value of the selected column
+- Isnull(expression)
+  - returns 1 or 0 depending if expression is null
