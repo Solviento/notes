@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Patient Entries</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/greeting">Patient UI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/greeting">Patient Entry</a>
+          </li>
+          <li class="nav-item">
+            <!-- change to other page -->
+            <a class="nav-link" href="/members">Patient History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <br>
+    	   <p class="right-align"><b>Confirmed Entry!</b></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">First Name:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.fname}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">Last Name:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.lname}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">DOB Month:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.month}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">DOB Day:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.day}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">DOB Year:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.year}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">Email</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.email}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">Address 1:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.addr1}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">Address 2:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.addr2}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">City:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.city}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">State:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.state}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <p class="right-align">Zip:</p>
+      </div>
+      <div class="col-md-5">
+        <p th:text="${greeting.zip}" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-5">
+        <button type="" class="btn btn-primary save_entry" value="" onclick="location.href='/greeting'">Submit Again</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
