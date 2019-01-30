@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title>Patient UI</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta charset="utf-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/greeting">Patient UI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/greeting">Patient Entry</a>
+            </li>
+            <li class="nav-item">
+              <!-- change to other page -->
+              <a class="nav-link" href="/members">Patient History</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+      <div class="container">
+        <div class="row">
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">First Name:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="fname" type="text" th:field="*{fname}" class="form-control" placeholder="Mark" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">Last Name:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="lname" type="text" th:field="*{lname}" class="form-control" placeholder="Hamill" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">DOB:</p>
+          </div>
+          <div class="col-md-5">
+            <!-- <input id="dobMonth" type="text" th:field="*{month}" class="form-control month-width" placeholder="Jan" aria-label="Username" aria-describedby="basic-addon1"> -->
+            <select th:field="*{month}" class="custom-select month-width" id="dobMonth">
+              <!-- <option selected>Month</option> -->
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">March</option>
+              <option value="Apr">April</option>
+              <option value="May">May</option>
+              <option value="Jun">June</option>
+              <option value="Jul">July</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sept</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+            <input required id="dobDay" type="text" th:field="*{day}" class="form-control day-width" placeholder="20" aria-label="Username" aria-describedby="basic-addon1">
+            <input required id="dobYear" type="text" th:field="*{year}" class="form-control year-width" placeholder="1990" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">Email:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="email" type="email" th:field="*{email}" class="form-control" placeholder="mhamill@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">Address(1):</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="addr1" type="text" th:field="*{addr1}" class="form-control" placeholder="1007 Mountain Drive" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">Address(2):</p>
+          </div>
+          <div class="col-md-5">
+            <input id="addr2" type="text" th:field="*{addr2}" class="form-control" placeholder="500 Express Hall" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">City:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="city" type="text" th:field="*{city}" class="form-control" placeholder="Queens" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">State:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="state" type="text" th:field="*{state}" class="form-control" placeholder="New York" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p class="right-align">Zip Code:</p>
+          </div>
+          <div class="col-md-5">
+            <input required id="zip" type="text" th:field="*{zip}" class="form-control" placeholder="10902" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <!-- <p class="right-align">Zip Code:</p> -->
+          </div>
+          <div class="col-md-5">
+            <button type="submit" class="btn btn-primary save_entry" value="Submit">Save Entry</button>
+            <button type="reset" class="btn btn-primary save_entry" value="Reset">Reset Form</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Workaround: js files places here in order to function -->
+    <script src="server.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
