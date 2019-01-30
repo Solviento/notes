@@ -1,0 +1,26 @@
+/* .right-align-label-text{
+  display: block !important;
+  text-align: right !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  min-height: 10%;
+  border: .25px solid black;
+} */
+/* override bootstrap to bring right alined labeled text */
+.right-align{
+  text-align: right !important;
+}
+.month-width{
+  margin-bottom: 5px !important;
+  width: 20% !important;
+  display: inline-block !important;
+}
+.day-width{
+  width: 10% !important;
+  display: inline-block !important;
+}
+.year-width{
+  width: 15% !important;
+  display: inline-block !important;
+}

@@ -1,29 +1,53 @@
-/* Will evaluate primeness of an integer */
-import java.util.Scanner; // Scanner
+/* Will evaluate primeness of an integer 
+ It uses the fact that a prime (except 2 and 3) 
+ is of form 6k - 1 or 6k + 1 and looks only at 
+ divisors of this form.
+ */
+import java.util.Scanner;
+
 public class prime {
   public static boolean checkPrime(int number) {
-    boolean prime = true; // Default is prime
-    for (int i = 2; i <= number / 2; i++) {
-      // Please verify what prime checker method is this
-      if (number % i == 0) {
-        prime = false; // Once i divides cleanly into input, not prime
-        break;
+    if (number == 0)
+      return false;
+    else if (number == 2)
+      return true;
+    else if (number == 3)
+      return true;
+    else if (number % 2 == 0)
+      return false;
+    else if (number % 3 == 0)
+      return false;
+    else{
+      int i = 5;
+      int w = 2;
+      while (i * i < number){
+        if (number % i == 0)
+          return false;
+        i += w;
+        w = 6-w;
       }
+      return true;
     }
-    return prime;
   }
   public static void main(String... args) {
-    Scanner keyb = new Scanner(System.in);
-    System.out.println("Enter a number to check if prime: ");
-    // int num = keyb.nextInt();
+    Scanner in = new Scanner(System.in);
+    System.out.print("Enter a number to check primeness: ");
+    int num = -1;
     do{
+      while(!in.hasNextInt()){
+        System.out.print("Please enter a positive integer: ");
+        in.next();
+      }
+      num = in.nextInt();
+      if (num < 0)
+        System.out.print("Please enter a positive integer: ");
+    }while(num < 0);
 
-    }while(num <= 0);
-    boolean primeEval = checkPrime(num);
-    if (primeEval) {
-      System.out.println("Number is prime");
-    } else {
-      System.out.println("Number is not prime");
+    if (checkPrime(num)){
+      System.out.println("Prime");
+    }
+    else{
+      System.out.println("Composite");
     }
   }
 }
