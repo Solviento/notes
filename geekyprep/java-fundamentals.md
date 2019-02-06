@@ -249,8 +249,8 @@ class ide{
     id.method();
   }
 }
-- infinite "hi"s and cause stack overflow
 ```
+- infinite "hi"s and cause stack overflow
 
 Which one will declare an array and initialize it with five numbers?
 - int[] a = [21, 22, 32, 44, 35];
