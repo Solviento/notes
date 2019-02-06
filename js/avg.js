@@ -1,4 +1,4 @@
-// there are different ways of creating a function in java (creating an average of an array for example)
+// there are different ways of creating a function in js (creating an average of an array for example)
 // the usual way
 function avgArray(arr){
   var sum = 0;

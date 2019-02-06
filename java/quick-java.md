@@ -59,7 +59,13 @@ public abstract class BankAccount{
     public int getBalance(){
         return balance;
     }
-    public abstract void withdraw(int amount);
+    abstract void withdraw(int amount);
+}
+
+class Checking extends BankAccount{
+    void withdraw(int amount){
+        this.balance -= amount;
+    }
 }
 ```
 
