@@ -1,6 +1,6 @@
 class isPalindrome{
   // slow method using built in methods
-  public static boolean isPalindrome(String s) {
+  public static boolean isPalindromeI(String s) {
     s = s.toLowerCase();
     s = s.replaceAll("[^\\w]","");
     int left = 0, right = s.length() - 1;
@@ -30,6 +30,36 @@ class isPalindrome{
         continue;
       }
       else if (Character.toUpperCase(l) != Character.toUpperCase(r)) {
+        return false;
+      }
+      left++;
+      right--;
+    }
+    return true;
+  }
+  // input is only lowercase abc AND input can be at MOST off by one letter
+  public static boolean validPalindromeII(String s) {
+    int left = 0, right = s.length() - 1;
+    while (left < right) {
+      char l = s.charAt(left);
+      char r = s.charAt(right);
+      if (l != r) {
+        // break string into two parts
+        boolean left_ = subPalindrome(s, left + 1, right);
+        boolean right_ = subPalindrome(s, left, right - 1);
+        return left_ || right_;
+      }
+      left++;
+      right--;
+    }
+    return true;
+  }
+  // helper method
+  static boolean subPalindrome(String s, int left, int right) {
+    while (left < right) {
+      char l = s.charAt(left);
+      char r = s.charAt(right);
+      if (l != r) {
         return false;
       }
       left++;
