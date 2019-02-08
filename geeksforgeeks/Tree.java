@@ -74,6 +74,18 @@ class Tree {
         List<Integer> preorder(){
             return preorderTraversal(root);
         }
+        // Given a binary tree, find its maximum depth.
+        // The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+        public int maxDepth(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+            int depthL = maxDepth(root.left);
+            depthL++; // add level
+            int depthR = maxDepth(root.right);
+            depthR++; // add level
+            return Math.max(depthL, depthR);
+        }
     }
     public static void main(String... args){
         BinaryTree bt = new BinaryTree();
