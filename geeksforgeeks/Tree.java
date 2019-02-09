@@ -86,6 +86,22 @@ class Tree {
             depthR++; // add level
             return Math.max(depthL, depthR);
         }
+        // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+        // For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+        public TreeNode sortedArrayToBST(int[] nums) {
+            if (nums.length == 0) {
+                return null;
+            }
+            int med = (int) Math.ceil(nums.length / 2);
+            TreeNode head = new TreeNode(nums[med]);
+
+            int[] numsLeft = Arrays.copyOfRange(nums, 0, med);
+            int[] numsRight = Arrays.copyOfRange(nums, med + 1, nums.length);
+
+            head.left = sortedArrayToBST(numsLeft);
+            head.right = sortedArrayToBST(numsRight);
+            return head;
+        }
     }
     public static void main(String... args){
         BinaryTree bt = new BinaryTree();
