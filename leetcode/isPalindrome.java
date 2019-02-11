@@ -37,6 +37,7 @@ class isPalindrome{
     }
     return true;
   }
+  // Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
   // input is only lowercase abc AND input can be at MOST off by one letter
   public static boolean validPalindromeII(String s) {
     int left = 0, right = s.length() - 1;

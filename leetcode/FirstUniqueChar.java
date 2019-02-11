@@ -1,3 +1,5 @@
+// Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
 class FirstUniqueChar {
   public int firstUniqChar(String s) {
     // to save space, we can use int[] votes = new int[256]

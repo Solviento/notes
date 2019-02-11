@@ -102,6 +102,56 @@ class Tree {
             head.right = sortedArrayToBST(numsRight);
             return head;
         }
+        // Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+        // For example, this binary tree [1,2,2,3,4,4,3] is symmetric
+        // But the following [1,2,2,null,3,null,3] is not
+        // https://www.youtube.com/watch?v=XV7Sg2hJO3Q
+        public boolean isSymmetric(TreeNode root) {
+            if (root == null)
+                return true;
+            return isSymRecursive(root.left, root.right);
+        }
+        boolean isSymRecursive(TreeNode leftChild, TreeNode rightChild) {
+            if (leftChild == null && rightChild == null)
+                return true;
+            if (leftChild == null || rightChild == null)
+                return false;
+            else {
+                boolean valCheck = (leftChild.val == rightChild.val) ? true : false;
+                return valCheck && isSymRecursive(leftChild.left, rightChild.right)
+                        && isSymRecursive(leftChild.right, rightChild.left);
+            }
+        }
+        // iterative version of tree symmetry
+        public boolean isSymmetricIt(TreeNode root) {
+            Queue<TreeNode> queue_ = new LinkedList<>();
+            queue_.add(root);
+            queue_.add(root);
+            while (!queue_.isEmpty()) {
+                TreeNode leftChild = queue_.poll();
+                TreeNode rightChild = queue_.poll();
+                if (leftChild == null && rightChild == null) {
+                    // valid condition, structure is good
+                    continue;
+                }
+                if (leftChild == null || rightChild == null) {
+                    // structure does not hold symmetric condition
+                    return false;
+                }
+                if (leftChild.val != rightChild.val) {
+                    // structure may be valid but values are not symmetric
+                    return false;
+                }
+                // add remaining children nodes
+                queue_.add(leftChild.left);
+                queue_.add(rightChild.right);
+                // symmetric principle
+                queue_.add(leftChild.right);
+                queue_.add(rightChild.left);
+            }
+            // if none of the above conditions invalidate tree, then return true
+            return true;
+        }
     }
     public static void main(String... args){
         BinaryTree bt = new BinaryTree();

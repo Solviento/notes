@@ -1,5 +1,5 @@
 // simple hash map
-class hashMap {
+class HashMap {
   int[] arr;
 
   /** Initialize your data structure here. */

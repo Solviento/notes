@@ -12,6 +12,9 @@ class LinkedList {
       head = null;
     }
   }
+  class DLinkedList{
+
+  }
   class ListNode{
     int val;
     ListNode next;
@@ -48,7 +51,11 @@ class LinkedList {
     // when base case has executed, return 1->(2->null)<-3
     return reversedListHead;
   }
-
+  // delete node in a singly linked list given only access to that node
+  public void deleteNode(ListNode node) {
+      node.val = node.next.val;
+      node.next = node.next.next;
+  }
 
   public static void main(String... args){
 

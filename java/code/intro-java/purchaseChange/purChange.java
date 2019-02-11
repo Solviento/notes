@@ -1,4 +1,3 @@
-
 /* Will calculate change based on purchase */
 import java.util.Scanner; // Scanner
 
