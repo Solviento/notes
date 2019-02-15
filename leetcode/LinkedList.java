@@ -23,7 +23,7 @@ class LinkedList {
     }
   }
   // iterative, S: O(n) T: O(1)
-  static ListNode reverseList(ListNode head) {
+  static ListNode reverseLList(ListNode head) {
     ListNode tail = null;
     while (head != null) {
       // stash away head.next node
@@ -55,6 +55,24 @@ class LinkedList {
   public void deleteNode(ListNode node) {
       node.val = node.next.val;
       node.next = node.next.next;
+  }
+  // Floyd’s Cycle-Finding Algorithm
+  // detects cycle in a linked list using two pointers, fast and slow
+  // Time: O(n) Space: O(1)
+  public boolean hasCycle(ListNode head) {
+      if (head == null || head.next == null){
+          return false;
+      }
+      ListNode slow = head;
+      ListNode fast = head.next;
+      while(slow!=fast){
+          if(fast == null || fast.next == null){
+              return false;
+          }
+          slow = slow.next;
+          fast = fast.next.next;
+      }
+      return true;
   }
 
   public static void main(String... args){

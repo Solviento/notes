@@ -83,6 +83,11 @@ top()     // returns first element of the queue
 Double-ended Queue
 
 Priority Queue
+- Needs to have
+  - isEmpty()
+  - insertWithPriority()
+  - pullHighestPriority()
+  - peek()
 
 Graph
 - Nodes and edges
