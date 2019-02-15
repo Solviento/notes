@@ -74,6 +74,55 @@ class LinkedList {
       }
       return true;
   }
+  // Time: O(n) Space: O(1) ** very good problem, uses floyd cycle pointers and another function to reverse linked list using a node
+  public boolean isPalindrome(ListNode head) {
+    // have two pointers, one fast and one slow
+    // fast one will be 2x as fast, which will end at tail and slow pointer will be
+    // at middle
+    // be careful with uneven and odd lengths
+    ListNode slow = head;
+    ListNode fast = head;
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    // if even length, fast will end up as null
+    // if odd, fast ptr will end up at final node
+    // odd case:
+    // 1-2-1-2-1
+    //     s   f
+    // 1-2 .. 2-1
+    if (fast != null) {
+      slow = slow.next;
+    }
+    // even case:
+    // 1-2-2-1
+    //   s    f
+    // 1-2 .. 2-1
+    fast = head;
+    slow = reverseLList_(slow);
+    // perform value check on every node
+    while (slow != null) {
+      if (slow.val != fast.val) {
+        return false;
+      }
+      slow = slow.next;
+      fast = fast.next;
+    }
+    return true;
+  }
+
+  public ListNode reverseLList_(ListNode head) {
+    ListNode prev = null;
+    while (head != null) {
+      ListNode tmp = head.next; // make a copy of a reference to the next node for last step, aka iteration
+                                // (head = tmp)
+      head.next = prev; // re-wire head node to point to previous node
+      prev = head; // move prev pointer to head location
+      head = tmp; // move head pointer to tmp location (head.next)
+    }
+    return prev;
+  }
 
   public static void main(String... args){
 
