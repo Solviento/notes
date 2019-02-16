@@ -1,10 +1,39 @@
 class StrStr {
-  // KMP is Time: O(m+n) Space: O(n)
+  // KMP is Time: O(m+n) Space: O(n), n = haystack, m = needle
   static int strStr(String haystack, String needle) {
+    if(needle.length() == 0){
+      return 0;
+    }
     // first pre process string, find Longest Prefix Suffix (LPS)
     int[] lps = preProcess(needle);
     // now iterate through haystack and use KMP algorithm skip/checks
-    return 0;
+    int haystackLen = haystack.length();
+    int needleLen = needle.length();
+    int i = 0;    // index ptr for haystack
+    int j = 0;    // index ptr for needle pattern
+    while(i < haystackLen){
+      // a char match is found, increment haystack and needle pointers
+      if(haystack.charAt(i) == needle.charAt(j)){
+        i++;
+        j++;
+      }
+      // once enough char matches are found, needle pointer will reach end of needle pattern string
+      if(j == needleLen){
+        return (i-j);
+      }
+      // if j (needle ptr) mismatches, use lps array to determine longest prefix suffix to move haystack ptr by
+      else if(i < haystackLen && haystack.charAt(i) != needle.charAt(j)){
+        // there was prefix-suffix pattern so we move j (needle ptr) accordingly
+        if(j!=0){
+          j = lps[j-1];
+        }
+        // no char match nor prefix-suffix pattern found whatsoever, move i (haystack ptr) by one
+        else{
+          i = i +1;
+        }
+      }
+    }
+    return -1;
   }
   static int[] preProcess(String n){
     int[] lps = new int[n.length()];
@@ -34,7 +63,8 @@ class StrStr {
   }
   public static void main(String... args){
     String hay = "blakinpockiyabkinkmkinkibiko";
-    String n = "AACA";
+    String n = "kinki";
     int index = strStr(hay, n);
+    System.out.println(index);
   }
 }
