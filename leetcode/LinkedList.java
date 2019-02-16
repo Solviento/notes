@@ -123,6 +123,63 @@ class LinkedList {
     }
     return prev;
   }
+  // Write a program to find the node at which the intersection of two singly
+  // linked lists begins. If no intersection exists, return null
+  // This method uses two pointers, have each pointer iterate through both linked lists
+  // if one pointer reaches null, have it reassigned to the head of the Other list and vice versa
+  // if there is an intersection, break, if both pointers reach null then there is no intersection, break, draw out iterations to understand
+  // Time: O(m+n) Space: O(1)
+  public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    ListNode aPointer = headA;
+    ListNode bPointer = headB;
+    while (aPointer != bPointer) {
+      if (aPointer == null) {
+        aPointer = headB;
+        bPointer = bPointer.next;
+      } else if (bPointer == null) {
+        bPointer = headA;
+        aPointer = aPointer.next;
+      } else {
+        bPointer = bPointer.next;
+        aPointer = aPointer.next;
+      }
+    }
+    return aPointer;
+  }
+  // alternative above method using differences in length of two linked lists
+  public ListNode getIntersectionNode_(ListNode headA, ListNode headB) {
+    // get copies of head node reference
+    ListNode headACpy = headA;
+    ListNode headBCpy = headB;
+    // get length of list A
+    int lengthA = 0;
+    while (headA != null) {
+      lengthA++;
+      headA = headA.next;
+    }
+    // get length of list B
+    int lengthB = 0;
+    while (headB != null) {
+      lengthB++;
+      headB = headB.next;
+    }
+    // get abs difference of list lengths
+    int difference = Math.abs(lengthA - lengthB);
+    // assigned references to longest, shortest lists
+    ListNode longestList = (lengthA >= lengthB) ? headACpy : headBCpy;
+    ListNode smallList = (lengthA < lengthB) ? headACpy : headBCpy;
+    // iterate longest linked list using abs difference
+    for (int i = 0; i < difference; i++) {
+      longestList = longestList.next;
+    }
+    // nodes should now start along same indices AND meet at intersection or null
+    while (longestList != smallList) {
+      longestList = longestList.next;
+      smallList = smallList.next;
+    }
+    // return intersection or null
+    return longestList;
+  }
 
   public static void main(String... args){
 
