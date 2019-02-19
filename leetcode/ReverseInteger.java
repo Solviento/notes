@@ -2,6 +2,7 @@ class ReverseInteger {
     public int reverse(int x) {
         // use long instead of int
         long result = 0;
+        // could also do Math.abs to take care of negative cases and then return the negative int result
         while(x != 0){
             int lastDig = x % 10;
             x = x/10;

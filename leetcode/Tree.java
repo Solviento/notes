@@ -37,21 +37,21 @@ class Tree {
         }
         // inorder traversal but using iterative loop
         List<Integer> inorderTraversalIterative(TreeNode root) {
+            List<Integer> inorderList = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
-            List<Integer> in = new ArrayList<>();
-            TreeNode current = root;
-            // crucial to understand, while a right child node may be null the stack MUST be empty to complete the traversal
-            while (current != null || !stack.empty()) {
-                while (current != null) {
-                    stack.push(current);
-                    current = current.left;
+            // TreeNode prev = null;
+            while(root != null || stack.isEmpty() == false){
+                // traverse and collect all left child nodes
+                while(root!=null){
+                    stack.push(root);
+                    root = root.left;
                 }
-                // use stack as backorder
-                current = stack.pop();
-                in.add(current.val);
-                current = current.right;
+                // no more left child nodes, collect center node and then set node to right child node
+                root = stack.pop();
+                inorderList.add(root.val);
+                root = root.right;
             }
-            return in;
+            return inorderList;
         }
         // preorder traversal using recursion
         List<Integer> preorderTraversal(TreeNode root) {
