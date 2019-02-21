@@ -1,7 +1,10 @@
 // Given two strings s and t , write a function to determine if t is an anagram of s.
+// Input: s = "anagram", t = "nagaram"
+// Output: true
 import java.util.HashMap;
-
 class Anagram {
+  // another solution is to sort the strings, use two pointers, if pointers dont match, then false OR use .equals() Time: O(nlogn)
+
   public boolean isAnagram(String s, String t) {
     if (s.length() != t.length()) {
       return false;
