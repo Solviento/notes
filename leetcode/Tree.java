@@ -4,6 +4,7 @@ import java.util.Stack;
 // INORDER:   LEFT, ROOT, RIGHT ------------------------------
 // PREORDER:  ROOT, LEFT, RIGHT ------------------------------
 // POSTORDEr: LEFT, RIGHT, ROOT ------------------------------
+// Has problems: Maximum Depth of Binary Tree, 
 class Tree {
     static class TreeNode {
         int val;
@@ -76,15 +77,15 @@ class Tree {
         }
         // Given a binary tree, find its maximum depth.
         // The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
-        public int maxDepth(TreeNode root) {
-            if (root == null) {
+        // The trick here is to reach all the way down using the left child node, once a leaf is found, we work back up and THEN use the right child node
+        // once a call is returned (a null is reached), return +1 as the level
+        public int maxDepthRecursive(TreeNode root) {
+            if (root == null) { // reached leaf node, return
                 return 0;
             }
-            int depthL = maxDepth(root.left);
-            depthL++; // add level
-            int depthR = maxDepth(root.right);
-            depthR++; // add level
-            return Math.max(depthL, depthR);
+            int depthL = maxDepth(root.left);       // go all the way down the left subtree
+            int depthR = maxDepth(root.right);      // go all the way down the right subtree
+            return Math.max(depthL, depthR) + 1;    // add current level once recursive calls go back up
         }
         // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
         // For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
