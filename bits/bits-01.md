@@ -15,9 +15,12 @@ Two's Complement
 - To turn -2 into a two's complement representation:
     - 2 = 0010
     - invert bits, add 1
-    - 1101 + 1 = 1110 (in this example, we performed operations on a 4 bit representation)
+    - 1101 + 1 = 1110 (in this example, we performed operations on a 4 bit representation of 2)
 
-Range of Numbers (32/64-bit)
+Range of Numbers (32/64-bit, aka N=32 or 64)
+
+- move below into a table and use superscript < sup > < / sup >
+
 ```
 System              Range
 Unsigned            [0 -> 2^N - 1]
@@ -41,12 +44,12 @@ x y z
 1 0 1
 1 1 1
 
-XOR - ^
+XOR - ^ (False when ALL inputs are false or true)
 x y z
 0 0 0
 1 0 1
 0 1 1
-1 1 1
+1 1 0
 ```
 
 Bit Shift Operator
@@ -54,12 +57,12 @@ Bit Shift Operator
 <<
 x = 1 (001)
 x << 1
-x = 2 (010)
+x = 2 (010) note: essentially multiplying by 2
 
 >>
 x = 1
 x >> 1
-x = 0 (000) note: 1 is shifted out of bit representation
+x = 0 (000) note: 1 is shifted out of bit representation, also basically dividing by 2
 ```
 
 Simple Bit Wise Examples
@@ -71,7 +74,9 @@ int xy = x & y;         // 0100 = 4
 // checking bit value at ith position
 int mask = 0x8;         // 1000 in binary
 int res = x & mask;     // 0101 & 1000 = 0000 therefore res = 0000 or simply 0
-int res_ = y & mask;    // 1100 & 1000 = 1000, NOTE: this is the same value of 0x8 = 8, therefore to verify if y contains a 1 in the ith bit (i = 4) then y & mask = mask
+						// verifies that there is a 0 at the mask bit value
+int res_ = y & mask;    // 1100 & 1000 = 1000
+						// NOTE: this is the same value of 0x8 = 8
 ```
 
 Before we have a look at how memory works,
@@ -122,7 +127,6 @@ To figure out what negative number is represented (e.g. 1100):
 So why do we use this weird form of representation?
 Well as it turns out, in two's complement, the computer can perform arithmetic
 on negative numbers as if they were positive numbers!
-(Find out more in w3827: Fundamentals of Computer Systems.)
 
 Let's look at how two's complement works in 3 bits first:
       
@@ -262,7 +266,7 @@ Takes integer as operand and returns an integer with all its bits flipped.
 
     unsigned int x = 5; // 0101 in binary, unsigned
     int y = 5;          // 0101 in binary, signed
-
+    
     assert(~x == 10);   // 1010 (10, unsigned)
     assert(~y == -6);   // 1010 (-6, signed)
 
@@ -304,6 +308,9 @@ Note that this is equivalent to dividing a number by 2^`n`
 
     int x = 5;              // 0101 in binary
     assert(x >> 2 == 1);    // 0001 (1)
+    
+    int y = -102			// 10011010
+    y >> 1					// 11001101 (-102/2^1 = -51)
 
 ## Appendix: Truth Tables for Bitwise Operations ##
 ### AND
@@ -343,3 +350,4 @@ The result is the opposite of the bit's current value.
 :--:|:-----:
 0   | **1**
 1   | **0**
+

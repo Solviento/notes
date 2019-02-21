@@ -18,7 +18,7 @@ int[][][] intArray = new int[10][20][10]; // a 3d array
     - When cloning single dimension arrays, a deep copy is performed and a new array is created for each copied item
     - For multi dimension arrays, a shallow copy is made and a new array is created for references to the original item
 - Python
-- Basic Operations:
+  - Basic Operations:
 ``` Java
 insert()  // insert element at given idx
 get()     // return element at given idx
@@ -30,6 +30,7 @@ size()    // get total number of elements
   - First non repeating integers in array
   - Merge two sorted arrays
   - Rearrange positive and negative values in an array
+
 List
 
 Tuple 
@@ -54,7 +55,9 @@ isEmpty()        // return true if empty
   - Detect loop in a linked list
   - Return nth node from the end in a linked list
   - Remove duplicates from a linked list
+
 Stack
+
 - Basic Operations
 ``` Java
 push()    // inserts element at top
@@ -80,6 +83,7 @@ top()     // returns first element of the queue
   - Reverse first k elements of a queue
   - Generate binary numbers from 1 to n using a queue
   
+
 Double-ended Queue
 
 Priority Queue
@@ -124,6 +128,7 @@ Tries
   - Form words from dictionary using trie
   - Build T9 dictionary
   
+
 AVL Tree
 
 Binary Search Tree
@@ -133,7 +138,8 @@ Binary Tree
 Red black Tree
 
 Heap
-- 
+- Max-heap
+- Min-heap
 
 Treap
 
@@ -143,6 +149,7 @@ Hash list
 - Not really data structure, just a list of hashcodes calculated on various chunks of data
 - Split a file into many parts, calculate hashcode for each part, store them into a list
   
+
 Hash table
 - Key, value pairs + also called dictionaries
 - Usually implemented using arrays
