@@ -1,4 +1,9 @@
 class isPalindrome{
+  // Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+  // Note: For the purpose of this problem, we define empty string as valid palindrome.
+  // Example 1:
+  // Input: "A man, a plan, a canal: Panama"
+  // Output: true
   // slow method using built in methods
   public static boolean isPalindromeI(String s) {
     s = s.toLowerCase();
@@ -39,6 +44,9 @@ class isPalindrome{
   }
   // Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
   // input is only lowercase abc AND input can be at MOST off by one letter
+  // aabnanbcaa
+  // once left has reached aa and right has reached aa, it will reach b and c, to verify it is only one off simply
+  // take the sub arrays of BOTH left+1 and right-1
   public static boolean validPalindromeII(String s) {
     int left = 0, right = s.length() - 1;
     while (left < right) {

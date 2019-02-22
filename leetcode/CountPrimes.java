@@ -20,7 +20,6 @@ class CountPrimes {
         int count = 0;
         for(int i = 0; i < primeArr.length; i++){
             if(primeArr[i] == true){
-                // System.out.println(i);
                 count++;
             }
         }

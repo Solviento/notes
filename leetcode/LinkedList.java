@@ -22,7 +22,7 @@ class LinkedList {
       val = x;
     }
   }
-  // iterative, S: O(n) T: O(1)
+  // iterative, Space: O(n) Time: O(1)
   static ListNode reverseLList(ListNode head) {
     ListNode tail = null;
     while (head != null) {
@@ -92,13 +92,15 @@ class LinkedList {
     // 1-2-1-2-1
     //     s   f
     // 1-2 .. 2-1
+    // f      s
     if (fast != null) {
       slow = slow.next;
     }
     // even case:
     // 1-2-2-1
-    //   s    f
+    //     s f
     // 1-2 .. 2-1
+    // f      s
     fast = head;
     slow = reverseLList_(slow);
     // perform value check on every node

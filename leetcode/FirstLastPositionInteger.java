@@ -1,3 +1,8 @@
+// Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+// Your algorithm's runtime complexity must be in the order of O(log n).
+// If the target is not found in the array, return [-1, -1].
+// Input: nums = [5,7,7,8,8,10], target = 8
+// Output: [3,4]
 class FirstLastPositionInteger {
     public int[] searchRange(int[] nums, int target) {
         // do binary searches for first appearance of target int and final appearance of target int (final i- first i + 1 = number of target element occurences)
@@ -33,7 +38,6 @@ class FirstLastPositionInteger {
         }
         int mid = left+(right-left)/2;
         // int mid = (right+left)/2;
-        // System.out.println(mid);
         if(nums[mid] == x && (mid == nums.length-1 || nums[mid+1] > x)){
             return mid;
         }

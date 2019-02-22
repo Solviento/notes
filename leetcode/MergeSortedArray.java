@@ -1,9 +1,9 @@
 class MergeSortedArray {
   public void merge(int[] nums1, int m, int[] nums2, int n) {
     // 1 2 3 0 0 0
-    // lP rP
+    //     lP    rP
     // 2 5 6
-    // tP
+    //     tP
     int lPointer = m - 1;
     int rPointer = m + n - 1;
     int thirdPointer = n - 1;

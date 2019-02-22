@@ -13,7 +13,6 @@ import java.util.*;
 class pascalsTriangle {
     static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> pascal = new ArrayList<>();
-        
         for(int i = 0; i < numRows; i++){
             List<Integer> subRow = new ArrayList<>();
             subRow.add(1);
@@ -24,7 +23,7 @@ class pascalsTriangle {
                 // set index j to the sum of above elements
                 subRow.add(j, aboveLeft+aboveRight);
             }
-            // removes extra 1 added to first level
+            // adds final 1 to level
             if(i > 0){
                 subRow.add(1);
             }

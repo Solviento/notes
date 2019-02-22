@@ -53,6 +53,7 @@ class FizzBuzz {
             };
         for(int i = 1; i < n; i++){
             String tmp = "";
+            // this may not work for hashmap due non-ordering, need to use hashSet for ordering
             for(Integer key: map.keySet()){
                 if(i%key==0){
                     tmp += map.get(key);
