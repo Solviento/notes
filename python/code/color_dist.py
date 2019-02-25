@@ -16,7 +16,6 @@ def main(argv):
     # convert crowd file into 2d array
     with open(crowdfile) as f:
         for line in f:
-            #line_list = line.split()
             line_list = map(int, line.split())
             crowd_array.append(line_list)
             
@@ -31,7 +30,6 @@ def main(argv):
     
     # compute personal score against crowd
     for line in personal_array:
-        
         t1 = crowd_array[line[0] - 1][line[1] - 1]
         t2 = crowd_array[line[0] - 1][line[2] - 1]
         t3 = crowd_array[line[0] - 1][line[3] - 1]
