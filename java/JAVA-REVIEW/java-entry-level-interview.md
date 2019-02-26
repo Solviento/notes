@@ -7,10 +7,156 @@ What Is Inheritance?
 - Inheritance provides a powerful and natural mechanism for organizing and structuring your software. Objects can relate to each other with either a “has a”, “uses a” or an “is a” relationship.  “Is a” is the inheritance way of object relationship.   
 - Rather than duplicate functionality, inheritance allows you to inherit functionality from another class, called a superclass or base class.
 
-What Is an Interface?
+**Interfaces**
+
+What Is an **Interface**?
 - An interface is a contract between a class and the outside world. When a class implements an interface, it promises to provide the behavior published by that interface.  
+- An interface is also a reference type, similar to classes but has a collection of abstract methods
+  - Interfaces may also contain constants, default methods, static methods and nested types
+  - The class that implements the interface must define all methods in the interface UNLESS the class is abstract
+- Interfaces can contain methods, are written with .java extension and also appear in packages
+- Interfaces CANNOT be instantiated, DO NOT contain constructors, ALL methods of interface are abstract, fields in an interface MUST BE static and final, an interface is NOT extended by a class, interface CAN extend multiple interfaces
+
+Declaring Interfaces
+
+- **interface** keyword must be used
+
+``` java 
+// NameOfInterface.java
+import java.lang.*;
+// import statements
+public interface NameOfInterface{
+    // final, static fields
+    // abstract method declarations
+    public void methodA();
+}
+```
+
+- The **abstract** keyword is already implicit, there is no need to declare it
+- Interface methods are implicitly public
+
+Implementing Interfaces
+
+- A class uses the **implements** keyword to implement an interface
+
+``` java
+// mammal.java
+public class mammal implements animal{
+    public void eat(){
+        return null;
+    }
+    public void travel(){
+        return null;
+    }
+    public static void main(String... args){
+        mammal m = new mammal();
+        m.eat();
+        m.travel();
+    }
+}
+```
+
+- always remember that classes can implement more than one interface BUT classes can only extend one class
+
+``` java
+// Filename: sports.java
+public interface sports {
+   public void setHomeTeam(String name);
+   public void setVisitingTeam(String name);
+}
+
+// Filename: football.java
+public interface football extends sports {
+   public void homeTeamScored(int points);
+   public void visitingTeamScored(int points);
+   public void endOfQuarter(int quarter);
+}
+
+// Filename: Hockey.java
+public interface hockey extends sports {
+   public void homeGoalScored();
+   public void visitingGoalScored();
+   public void endOfPeriod(int period);
+   public void overtimePeriod(int ot);
+}
+```
+
+- A class that implements hockey MUST implement all six methods of sports and hockey, a class that implements sports will only implement two methods
+
+Multiple Interface declaration
+
+```java 
+public interface hockey extends sports, event{...}
+```
+
+**Exceptions**
+
+- Types of exceptions
+  - Checked exceptions
+    - Must be handled explicitly using **throw** 
+  - Unchecked exceptions
+    - Errors and **RuntimeExceptions** are unchecked, not always handled explicitly
+    - Index out of bounds exception
+  - Errors
+    - Errors are problems that arise beyond control of user such as Stack Overflow
+
+Throws/Throw
+
+- **throws** keyword tells compiler that your function MIGHT throw an exception and this should be caught by the compiler
+- **throw** keyword will throw an exception that is instantiated or one that is caught in the code
+
+``` java
+import java.io.*;
+
+public class name{
+    public void deposit(double amount) throws RemoteException{
+        // method implementation
+        throw new RemoteException();
+    }
+}
+```
+
+**Try/Catch**
+
+``` java
+try {
+   // Protected code
+} catch (ExceptionType1 e1) {
+   // Catch block
+} catch (ExceptionType2 e2) {
+   // Catch block
+} catch (ExceptionType3 e3) {
+   // Catch block
+}finally {
+   // The finally block always executes.
+}
+```
+
+Example of try/catch
+
+``` java
+public class ExcepTest {
+   public static void main(String args[]) {
+      int a[] = new int[2];
+      try {
+         System.out.println("Access element three :" + a[3]); // Accessing 3rd element
+      } catch (ArrayIndexOutOfBoundsException e) {
+         System.out.println("Exception thrown  :" + e);
+      }finally { // Always executed no matter what!
+         a[0] = 6;
+         System.out.println("First element value: " + a[0]);
+      }
+   }
+}
+Output: 
+Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
+First element value: 6
+```
+
+
 
 What Is a Package?
+
 - A package is a namespace for organizing classes and interfaces in a logical manner. Placing your code into packages makes large software projects easier to manage.  
 
 Encapsulation
@@ -250,3 +396,87 @@ Provide a real-world example of when it might be necessary to use the modulus op
 
 Do you know what multi-threading is? How do you do it (how would you start/stop a thread)?
 - Multithreading in java is a process of executing multiple threads simultaneously. Thread is basically a lightweight sub-process, a smallest unit of processing. Multithreading is used to achieve multitasking.
+
+**Java Specific Data Structures**
+
+- Arrays, queues, collections, list, arraylist, set, map
+
+Arrays
+
+- An array is a collection of similar type of elements that have a contiguous memory location
+- A Java array is a fixed set
+
+Queues
+
+- FIFO, first in first out
+
+Collections
+
+- All collections frameworks include interfaces, data structures, algorithms
+
+List
+
+- Extends collections, allows elements to be inserted or accessed at will
+
+ArrayList
+
+- Dynamic array
+- Slower than standard arrays
+- Cannot be used for primitive types like char or int, needs a wrapper class
+
+Set
+
+- A set is a collection that cannot contain duplicate elements
+- Duplicate elements are prohibited
+
+Maps
+
+- Maps unique keys to values
+- NoSuchElementException, ClassCastException, NullPointerException, UnsupportedOperation may arise
+
+List, Set, Map examples:
+
+``` java
+import java.util.*; // All the classes and interfaces are part of the util package
+public class CollectionsDemo {
+
+   public static void main(String[] args) {
+      // ArrayList 
+      List a1 = new ArrayList();
+      a1.add("Zara");
+      a1.add("Mahnaz");
+      a1.add("Ayan");
+      System.out.println(" ArrayList Elements");
+      System.out.print("\t" + a1);
+
+      // LinkedList
+      List l1 = new LinkedList();
+      l1.add("Zara");
+      l1.add("Mahnaz");
+      l1.add("Ayan");
+      System.out.println();
+      System.out.println(" LinkedList Elements");
+      System.out.print("\t" + l1);
+
+      // HashSet
+      Set s1 = new HashSet(); 
+      s1.add("Zara");
+      s1.add("Mahnaz");
+      s1.add("Ayan");
+      System.out.println();
+      System.out.println(" Set Elements");
+      System.out.print("\t" + s1);
+
+      // HashMap
+      Map m1 = new HashMap(); 
+      m1.put("Zara", "8");
+      m1.put("Mahnaz", "31");
+      m1.put("Ayan", "12");
+      m1.put("Daisy", "14");
+      System.out.println();
+      System.out.println(" Map Elements");
+      System.out.print("\t" + m1);
+   }
+}
+```
+

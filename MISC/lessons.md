@@ -1,9 +1,46 @@
-createdAt: "2018-10-17T15:42:41.827Z"
-updatedAt: "2018-11-01T14:19:27.376Z"
-type: "MARKDOWN_NOTE"
-folder: "0295d9293f4867e4a88c"
-title: "Useful SQL Codes"
-content: '''
+  Stored Procedures
+  - Basically a SQL script you can run
+  
+  Syntax
+  ```sql
+  create procedure procedure_name
+  as
+  sql_statement(s)
+  
+  go
+  ```
+  
+  To execute
+  ```sql
+  exec procedure_name
+  ```
+  
+  Stored Procedure Example
+  - Will create stored procedure that selects all records from a table
+  ```sql
+  create procedure SelectAllCustomers
+  as
+  select * from Customers
+  go
+  ```
+
+    - Programs
+    - Microsoft Office (outlook, calendar)
+    - Slack (instant messaging)
+    - Tettra (intra-document sharing)
+    - SnagIt (take window snapshots, make annotations)
+    - Dropbox (specs and documentation readings)
+    - Jump Desktop (connect
+    - Microsoft remote desktop (connect to demo app and debug)
+    - Jamf (install programs)
+    - Airtame (screen share with tv)
+    - Kayako (customer service cases)
+    - Keeper (security login information)
+  
+  - Backend Workflow
+    - Database language is MySQL
+    - Code base is worked on Visual Studio
+
   Useful SQL Codes
   
   dbo.labordata duplicate key resolution
@@ -37,7 +74,3 @@ content: '''
   ORDER BY    TableName
               ,ColumnName;
   ```
-'''
-tags: []
-isStarred: false
-isTrashed: false
