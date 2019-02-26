@@ -1,4 +1,5 @@
-# todo
-- get postman notes
-- get udemy node notes (finish udemy)
-- get more sql info 
+# To Do
+- Add more content
+- Fix up formatting
+- Needs more leetcode and interview question breakdown
+- 
