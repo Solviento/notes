@@ -17,3 +17,9 @@ Keys to backtracking
     - Whats our target?
     - What are we trying to find?
 
+Write a program to print all permutations of a given string
+- A permutation is a rearrangement of elements in an ordered list S
+- A string of length n has n! permutation
+
+ABC -> ABC, ACB, BAC, BCA, CBA, CAB
+
