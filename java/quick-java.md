@@ -20,7 +20,7 @@ public class Employee{
     }
     // mutator
     public void setSalary(int newSalary){
-        salary = newSalary;
+        salary = newSalary; 
     }
 }
 ```

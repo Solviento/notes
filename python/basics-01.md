@@ -5,7 +5,7 @@
 - argv
   - What is sys.argv?
   - argv is a list in python which contains the command line arguments passed to the script
-  - When working with command line arguments, you'll need to work with sys.argv
+  - When working with command line arguments, you'll need to work with sys.argv 
 
 ``` Python
 import sys
