@@ -69,7 +69,7 @@ class Checking extends BankAccount{
 }
 ```
 
-Prime Checker using Divisibility by 2
+Prime Checker using Divisibility by Some Number
 ``` Java
 // basic prime checker
 for (int i = 2; i < n/2; i++){

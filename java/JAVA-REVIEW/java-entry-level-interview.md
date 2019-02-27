@@ -4,7 +4,7 @@ What Is a Class?
 - A class is a blueprint or prototype from which objects are created.  
 
 What Is Inheritance?
-- Inheritance provides a powerful and natural mechanism for organizing and structuring your software. Objects can relate to each other with either a “has a”, “uses a” or an “is a” relationship.  “Is a” is the inheritance way of object relationship.   
+- Inheritance provides a powerful and natural mechanism for organizing and structuring your software. Objects can relate to each other with either “has a”, “uses a” or an “is a” relationship.  “Is a” is the inheritance way of object relationship.   
 - Rather than duplicate functionality, inheritance allows you to inherit functionality from another class, called a superclass or base class.
 
 **Interfaces**
@@ -166,7 +166,7 @@ Accessor
 - An accessor is a method that is used to ask an object about itself. In OOP, these are usually in the form of properties, which have, under normal conditions, a get method, which is an accessor method. However, accessor methods are not restricted to properties and can be any public method that gives information about the state of the object.
 
 Mutator  
-- Mutators are public methods that are used to modify the state of an object, while hiding the implementation of exactly how the data gets modified. Mutators are commonly another portion of the property discussed above, except this time it's the set method that lets the caller modify the member data behind the scenes.
+- Mutators are public methods that are used to modify the state of an object, while hiding the implementation of exactly how the data gets modified. Mutators are commonly another portion of the property discussed above, except this time it's the set method that lets the caller modify the data member behind the scenes.
 - So, the use of mutators and accessors provides many advantages. By hiding the implementation of our Person class, we can make changes to the Person class without the worry that we are going to break other code that is using and calling the Person class for information.  
 - If we wanted, we could change the fullName from a String to an array of single characters (FYI, this is what a string object actually is behind the scenes) but they callers would never have to know because we would still return them a single FullName string, but behind the scenes we are dealing with a character array instead of a string object. Its transparent to the rest of the program.  
 - This type of data protection and implementation protection is called Encapsulation. Think of accessors and mutators as the pieces that surround the data that forms the class.
@@ -217,7 +217,7 @@ What are the uses of the final keyword?
 What is the difference between Set and Map?   
 - A set list does not allow duplicates, while a map doesn't allow duplicate keys but can have duplicate values.
 
-What is difference between array and Array List?
+What is the difference between array and Array List?
 - Arrays are simple fixed sized arrays while ArrayLists are dynamic sized arrays in Java.
 
 Asked to implement some simple methods in a language of your choices. Generating prime numbers, generating an alternating sequence of numbers, reverse a number.

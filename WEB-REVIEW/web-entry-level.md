@@ -142,14 +142,10 @@ z = x + y;
 What do you use JavaScript for?
 - In web pages, makes things responsive (hover, drag, clickable)
 
-What is a stored procedure?
-- Stored procedures are a batch of SQL statements that can be executed in a couple of ways. Most major DBMs support stored procedures
-- It is a set of pre-compiled SQL statements, it is stored in the database
-
 What is the difference between "==" and "===" in Javascript?
-- === strictly equality comparison
+- === **strict** equality comparison
   - No type conversion is done, datatypes and their respective values must be the same
-- == abstract equality comparison
+- == **abstract** equality comparison
   - will compare for equality after doing any necessary type conversions
 
 ``` javascript
