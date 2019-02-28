@@ -1,6 +1,9 @@
+// Time: ?? Space: O(2n), does around 2n calls on the recursion call stack
 class GenerateParenthesis {
   public List<String> generateParenthesis(int n) {
     List<String> result = new ArrayList<>();
+    // number of left parenthesis remaining = n, number of right parenthesis remaining = n
+    // initial string = ""
     backtrackParenthesis(result, n, n, "");
     return result;
   }
@@ -9,6 +12,7 @@ class GenerateParenthesis {
   // if string is equal to n letters, return recursion call
   // say '(((' exists, we still have 3 ')' remaining
   void backtrackParenthesis(List<String> result, int numLeftParen, int numRightParen, String str) {
+    // no more left or right parenthesis to add
     if (numLeftParen == 0 && numRightParen == 0) {
       result.add(new String(str));
       return;

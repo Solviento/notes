@@ -10,12 +10,16 @@ Keys to backtracking
 - Our choice
     - What choice do we make at each call of the function?
     - Recursion expresses decision
-- Our constraints
+- Our constraints, very important!!
     - When do we stop following a certain path?
     - When do we not even go one way?
 - Our goal
     - Whats our target?
     - What are we trying to find?
+- Backtrack
+  - Once a change has been made, look for a way to reverse that change or simply do another
+    call on the same input
+    - void permute(String str){permute(str+"first"; ... permute(str+"second"))}
 
 Write a program to print all permutations of a given string
 - A permutation is a rearrangement of elements in an ordered list S
