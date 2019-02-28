@@ -50,7 +50,7 @@ int f(int n){
 ```
   - Understand that for a function call of f(4), this will call f(3) twice, each f(3) call will then call f(2) twice and so forth.
   - This can be drawn as a tree, where each level will have twice as many calls as the preceding one
-  - To complete this algorithm, it will have a big O(2N) runtime.
+  - To complete this algorithm, it will have a big O(2^N) runtime.
   - Space complexity will be O(N) since only N elements exist at any time (sequential calls)
 
 ``` Java
@@ -65,7 +65,7 @@ void printUnorderedPairs(int[] array){
   - Not intuitive at first, must look at and count the iterations
   - First iteration, j runs for N-1 steps, second iteration it runs for N-2 steps, until final reaches the last single step iteration
   - *The sum of 1 through N-1 is 𝑵(𝑵−𝟏)/2*
-  - *This run time amounts to O(N2)*
+  - *This run time amounts to O(N^2)*
 
 Sample algorithms
 - Design algorithm that takes in an array of strings, sorts each string, then sorts the full array. What is the runtime?
@@ -88,7 +88,7 @@ int sum(Node node) {
     if (node == null) {
        return a;
     }
-    return sum(node . left) + node. value + sum(node.right);
+    return sum(node.left) + node.value + sum(node.right);
 }
 ```
 - The code will touch each node in the tree once (at most), therefore the runtime is O(N)
@@ -96,7 +96,7 @@ int sum(Node node) {
   - Runtime of a recursive function is usually O(branches^depth)
   - At each call there are two branches, so it becomes O(2^depth)
   - The tree is a balanced binary search tree!! ***
-    - If there are N nodes, depth is roughly log N ***
+    - If there are N nodes, depth is roughly **log N** ***
   - Therefore runtime becomes O(2log N)
   - Let P = 2log N
     - log2P = log2N
@@ -153,7 +153,7 @@ void permutation(String str, String prefix){
     else{
          for(int i = 0; i < str.length(); i++){
              String rem = str.substring(0, i) + str.substring(i + 1);
-             permutation(rem, prefix + str.charAt(i));
+       permutation(rem, prefix + str.charAt(i));
          }
     }
 }

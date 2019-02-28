@@ -6,7 +6,7 @@ Step 1: Handle Ambiguity
 - Example case used is to create a object oriented design for a coffee maker
 
 Step 2: Define the Core Objects
-- Core ojects ina system should be defined
+- Core objects in a system should be defined
 - For a restaurant, the core objects are Table, Guest, Party, Order, Meal, Employee, Server, Host
 
 Step 3: Analyze Relationships
@@ -59,3 +59,4 @@ public class CardGame{
     return null;
   }
 }
+```

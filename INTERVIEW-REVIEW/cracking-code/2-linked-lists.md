@@ -117,7 +117,7 @@ public class doublyLinked {
         } 
     } 
   
-    /* Drier program to test above functions*/
+    /* Driver program to test above functions*/
     public static void main(String[] args) 
     { 
         /* Start with the empty list */

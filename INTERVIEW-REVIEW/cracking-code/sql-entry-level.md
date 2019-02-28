@@ -331,8 +331,8 @@ What is the difference between ORDER BY and GROUP BY?
 
 What is the difference between the WHERE and HAVING clause?   
 - Where is used to filter records from a result
-- HAVING is used to filer values from a group
-- Used with group by
+- HAVING is used to filter values from a group
+  - Used with 'group by'
 
 What is the purpose of JOIN in SQL?   
 - Combines one or more tables in a relational database
@@ -357,7 +357,7 @@ What are examples of oracle datatypes?
 
 What is normalization?
 - It is a process to remove redundancy across tables
-- Instead of having multiple of the same fields in different tables you can consolidate them into and ID so you are able to refer to one ID .
+- Instead of having multiple of the same fields in different tables you can consolidate them into one ID so you are able to refer to that one ID
 
 Difference between INNER JOIN and OUTER JOIN?
 - Inner join is simply the entries that are intersected by the two tables while outer join will include the entire two tables
