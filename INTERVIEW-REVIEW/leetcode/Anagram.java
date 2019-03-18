@@ -3,8 +3,12 @@
 // Output: true
 import java.util.HashMap;
 class Anagram {
-  // another solution is to sort the strings, use two pointers, if pointers dont match, then false OR use .equals() Time: O(nlogn)
-
+  // another solution is to sort the strings, use two pointers, if pointers dont match, then false OR use .equals() 
+  // sorting will require Time: O(nlogn) and Space: O(1)
+  
+  // by using a hashmap we can simply store the frequency of letters for the first string, the second string will then
+  // match against the frequency values in the hashmap. If any frequency values are not equal to 0, then it is not an anagram
+  // Time: O(n) Space: O(n)
   public boolean isAnagram(String s, String t) {
     if (s.length() != t.length()) {
       return false;

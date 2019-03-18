@@ -6,7 +6,7 @@
 class FirstLastPositionInteger {
     public int[] searchRange(int[] nums, int target) {
         // do binary searches for first appearance of target int and final appearance of target int (final i- first i + 1 = number of target element occurences)
-        int firstIndex = firstInd(nums, 0, nums.length-1, target);
+        int firstIndex = firstIndex_(nums, 0, nums.length-1, target);
         if(firstIndex < 0){
             return new int[]{-1,-1};
         }
@@ -14,7 +14,7 @@ class FirstLastPositionInteger {
         // if first index has been found, find last appearance of target int
         return new int[]{firstIndex,secondIndex};
     }
-    int firstInd(int[] nums, int left, int right, int x){
+    int firstIndex_(int[] nums, int left, int right, int x){
         if(right < left){
             return -1;
         }
@@ -25,11 +25,11 @@ class FirstLastPositionInteger {
             return mid;
         }
         else if(nums[mid] < x){
-            return firstInd(nums, mid+1, right, x);
+            return firstIndex_(nums, mid+1, right, x);
         }
         // MAY RETURN SEPARATE INTS BUT WILL NOT BE SAVED INTO THE VARIABLE OF FIRSTINDEX
         else{
-            return firstInd(nums, left, mid-1, x);
+            return firstIndex_(nums, left, mid-1, x);
         }
     }
     int finalIndex(int[] nums, int left, int right, int x){
