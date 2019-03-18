@@ -5,6 +5,14 @@
 import java.util.Set;
 import java.util.HashSet;
 class ContainsDuplicate {
+
+  // Alternative: sort the array, then use two pointers to iterate and check for duplicates
+  // Time: O(nlogn) Space: O(1)
+  // When to use? If given very large array, compromise would be suitable
+
+  // Iterate through array, store all integers in a set and check for duplicates
+  // Time: O(n) Space: O(n)
+  // not suitable for very large arrays
   public boolean containsDuplicate(int[] nums) {
     Set<Integer> set = new HashSet<>();
     for (Integer e : nums) {
