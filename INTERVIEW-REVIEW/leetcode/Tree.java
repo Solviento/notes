@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 // INORDER:   LEFT, ROOT, RIGHT ------------------------------
 // PREORDER:  ROOT, LEFT, RIGHT ------------------------------
@@ -190,6 +191,75 @@ class Tree {
                 }
                 return -1; // no kth element
             }
+        }
+        // Invert a binary tree.
+        // Input:
+        //       4
+        //      / \
+        //     2   7
+        //    / \ / \
+        //   1  3 6 9
+        // Output:
+        //      4
+        //     / \
+        //    7   2
+        //   / \ / \
+        //   9 6 3  1
+        // Time: O(n) Space: O(n)
+        // why? Must recursively iterate through n nodes
+        // must also store each function call on the stack, worst case we do h (tree
+        // height) calls stored on stack
+        public TreeNode invertTree(TreeNode root) {
+            if (root == null || (root.left == null && root.right == null)) {
+                return root;
+            }
+            // recursively transfer left, right pointers with each other
+            TreeNode left = root.left;
+            TreeNode right = root.right;
+            // perform switch
+            root.left = right;
+            root.right = left;
+            // recursive dive deep and switch left, right pointers
+            invertRecursive(left);
+            invertRecursive(right);
+            return root;
+        }
+        public void invertRecursive(TreeNode node) {
+            if (node == null) {
+                return;
+            }
+            if (node.left == null && node.right == null) {
+                return;
+            }
+            TreeNode left = node.left;
+            TreeNode right = node.right;
+            node.left = right;
+            node.right = left;
+            invertRecursive(left);
+            invertRecursive(right);
+        }
+        // to do iterative search, we use BFS algorithm (queue), DFS requires stack
+        public TreeNode invertTreeBFS(TreeNode root){
+            if (root == null){
+                return null;
+            }
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.add(root);
+            while(!queue.isEmpty()){
+                TreeNode node = queue.poll();
+                TreeNode left = node.left;
+                // transfer pointers
+                node.left = node.right;
+                node.right = left;
+                // add children to queue (BFS)
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+                if(node.right != null){
+                    queue.add(node.right);
+                }
+            }
+            return root;
         }
     }
     public static void main(String... args){
