@@ -13,7 +13,7 @@ class climbingStairs {
     if (n < 3) {
       return n;
     }
-    // memoize[n] is the sum of the previous two indexes
+    // memoize[n] is the sum of the previous two indexes, prevents repeating work
     // [1] [2] [3] [5] [8] [13] [21]
     // its very helpful to draw out the recursive tree on how memoization would help in this scenario
     // ALSO HELPS TO DRAW OUT THE POSSIBLE STEP COMBINATIONS FOR 1, 2, 3, 4, 5 TO SEE THE PATTERNS OF WHY WE DO MEMOIZE[I] = MEM[I-2] + MEM[I-1]
