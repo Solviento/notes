@@ -1,6 +1,25 @@
 // Write a program that outputs the string representation of numbers from 1 to n.
 // But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+// n = 15,
 
+// Return:
+// [
+//     "1",
+//     "2",
+//     "Fizz",
+//     "4",
+//     "Buzz",
+//     "Fizz",
+//     "7",
+//     "8",
+//     "Fizz",
+//     "Buzz",
+//     "11",
+//     "Fizz",
+//     "13",
+//     "14",
+//     "FizzBuzz"
+// ]
 class FizzBuzz {
     // straightforward if conditions
     public static String[] fizzBuzz(int n) {
@@ -40,7 +59,7 @@ class FizzBuzz {
         }
         return fizz;
     }
-    // using a hash map to further simply future mappings
+    // using a hash map to further future mappings
     static String[] fizzBuzzHash(int n){
         String[] fizz = new String[n];
         HashMap<Integer, String> map = 
@@ -53,7 +72,7 @@ class FizzBuzz {
             };
         for(int i = 1; i < n; i++){
             String tmp = "";
-            // this may not work for hashmap due non-ordering, need to use hashSet for ordering
+            // this may not work for hashmap due to non-ordering, need to use hashSet for ordering
             for(Integer key: map.keySet()){
                 if(i%key==0){
                     tmp += map.get(key);

@@ -1,3 +1,12 @@
+// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+// For example, given n = 3, a solution set is:
+// [
+//   "((()))",
+//   "(()())",
+//   "(())()",
+//   "()(())",
+//   "()()()"
+// ]
 // Time: ?? Space: O(2n), does around 2n calls on the recursion call stack
 class GenerateParenthesis {
   public List<String> generateParenthesis(int n) {
