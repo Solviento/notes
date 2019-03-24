@@ -20,7 +20,7 @@ class isPalindrome{
     }
     return true;
   }
-  // faster, no built ins also using two pointers
+  // faster, no built ins (no replace all) also using two pointers
   public static boolean isPalindrome_(String s){
     int left = 0, right = s.length() - 1;
     while (left < right) {

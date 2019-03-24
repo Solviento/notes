@@ -4,7 +4,7 @@
 // If given arrays are already sorted, we can use two pointers for (Time: O(n))
 // and Space: O(1) to iterate through pointers to verify if selected numbers are
 // the same, to iterate compare the two numbers
-// nums1: [4, 5, 5, 7, 9] nums2 = [4, 5, 5, 5, 8, 10, 12]
+// nums1: [4, 5, 5, 7, 9] nums2 = [4, 5, 5, 5, 8, 9, 12]
 class IntersectionArrays {
   public int[] intersect(int[] nums1, int[] nums2) {
     HashMap<Integer, Integer> fMap = new HashMap<>();
@@ -28,5 +28,24 @@ class IntersectionArrays {
       intx[i] = arr.get(i);
     }
     return intx;
+  }// use two hash sets to detect intersection
+   // Time: O(n) Space: O(n)
+  public int[] intersection(int[] nums1, int[] nums2) {
+    Set<Integer> setA = new HashSet<>();
+    Set<Integer> setB = new HashSet<>();
+    for (int i = 0; i < nums1.length; i++) {
+      setA.add(nums1[i]);
+    }
+    for (int i = 0; i < nums2.length; i++) {
+      if (setA.contains(nums2[i])) {
+        setB.add(nums2[i]);
+      }
+    }
+    int[] ret = new int[setB.size()];
+    int i = 0;
+    for (Integer e : setB) {
+      ret[i++] = e;
+    }
+    return ret;
   }
 }
