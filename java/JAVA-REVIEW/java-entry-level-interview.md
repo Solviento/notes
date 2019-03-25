@@ -351,14 +351,44 @@ Polymorphism
 
 **Type Compatibility**
 
+Downcasting
 
+- Casting a GradStudent as a Student object would be considered for downcasting
+- In order to call certain GradStudent methods from this Student object, you would need to cast it "down"
+- ClassCastException occurs when you attempt to cast an object to a completely different class
 
 **Abstract Classes**
 
 Abstraction
 
+- An abstract class is a superclass that represents an abstract concept and therefore should no be instantiated
+  - Example: a maze program can have different components (paths, walls, exits). These components can be declared as subclasses of the abstract class MazeComponent (path objects, wall objects, etc. can be created but MazeComponent will not be instantiated)
+  - Abstract classes may contain abstract methods, if they do then every subclass must override this method
+  - A class that contains abstract methods must be declared as an abstract class
+
 - Data abstraction and encapsulation are closely tied together, because a simple definition of data abstraction is the development of classes, objects, types in terms of their interfaces and functionality, instead of their implementation details. Abstraction is essential in the construction of programs. It places the emphasis on what an object is or does rather than how it is represented or how it works. Thus, it is the primary means of managing complexity in large programs.
 - Abstraction is used to manage complexity. Software developers use abstraction to decompose complex systems into smaller components. As development progresses, programmers know the functionality they can expect from as yet undeveloped subsystems. Thus, programmers are not burdened by considering the ways in which the implementation of later subsystems will affect the design of earlier development.
+
+``` java
+public abstract class AbstractClass{
+    private String name;
+    public AbstractClass(String shape){
+        name = shape;
+    }
+    public abstract double area();
+}
+
+public class SubClass extends AbstractClass{
+    private double side;
+    public SubClass(double square, String name){
+        super(name);
+        side = square;
+    }
+    public double area(){
+        return side*side;
+    }
+}
+```
 
 **Interfaces**
 
@@ -373,7 +403,7 @@ What Is an **Interface**?
 
 Declaring Interfaces
 
-- **interface** keyword must be used
+- **interface** and implement keyword must be used
 
 ```java 
 // NameOfInterface.java
@@ -437,31 +467,103 @@ public interface hockey extends sports {
 
 - A class that implements hockey MUST implement all six methods of sports and hockey, a class that implements sports will only implement two methods
 
+Comparable Interface
+
+- Any class that implements Comparable must provide a compareTo method for comparing objects
+- The method compares the implicit object (this) with the parameter object (obj) and returns a negative int, zero or a positive int depending whether the implicit object is less, equal to, or greater than the parameter
+
+``` java
+public abstract class Shape implements Comparable{
+    // constructor, setters, getters
+    public int compareTo(Object obj){
+        Shape rhs = (Shape) obj;
+        if(rhs.area() < this.area()){
+            return -1;	// obj area less than this object
+        }
+        if(rhs.area() > this.area()){
+            return 1;	// obj area greater than this object
+        }
+        else{
+            return 0;	// equal
+        }
+    }
+}
+```
+
 Multiple Interface declaration
 
 ```java 
 public interface hockey extends sports, event{...}
 ```
 
+Interface vs. Abstract Class
 
+- Use an abstract class for an object that is application specific but incomplete without its subclasses
+- Consider using an interface when its methods are suitable for your program but could be applicable in a variety of programs
+- An interface doesn't provide implementation, abstract classes can
+- Interfaces cannot contain instance variables, abstract classes can
+- No instantiation of abstract or interface objects
 
 ## Standard Classes
 
-
-
 **Object Class**
 
+- The universal superclass
+- Every class automatically extends Object
+- The methods of Object include: toString and equals
+- All subclasses are expected to override these methods in some way
 
+``` java
+public String toString(){
+    return "...";
+}
+public boolean equals(Object other){
+    // boolean ifs
+}
+```
+
+hashCode Method
+
+- Every class inherits the hashCode method from Object
+- the value returned by hashCode is an integer produced by some formula that maps your object to an address in a hash table
+- A given object must always produce the same has code
 
 **String Class**
 
+- An object or String type is a sequence of characters
+- All string literals, "sss!", are implemented as instances of this class
+  - String literals can be zero or more characters
+- Strings objects are immutable, which means there are no methods to change them after they've been constructed
+- Use .equals(), .compareTo() when comparing strings
 
+``` java
+s1.equals(s2);
+s1.compareTo(s2);
+s1.length();
+s1.substring(int index, int endIndex);
+s1.indexOf(String str);
+```
 
 **Wrapper Class**
 
-
+- A wraper class takes either an existing object or a value of primitive type, "wraps" or "boxes" it in an object, and provides a new set of methods for that type
+- The point of a wrapper class is to provide extended capabilities for the boxed quantity
+  - Integer Class
+    - Will wrap values of type int
+  - Double Class
+    - Values of type double
 
 **Math Class**
+
+- Class that implements standard mathematical functions such as absolute value, square root, trig functions, etc.
+
+``` java
+int abs(int x);	// Math.abs(-3);
+double abs(double x);
+double pow(double base, double exp);
+double sqrt(double x);
+double random();
+```
 
 
 
@@ -469,29 +571,68 @@ public interface hockey extends sports, event{...}
 
 **Software Development Life Cycle**
 
+Waterfall Method
 
+- Analysis of Specification -> Program Design -> Implementation -> Testing and Debugging -> Maintainence
 
 **Object Oriented Program Design**
 
+Steps in OO design
 
+- Identify classes to be written
+- Identify behaviors for each class
+- Determine the relationships between classes
+- Write the interface (public method headers)
+- Implement the methods
 
 **Program Analysis**
 
+- A program must be tested for correctness
 
+Assertions
+
+- An assertion is a statement about a program at any given point
+- The idea is that if an assertion is proved to be true, then the program is working correctly at that point
 
 ## Arrays and Array List
 
 **Arrays**
 
+- 1D arrays, 2D arrays
 
+``` java
+double[] data = new double[25];
+int n = data.length;
+for(double d: data){
+    // do something
+}
+```
+
+- Arrays are treated as objects so passing an array can also allow you to access and modify elements of the actual array
 
 **ArrayLists**
 
+- Can shrink or grow
 
+``` java
+import java.util.ArrayList;
+
+ArrayList<Integer> arr = new ArrayList<>();
+```
 
 **List<E> Interface**
 
+Methods of List<E>
 
+``` java
+boolean add(E obj);
+int size();
+E get(int index);
+E set(int index, E element);
+void add(int index, E element);
+E remove(int index);
+Iterator<E> iterator();
+```
 
 **Collections and Iterators**
 
@@ -499,7 +640,17 @@ Collections
 
 - Collections in java is a framework that provides an architecture to store and manipulate the group of objects. All the operations that you perform on a data such as searching, sorting, insertion, manipulation, deletion etc. can be performed by Java Collections. Java Collection simply means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque etc.) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet etc).
 
-**2-D Arrays**
+Iterator<E> Interface
+
+Methods of Iterator<E>
+
+``` java
+boolean hasNext();
+E next();
+void remove();
+```
+
+
 
 
 
