@@ -1,7 +1,7 @@
 # Arrays and Strings
 
 Hash tables
-- a data structure that maps keys to values for highly efficient lookups
+- A data structure that maps keys to values for highly efficient lookups
 - Simple implementations of this consist of:
   - Use an array of linked lists and a hash code function
   - To insert key, which can be a string, do the following
@@ -28,6 +28,7 @@ ArrayList, Resizable arrays
         - The sum of the series is less than n, which we amortize to 1
     - In worst cases, its O(n)
   
+
 StringBuilder
 - useful for concatenating list of strings
 - Reminder: 1 + 2 + 3 + ... + n = n(n+1)/2 = O(n^2)
@@ -50,3 +51,5 @@ String joinWords(String[] words){
   }
   return s.toString();
 }
+
+```
