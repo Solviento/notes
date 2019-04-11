@@ -1,4 +1,4 @@
-# SQL Basic Concepts
+#  SQL Basic Concepts
 
 What is a database? (DB)
 - Any collection of related information
