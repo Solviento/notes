@@ -197,8 +197,9 @@ o1.equals(o2);
   
       - Return 0 if they are the same
     - Return 1 if it is greater than object t
-      - Return -1 if it is less than object t
-  
+      
+    - Return -1 if it is less than object t
+      
     - ``` java
       public class User implements Comparable<User>
       {
@@ -214,10 +215,10 @@ o1.equals(o2);
       User admin = new User();
       User shareholder = new User();
     admin.compareTo(shareholder);
-      ```
-
-  - **Comparator**
-
+    ```
+  
+- **Comparator**
+  
     - Comparator is defined in java.util package. 
   
     - Limited, as you need to make an instance of class Comparator in order to test to of your objects. Which means that the Comparator instance cannot ‘see’ any of your objects private fields. 
@@ -227,7 +228,7 @@ o1.equals(o2);
   - ``` java
         public int compare(Type t1, Type t2);
       public boolean equals(Object o);
-        ```
+    ```
   
     - An object that implements this is designed to compare two other objects to each other
   

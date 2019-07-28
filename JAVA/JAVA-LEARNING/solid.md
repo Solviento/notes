@@ -50,8 +50,8 @@ public class Employee {
 	private String name;
 	private Role title;	
 
-	public double calculateSalary() { … }
- 	public void storeToDatabase() { … }
+	public double calculateSalary() { … }		// reason 1: calculate salary
+ 	public void storeToDatabase() { … }			// reason 2: storing to db
 	...
 }
 ```
@@ -80,9 +80,11 @@ class Rectangle { … }
 
 public class ShapeGraphics{ 
 	
-	public void drawCircle (Circle circle) { … }	
+	public void drawCircle (Circle circle) { … }			// rigid - hardcoded
 	public void drawSquare (Square square) { … }
 	public void drawRectangle (Rectangle rectangle) { … }
+    
+    public void drawShape(Shape shape) {...}				// flexible - dynamic 
 }
 ```
 

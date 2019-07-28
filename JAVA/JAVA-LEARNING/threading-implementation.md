@@ -3,6 +3,7 @@
 - There are two ways to create your own thread:
   - Extend the Thread class, overriding run()
   - Implement the Runnable interface, implementing run()
+    - Better practice
 - The run() method contains the code for your thread to execute.
 
 **Extending Thread**
@@ -22,7 +23,7 @@ myThread.start();
 ```
 
 - Inheritance (IS-A)
-  - Less code needs to be  to written in order to start executing the thread
+  - Less code needs to be to written in order to start executing the thread
   - Can lead to system design issues
     - If our class extends Thread, it is unable to extend any other class
 
@@ -44,20 +45,20 @@ thread.start();
 ```
 
 - Composition (HAS-A)
-  - Preferred method – no issues with inheritance
+  - Preferred method - no issues with inheritance
   - Runnable implementation can be used to create multiple threads
     - Thread pool?
 
 **Key Thread Methods**
 
-- start()
-  - Launches thread execution – the run() method is called by the JVM.
-- sleep(long millis)
+- **start()**
+  - Launches thread execution - the run() method is called by the JVM.
+- **sleep(long millis)**
   - Static. Causes currently executing thread to sleep for specified duration.
 
-- yield()
-  - Static. Indicates that the currently executing thread is willing to stop running on the CPU to allow others to execute.
-- join()
+- **yield()**
+  - Static. Indicates that the currently executing thread is willing to stop running on the CPU to allow others to execute.
+- **join()**
   - Currently executing thread stops running until the specified thread dies.
 
 **Synchronized Keyword**
