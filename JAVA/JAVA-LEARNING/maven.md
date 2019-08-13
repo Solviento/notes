@@ -118,6 +118,10 @@ mvn clean
 
 - removing any output generated previously
 
+**Creating Maven Projects**
+
+
+
 **Module Review**
 
 - What is Maven?
