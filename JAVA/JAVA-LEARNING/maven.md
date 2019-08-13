@@ -103,6 +103,21 @@
   - Test
     - Will be included only during the test phase of the build cycle
 
+**Managing the Project Lifecycle**
+
+mvn install
+
+- Will do the following key steps:
+  - Compile the source code and place it in a directory called *target.*
+  - Compile the tests.
+  - Run the tests.
+  - Package the project into a jar, as specified in the POM, and place it inside *target.*
+  - Install the resulting jar into the local Maven repository as an artifact like any other.
+
+mvn clean
+
+- removing any output generated previously
+
 **Module Review**
 
 - What is Maven?

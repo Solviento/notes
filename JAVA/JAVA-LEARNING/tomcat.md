@@ -102,7 +102,7 @@
   <Resource name="jdbc/myoracle" auth="Container"
      type="javax.sql.DataSource"
      driverClassName="oracle.jdbc.driver.OracleDriver"
-     url="jdbc:oracle:thin:@oracle.fdmgroup.com:1521:xe"
+     url="jdbc:oracle:thin:@oracle.xyzcompany.com:1521:xe"
      username="yourUserName" password="YourPassword" 
      maxActive="20" maxIdle="10“ maxWait="-1"/>
 </Context>
