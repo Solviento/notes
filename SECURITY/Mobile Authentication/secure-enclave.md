@@ -24,6 +24,6 @@
 - in 2017, hackers managed to decrypt the firmware of SE
 - Gives them information on how enclave works but not how to retrieve encryption keys
 
-Note
+**Note**
 
 - When selling a Mac, SE should be wiped out
