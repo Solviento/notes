@@ -1,4 +1,4 @@
-Types of financial markets
+**Types of financial markets**
 
 - capital markets(stocks and bonds) 
 - money markets (short term)
@@ -7,21 +7,13 @@ Types of financial markets
 - insurance markets (health insurance, car insurance) 
 - foreign exchange markets 
 
-
-
-
-
-Financial markets 
+**Financial markets** 
 
 - buyer and seller determine price of assets
 - liquidity means how fast can something liquidate to cash and the presence of a buyer and seller ready to trade
 - financial markets reduce search cost where information cost decreases due to collected aggregated information by all market participants 
 
-
-
-
-
-Capital markets are Stock markets and Bond Markets 
+**Capital markets are Stock markets and Bond Markets** 
 
 - stock markets 
 - - provide financing through issuance of shares or common stock(preferred stock) and enable subsequent trading
@@ -31,13 +23,7 @@ Capital markets are Stock markets and Bond Markets
 - bond markets
 - - provide financing through issuance of bonds (debt instruments) where dividends is cash in your pocket for every share you own through interest rates. 
 
-
-
-
-
-
-
-Stock Market types
+**Stock Market Types**
 
 - primary markets (investment banks buy and sell in secondary) 
 - - raise funds for company 
@@ -48,11 +34,7 @@ Stock Market types
   - day to day transactions of buying and selling
   - stock markets
 
-
-
-
-
-Stocks 
+**Stocks** 
 
 - **common stock** mostly is held by individuals
 - - represents majority of stock held by the public
@@ -69,11 +51,7 @@ Stocks
 - **unissued stock** retained in company treasury stocks not issued to public or to employees. 
 - - **treasury shares, treasury stock**
 
-
-
-Authorized shares need to be filed to SEC (securities exchange commission) 
-
-
+- Authorized shares need to be filed to SEC (securities exchange commission) 
 
 - **restricted shares** used for employee incentive and other compensation plans
 - - owners of this stock need permission of SEC to sell, declare intention to sell 
@@ -85,32 +63,18 @@ Authorized shares need to be filed to SEC (securities exchange commission)
 - - includes all shares issued by the company
   - restricted shares + float shares
 
-
-
-
-
-
-
-What is a stock broker? 
+**What is a stock broker?** 
 
 - they are financial intermediaries, a **registered representative, investment advisor, broker,** a professional individual who executes buy and sell orders for stocks and other securities through a stock market or OTC over the counter(penny stocks not in exchange trade) for a fee or commission 
 - they must be registered to conduct trades in a exchange 
 
-
-
-
-
-What is a stock split? 
+**What is a stock split?** 
 
 - occurs when prices turn to high. Stock splits are generally good, doubling or tripling stock volume without lowering value of the stock. Apple splitting to induce more buying for normal individuals like us. More affordable and value of stocks generally goes up due to the opened availability to purchase by consumers with less money. 
 - perception, entice small investors
 - liquidity increase trading volume
 
-
-
-
-
-What is a reverse stock split?
+**What is a reverse stock split?**
 
 - companies list common and preferred stock in major stock exchange so they can offer greater liquidity to shareholders, 
 - reverse split because need to meet criteria
@@ -122,21 +86,9 @@ What is a reverse stock split?
   - a min stock price of $1
 - reverse stock split help investors maintain liquidity and the company avoid embarrassment of Delistment from exchange
 - - to avoid removal from exchange, board of directors use reverse stock split to increase value of shares
-  - neither bad or good for stockholders when this happens. just to preserve stock dexterity 
+  - neither bad or good for stockholders when this happens. just to preserve stock dexterity from finance basics
 
-
-
-------
-
-from finance basics
-
-What is Finance?
-
-- application of economic principles of decision making that involves allocation of money under conditions of uncertainty(risks) 
-
-
-
-
+- **application** of economic principles of decision making that involves allocation of money under conditions of uncertainty(risks) 
 
 **Finance management for companies**
 
@@ -144,8 +96,6 @@ What is Finance?
 2. neutralize/protect from risk 
 3. transfer risk (hedging) 
 4. - buy insurance
-
-
 
 **What is money?**
 
@@ -155,27 +105,18 @@ What is Finance?
 
 **Money Fiat** - Money that has no intrinsic Value as physical commodity
 
+**Financial system of an economy consists of three components** 
 
+1. Financial Markets 
 
+2. Financial intermediaries
+   - brokers, retail banks, investment banks
 
+3. Financial regulators 
 
+   - state regulators:
 
-
-Financial system of an economy consists of three components 
-
-1)Financial Markets 
-
-2)Financial intermediaries
-
-- brokers, retail banks, investment banks
-
-
-
-3)Financial regulators 
-
-state regulators:
-
-federal regulators: 
+   - federal regulators: 
 
 - SEC(securities exchange commission) 
 - SRO (self regulating organizations/ watchdog groups) 
@@ -183,64 +124,40 @@ federal regulators:
 - FINRA(financial industry regulatory authority) 
 - SIPC(securities investors protection corp)
 
-
-
 Emotional element when presidents promise lower taxes. anticipate more hirings and more money and more economic activity and growth. More optimism 
-
-
 
 If interest rates rise unexpectedly, economic will experience shock and effect employment. people stop buying people will lose jobs, cut circulation. 
 
-
-
-
-
-Four monetary policy tools
+**Four monetary policy tools**
 
 1. **Fed funds rate 2.5%,** bank to bank interest on overnight loans
 2. **Discount rate 3%,** Bank to Fed interest on short term overnight loans (banks cant loan go to feds) 
 3. **Interest on reserves,** is interest paid by Fed to Banks on banks deposits. (surplus) 
 4. **Reserve ratio,** usually 10% of depositors assets kept as cash on hand. 
 
-
-
-
-
-Financial markets bring in Buyer + Seller
+**Financial markets bring in Buyer + Seller**
 
 - Price discover happens at financial markets, buyer and seller determine price of assets
 - Liquidity: how quickly something gets traded back into cash, trade volume and fluidity of a stock. Presence of a buyer and seller ready to trade
 - Reduce Cost: through lower information cost from aggregated info from market participants
 
-
-
-
-
-
-
 **Primary Market** : Raising fund Company through Investment banking
 
-\1. Loan
+1. Loan
 
-\2. Bond
+2. Bond
 
-\3. Stocks
+3. Stocks
 
 **Secondary Market**: IPO and Stock Exchanges
 
 Stocks
 
-\1. Ownership
+1. Ownership
 
-\2. Voting Rights
+2. Voting Rights
 
-
-
-
-
-
-
-Three areas within the field of Finance
+**Three areas within the field of Finance**
 
 1. Capital markets and Capital market theory
 2. - focuses on study of the financial system, structure of interest rates, and pricing risky(uncertain) assets. 
@@ -252,22 +169,12 @@ Three areas within the field of Finance
 6. - deals with management of individual(high net worth) or institutional funds(capital markets) 
    - setting investment objectives starts with deep analysis of what the institution or client wants to accomplish
 
-
-
-
-
-
-
-US economy 
+**US economy** 
 
 - is a mixed economy with a strong private sector of companies and orgs that operate for a profit and a public sector providing essential services such as emergency healthcare and education. 
 - also an open economy which means currency fluctuates and have no restrictions on movement of goods and currency
 
-
-
-
-
-US economy indicators 
+**US economy indicators** 
 
 - USA Economic indicators 
 - - **Inflation: based on CPI** (Consumer Price Index)
@@ -287,13 +194,7 @@ US economy indicators
   - **Dow Jones** 
   - - indicates the avg share prices for 30 companies traded in the USA
 
-
-
-
-
-
-
-Balance Sheets
+**Balance Sheets**
 
 **Balance Sheet** balances assets with equities and liabilities 
 
@@ -356,27 +257,15 @@ Assets minus Equity
   - OR
   - Net tangible assets = Asset - Liabilities - Intangibles - Goodwill
 
-Tech companies are more based on GoodWill (intangible goods)
+- Tech companies are more based on GoodWill (intangible goods)
 
-
-
-
-
-
-
-Income Statement
+**Income Statement**
 
 - **Income Statement shows** profit and lost statement:  Income and Expense summary
 - **Income statement is** snapshot of a companies position that changes from day to day
 - Bottom line shows net income. 
 
-
-
-
-
-
-
-Cash Flow Statement 
+**Cash Flow Statement** 
 
 Shows the cash flows into and out of the company
 
@@ -386,15 +275,7 @@ Investing
 
 Financing 
 
-
-
-
-
-
-
-
-
-Financial Reporting Ratios
+**Financial Reporting Ratios**
 
 **Liquidity** -how quickly can company come up with cash
 
@@ -424,11 +305,7 @@ Financial Reporting Ratios
 - - Mattel = 16.91% or $0.1691 for every dollar we invest in the stock we get back $0.1691(17 cents rougly) 
   - for every $1 I spend on your stock, how much of that $1 becomes profit?
 
-
-
-
-
-Bonds
+### Bonds
 
 **Bonds** (fixed incomes) 
 
@@ -440,8 +317,6 @@ Bonds
 - ownership
 - voting rights 
 - dividends 
-
-
 
 **Bonds has a:**
 
@@ -466,11 +341,7 @@ Bonds
   - **S&P** 
   - anything B and below are junk bonds, C are in danger of going to default (not paying lenders back) Lower the ranking the higher the interest rate, risky bets
 
-
-
-
-
-7 major functions of investment banking
+**7 major functions of investment banking**
 
 1. They act as brokers for their clients, **broker/dealer functions**
 2. They act as **market makers** (sets the bid and ask price spread for a stock or bond)
@@ -481,109 +352,61 @@ Bonds
 7. Perform mergers and acquisitions **(mergers acquisitions)**
 8. Research anything clients want or are interested in **(research)**
 
+- Economy heats up, inventory low, inflation is on the increase. People are working and employed. Interest rates go up. 
 
-
-
-
-
-
-Economy heats up, inventory low, inflation is on the increase. People are working and employed. Interest rates go up. 
-
-
-
-Stocks 
+**Stocks** 
 
 - ownership of company
 
-
-
 CDS -insurance pays out if the issuer goes to default. 
 
-
-
-
-
-Money market instruments
+**Money market instruments**
 
 - short term bonds, cds, treasury bills etc. less than 12 years
-
-
 
 Put lets you buy the asset
 
 Call lets you buy the asset
 
-
-
 Customized OTC derivative, 
 
 - Swap trading variables and fixed interest rates. balancing portolios 
 
-
-
-Money 
+**Money** 
 
 - store of value
 - medium of exchange
 - unit of account 
 
-
-
-Balance sheet
+**Balance sheet**
 
 - balances assets on the left with liabialties to the right
 
-
-
-Futures
+**Futures**
 
 - delivery option or cash option
 
-
-
-\--------------------------------------------------------------------------------------------------------
-
-
-
-Heres the second batch of Review Notes: 
-
-
-
-
-
-
-
 **Options** 
 
-Asset - MSFT(microsoft)
+- Asset - MSFT(microsoft)
 
-Premium - price of the option
+- Premium - price of the option
 
-Strike price - the price at which you can buy or sell the asset(MSFT)
+- Strike price - the price at which you can buy or sell the asset(MSFT)
 
-Spot price - current price
+- Spot price - current price
 
-Exercise: before or on the expiration date
-
-
+- Exercise: before or on the expiration date
 
 **Three choices: exercise, do nothing(let expire), or sell**
 
-
-
-
-
 **Futures**
 
-Asset- Potatoes to Mcdonalds from ADM
+- Asset- Potatoes to Mcdonalds from ADM
 
-Futures contract is cash flow settlement 
+- Futures contract is cash flow settlement 
 
 **delivery contract** (oil companies buying each other) **OR** **cash settlement contract** (individual investing into futures) 
-
-
-
-
 
 **Collateralized Debt Obligations (CDO) 2007-2008 recession real estate mortgage bubble burst**
 
@@ -592,27 +415,19 @@ Futures contract is cash flow settlement
 
 Bundles of mortgages (loans) are sold in shares to investors and promised a coupon payment every 6 months. When mortgages start to default, investors lose out and take heavy hits thus causing the recession of 2007-2008
 
-
-
 CDO levels: higher the tier higher the returns 
 
 - Senior (safer, got paid first)
 - Mezzanine (paid after senior)
 - Equity (paid last) 
 
-
-
 Subprime mortgages = bad mortgages to people with bad credit ratings
 
 N.I.N.A = no income no assets
 
-
-
 When mortgages started defaulting, equity, mezzanine, senior levels started not getting paid so CDS(credit default swap) came in. 
 
 - CDO's after some time started to turn toxic and put banks and insurance companies in a panic. 
-
-
 
 **CDS(credit default swaps)** 
 
@@ -621,8 +436,6 @@ When mortgages started defaulting, equity, mezzanine, senior levels started not 
 - allows investors exposure to fixed income assets without owing them
 - bond holder effectively insures against issuer defaulting 
 
-
-
 **All bonds are rated:**
 
 - **Treasury bonds are always highly rated.**
@@ -630,7 +443,6 @@ When mortgages started defaulting, equity, mezzanine, senior levels started not 
 - - States raise taxes to pay municipal bonds, changes of default is lower than corporate bonds
   - No tax on tax free municipal bonds. The interest is lower since we get to keep the interest returns. 
   - Millionaires tend to buy municipal bonds 
-  -  
 
 **Stocks : Value/Blend/Growth stocks**
 
@@ -646,8 +458,6 @@ Value
 - Under Armour 
 - General Electric
 
-
-
 Key words for investing in funds
 
 - Income = bonds and stocks with dividends
@@ -655,10 +465,6 @@ Key words for investing in funds
 - Index = software that runs the fund, low expense fees ratios 
 - emerging markets = risky, international investments risky
 - ETF's (exchange traded funds)
-
-
-
-
 
 **Mutual funds:** 
 
@@ -668,13 +474,7 @@ Large/Medium/Small Market Capitalization - different sizes of companies
 
 - run by asset managers 
 
- 
-
 **Net Asset Values = (Funds holdings / # of Fund shares)**
-
-
-
-
 
 **Exchange Traded Funds(ETF):** Type of funds people buy outside of retirement funds. 
 
@@ -685,19 +485,11 @@ Large/Medium/Small Market Capitalization - different sizes of companies
 - low expense ratio's (bought by individuals outside retirement accounts)
 - not for 401K, IRA, Roth IRA
 
-
-
 **Exchange Traded Funds**
 
 - are Stocks,
 - Options(derivatives),
 - ETFs (exchange traded funds) 
-
-
-
-
-
-
 
 **Money Markets** provide short term debt financing and investment (12 months or less) short term instruments. 
 
@@ -706,20 +498,12 @@ Large/Medium/Small Market Capitalization - different sizes of companies
 - **bankers acceptances** ( A ***banker's acceptance*** (***BA***) is a short-term debt instrument issued by a firm that is guaranteed by a commercial bank.) bank acceptances = **less than a year usually**
 - **certificates of deposit** (6 month 12 moth CDs) 
 
-
-
-
-
 **Companies borrow from financial markets when they need to** 
 
 - expand 
 - invest in new assets and equipment
 - cash flow
 - re-finance (to lower the interest rates) 
-
-
-
-
 
 Front office 
 
@@ -734,23 +518,9 @@ Technology
 
 - supports all business divisions 
 
-
-
-
-
 **Book Value:**
 
 An asset's **book value is** equal to its carrying **value** on the balance sheet, and companies calculate it netting the asset against its accumulated depreciation. **Book value is** also the net asset **value** of a company calculated as total assets minus intangible assets (patents, goodwill) and liabilities.
-
-
-
-
-
-
-
-
-
-------
 
 **Liquidity** -how quickly can company com up with cash
 
@@ -780,8 +550,3 @@ An asset's **book value is** equal to its carrying **value** on the balance shee
 - **Return on Equity = (net income / shareholders equity/equity)**
 - - Mattel = 16.91% or $0.1691 for every dollar we invest in the stock we get back $0.1691(17 cents rougly) 
   - **for every $1 I spend on your stock, how much of that $1 becomes profit?**
-
-
-
-
-  
