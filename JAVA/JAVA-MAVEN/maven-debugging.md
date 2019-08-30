@@ -58,7 +58,7 @@ b.      Open a web browser in Eclipse (the globe icon on the top toolbar) and na
 
 ​                                                               i.      Navigate into the manager as normal (username: admin, password: *leave blank).*
 
-​                                                             ii.      You should see your project, *manager* and */.*Your project has been deployed automatically.
+ii.      You should see your project, *manager* and */.*Your project has been deployed automatically.
 
 \6.       Now it is time to write some web code.
 
@@ -88,16 +88,11 @@ a.       Select your project and navigate to [*http://localhost:8088/YourProject
 
 \9.       You should now be shunted into debug mode as your application runs the servlet and hits the breakpoint. You can debug your project as normal.
 
- 
-
 **Note: For the time being this only works in non-Spring web projects. It should work with Spring, but there is some more configuration information that is needed and it didn’t work properly in the demonstration.**
-
-
-
-
 
 2	Maven and Eclipse
 2.1	Pre-requisites
+
 1.	You have chosen and created a new workspace within Eclipse
 
 In order to use Maven with your new workspace you need to configure your workspace.

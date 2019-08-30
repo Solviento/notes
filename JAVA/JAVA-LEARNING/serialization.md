@@ -164,13 +164,13 @@ Within the Serializable class, include the following:
 - serialver – a Java command used to generate an SUID compatible with old versions of the class that do not have an SUID 
 - “serialver –show” will bring up a GUI
 
-Review Questions
+**Review Questions**
 
-What is required in order to serialize and deserialize objects?
-What data type are objects stored as when serialized?
-What is serialization used for?
-What is a serial version id used for?
-What interface needs to be implemented in order to serialize an object?
+- What is required in order to serialize and deserialize objects?
+- What data type are objects stored as when serialized?
+- What is serialization used for?
+- What is a serial version id used for?
+- What interface needs to be implemented in order to serialize an object?
 
 
 

@@ -47,7 +47,7 @@
 - **/WEB-INF/classes**
   - Java class files that are part of the application
   - Package structure needs to be reflected inside /WEB-INF/classes  
-    - e.g. The ‘com.fdmgroup.User’ class needs to be in this directory structure: /WEB-INF/classes/com/fdmgroup/User.class
+    - e.g. The ‘com.xyzgroup.User’ class needs to be in this directory structure: /WEB-INF/classes/com/fdmgroup/User.class
 
 **META-INF Directory**
 
@@ -126,13 +126,13 @@ conn.close();
 
 **Review**
 
-What are the main directories in Tomcat?
-Which directories should be in the project document root?
-Where are the startup and shutdown commands stored?
-In which directory of your web app do you put static content?
-In which directory of your web app do you put non-static content?
-How do you gain access to Tomcat’s management screen?
-How can we use Tomcat to get a DB connection?
+- What are the main directories in Tomcat?
+- Which directories should be in the project document root?
+- Where are the startup and shutdown commands stored?
+- In which directory of your web app do you put static content?
+- In which directory of your web app do you put non-static content?
+- How do you gain access to Tomcat’s management screen?
+- How can we use Tomcat to get a DB connection?
 
 
 
