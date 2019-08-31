@@ -15,52 +15,50 @@
 
 **Capital markets are Stock markets and Bond Markets** 
 
-- stock markets 
-- - provide financing through issuance of shares or common stock(preferred stock) and enable subsequent trading
+- Stock markets 
+  - provide financing through issuance of shares or common stock(preferred stock) and enable subsequent trading
   - a share is the smallest unit of ownership
   - shareholders own a part of company
   - when company make money, a share of their income is paid as dividend to shareholder
 - bond markets
-- - provide financing through issuance of bonds (debt instruments) where dividends is cash in your pocket for every share you own through interest rates. 
+  - provide financing through issuance of bonds (debt instruments) where dividends is cash in your pocket for every share you own through interest rates. 
 
 **Stock Market Types**
 
 - primary markets (investment banks buy and sell in secondary) 
-- - raise funds for company 
+  - raise funds for company 
   - securities/bonds sold by company for first time
   - primary market known as new issue market (NIM) because shares change from being unissued to issued when such trades are made
 - secondary markets 
-- - IPO initial public offering, initial sale of a new stock on a stock market
+  - IPO initial public offering, initial sale of a new stock on a stock market
   - day to day transactions of buying and selling
   - stock markets
 
 **Stocks** 
 
 - **common stock** mostly is held by individuals
-- - represents majority of stock held by the public
+  - represents majority of stock held by the public
   - has voting rights and right to share in dividends
   - stocks going up or down refers to common stock
 - **preferred stock** has fewer rights than common stock
-- - higher consistent dividends than common stock
+  - higher consistent dividends than common stock
   - first call on dividends over common stock
   - buy because of income from dividends
 - **authorized shares** represent total num of shares of stock authorized by company’s board of directors
-- - only a vote by shareholders can increase this num of authorized shares
+  - only a vote by shareholders can increase this num of authorized shares
   - know also as authorized capital stock
   - not all of authorized shares are public, most companies retain shares for later use **unissued stock**
 - **unissued stock** retained in company treasury stocks not issued to public or to employees. 
-- - **treasury shares, treasury stock**
-
+  - **treasury shares, treasury stock**
 - Authorized shares need to be filed to SEC (securities exchange commission) 
-
 - **restricted shares** used for employee incentive and other compensation plans
-- - owners of this stock need permission of SEC to sell, declare intention to sell 
+  - owners of this stock need permission of SEC to sell, declare intention to sell 
   - waiting period usually two -three years, stock restricted to sell and frozen
 - **float shares** 
-- - refers to num of shares actually available for trade on the open market.
+  - refers to num of shares actually available for trade on the open market.
   - we can all buy these floating shares
 - **outstanding shares**
-- - includes all shares issued by the company
+  - includes all shares issued by the company
   - restricted shares + float shares
 
 **What is a stock broker?** 
@@ -78,15 +76,15 @@
 
 - companies list common and preferred stock in major stock exchange so they can offer greater liquidity to shareholders, 
 - reverse split because need to meet criteria
-- - ensure common stocks in exchange are reputable, respected and financially viable enterprises representing major engine of economic productivity in USA. 
+  - ensure common stocks in exchange are reputable, respected and financially viable enterprises representing major engine of economic productivity in USA. 
 - in order to earn and maintain in exchange listing, company must meet several criteria
-- - shareholders together must own more than 100 shares, min number of round lot holders
+  - shareholders together must own more than 100 shares, min number of round lot holders
   - have an absolute num of shareholders
   - a total num of public shares outstanding
   - a min stock price of $1
 - reverse stock split help investors maintain liquidity and the company avoid embarrassment of Delistment from exchange
-- - to avoid removal from exchange, board of directors use reverse stock split to increase value of shares
-  - neither bad or good for stockholders when this happens. just to preserve stock dexterity from finance basics
+  - to avoid removal from exchange, board of directors use reverse stock split to increase value of shares
+    - neither bad or good for stockholders when this happens. just to preserve stock dexterity from finance basics
 
 - **application** of economic principles of decision making that involves allocation of money under conditions of uncertainty(risks) 
 
@@ -95,7 +93,7 @@
 1. accept risk and pursue the investment
 2. neutralize/protect from risk 
 3. transfer risk (hedging) 
-4. - buy insurance
+4. buy insurance
 
 **What is money?**
 
@@ -103,7 +101,7 @@
 2. a medium of exchange 
 3. a unit of an account
 
-**Money Fiat** - Money that has no intrinsic Value as physical commodity
+**Fiat Money** - Money that has no intrinsic Value as physical commodity
 
 **Financial system of an economy consists of three components** 
 
@@ -118,15 +116,17 @@
 
    - federal regulators: 
 
-- SEC(securities exchange commission) 
+- SEC (securities exchange commission) 
 - SRO (self regulating organizations/ watchdog groups) 
-- FDIC(federal deposit insurance corporation) 
-- FINRA(financial industry regulatory authority) 
-- SIPC(securities investors protection corp)
+- FDIC (federal deposit insurance corporation) 
+- FINRA (financial industry regulatory authority) 
+- SIPC (securities investors protection corp)
 
-Emotional element when presidents promise lower taxes. anticipate more hirings and more money and more economic activity and growth. More optimism 
+------
 
-If interest rates rise unexpectedly, economic will experience shock and effect employment. people stop buying people will lose jobs, cut circulation. 
+- Emotional element when presidents promise lower taxes. anticipate more hirings and more money and more economic activity and growth. More optimism 
+
+- If interest rates rise unexpectedly, economic will experience shock and effect employment. people stop buying people will lose jobs, cut circulation. 
 
 **Four monetary policy tools**
 
@@ -151,7 +151,7 @@ If interest rates rise unexpectedly, economic will experience shock and effect e
 
 **Secondary Market**: IPO and Stock Exchanges
 
-Stocks
+**Stocks**
 
 1. Ownership
 
@@ -160,13 +160,21 @@ Stocks
 **Three areas within the field of Finance**
 
 1. Capital markets and Capital market theory
-2. - focuses on study of the financial system, structure of interest rates, and pricing risky(uncertain) assets. 
+
+2. focuses on study of the financial system, structure of interest rates, and pricing risky(uncertain) assets. 
+   
    - financial system = financial markets, financial intermediaries, financial regulators 
+   
 3. Financial Management 
-4. - Aka business finance/corporate finance is an area in finance concerned with financial decision making within a business(company) entity. 
+
+   - Aka business finance/corporate finance is an area in finance concerned with financial decision making within a business(company) entity. 
+
    - Another critical task in financial management is risk management of a company, process of risk management involves determining which risks to accept, neutralize, or transfer
-5. Investment Management
-6. - deals with management of individual(high net worth) or institutional funds(capital markets) 
+
+4. Investment Management
+
+   - deals with management of individual(high net worth) or institutional funds(capital markets) 
+
    - setting investment objectives starts with deep analysis of what the institution or client wants to accomplish
 
 **US economy** 
@@ -177,28 +185,28 @@ Stocks
 **US economy indicators** 
 
 - USA Economic indicators 
-- - **Inflation: based on CPI** (Consumer Price Index)
-  - - amount of money increases at a greater rate than the supply of goods
-    - higher prices
-    - savings worth less
-    - Federal Reserve attempts to control this by raising interest rates
-  - **Gross Domestic Product (GDP)**
-  - - value of all goods and services produced within the country
+- **Inflation: based on CPI** (Consumer Price Index)
+  - amount of money increases at a greater rate than the supply of goods
+  - higher prices
+  - savings worth less
+  - Federal Reserve attempts to control this by raising interest rates
+- **Gross Domestic Product (GDP)**
+  - value of all goods and services produced within the country
     - Balance of Payments = Exports - Imports
-  - **Unemployment Rate**
-  - - 18-65 years of age. 
-  - **USA budget deficit** 
-  - - Amount required for all public sector activities (amount collected from taxation and other sources)
-  - **Interest rate**
-  - - cost of borrowing (tightening/loosening credit
-  - **Dow Jones** 
-  - - indicates the avg share prices for 30 companies traded in the USA
+- **Unemployment Rate**
+  - 18-65 years of age. 
+- **USA budget deficit** 
+  - Amount required for all public sector activities (amount collected from taxation and other sources)
+- **Interest rate**
+  - cost of borrowing (tightening/loosening credit
+- **Dow Jones** 
+  - indicates the average share prices for 30 companies traded in the USA
 
 **Balance Sheets**
 
 **Balance Sheet** balances assets with equities and liabilities 
 
-**Current Assets** sell within a yea**r**
+**Current Assets** sell within a year
 
 **Long term assets** sell much longer
 
@@ -215,10 +223,6 @@ Stocks
 **Liquidity** 
 
 - defines the health of a company and how fast a company can liquidate assets into cash
-
-Snapshot of a Co's position on 1 day
-
-Assets minus Equity
 
 **Receivables** - money a company can receive from people
 
@@ -253,10 +257,9 @@ Assets minus Equity
 **Tangible:** Something you can touch
 
 - **Net tangible assets** aka Book Value aka Meltdown Value
-- - Net tangible assets = Equity - Goodwill - Intangible assets
+  - Net tangible assets = Equity - Goodwill - Intangible assets
   - OR
   - Net tangible assets = Asset - Liabilities - Intangibles - Goodwill
-
 - Tech companies are more based on GoodWill (intangible goods)
 
 **Income Statement**
@@ -267,13 +270,7 @@ Assets minus Equity
 
 **Cash Flow Statement** 
 
-Shows the cash flows into and out of the company
-
-Operating 
-
-Investing
-
-Financing 
+- Shows the cash flows into and out of the company
 
 **Financial Reporting Ratios**
 
@@ -321,25 +318,29 @@ Financing
 **Bonds has a:**
 
 - **Par Value**
-- - has a face value typically $1000 
+  - has a face value typically $1000 
   - more than face value (premium)
   - less than face value (discount) 
+
 - **Coupon Interest Rate**
-- - stated on the bonds themselves, ex: 7.5% on phillips petroleum company.
-  - bonds pay interest every six months(half of coupon interest rate). Every year you get that specified percentage
+  - stated on the bonds themselves, ex: 7.5% on phillips petroleum company.
+    - bonds pay interest every six months(half of coupon interest rate). Every year you get that specified percentage
 - **Maturity date**
-- - where bonds mature and locked until date. 
+  - where bonds mature and locked until date. 
 - **Yield** 
-- - Simple yield % = (yearly payment/what you paid) 
-  - - example:
-    - - paid = $1020
-      - yield (40/1020) = 3.92% 
+  - Simple yield % = (yearly payment/what you paid) 
+  - example:
+    - paid = $1020
+    - yield (40/1020) = 3.92% 
+
   - $40 a year is from 4% on $1000
+
 - Bonds are rated by companies like (AAA, AA etc) 
-- - **Moody's**
+  - **Moody's**
   - **Fitch**
   - **S&P** 
-  - anything B and below are junk bonds, C are in danger of going to default (not paying lenders back) Lower the ranking the higher the interest rate, risky bets
+
+- anything B and below are junk bonds, C are in danger of going to default (not paying lenders back) Lower the ranking the higher the interest rate, risky bets
 
 **7 major functions of investment banking**
 
@@ -367,8 +368,6 @@ CDS -insurance pays out if the issuer goes to default.
 Put lets you buy the asset
 
 Call lets you buy the asset
-
-Customized OTC derivative, 
 
 - Swap trading variables and fixed interest rates. balancing portolios 
 
@@ -440,13 +439,13 @@ When mortgages started defaulting, equity, mezzanine, senior levels started not 
 
 - **Treasury bonds are always highly rated.**
 - **Municipal Bonds** **are rated by the financial health of the city or state**
-- - States raise taxes to pay municipal bonds, changes of default is lower than corporate bonds
+  - States raise taxes to pay municipal bonds, changes of default is lower than corporate bonds
   - No tax on tax free municipal bonds. The interest is lower since we get to keep the interest returns. 
   - Millionaires tend to buy municipal bonds 
 
 **Stocks : Value/Blend/Growth stocks**
 
-Growth
+**Growth**
 
 - uber
 - apple
@@ -525,10 +524,10 @@ An asset's **book value is** equal to its carrying **value** on the balance shee
 **Liquidity** -how quickly can company com up with cash
 
 - **Current ratio = (current assets/ current liabilities)**
-- - we want it to be greater than 1. The bigger the better.
+  - we want it to be greater than 1. The bigger the better.
   - Mattel = 2.93 means they can pay their bills up to three times
 - **Net working capital ratio = (current assets - current liabilities / total)**
-- - Mattel = 31.19% after they pay their bills 31% of their assets are current assets
+  - Mattel = 31.19% after they pay their bills 31% of their assets are current assets
   - After you pay your bills, what percentage of your assets that are left are current assets?
   - Percentage of assets that are LIQUID after you pay your bills. (1 or 100% is ideal) 
 - These two ratios indicate a company's ability to pay it's bills on time. 
@@ -536,17 +535,17 @@ An asset's **book value is** equal to its carrying **value** on the balance shee
 **Debt** - expenses 
 
 - **Debt-to-equity ratio = (total liabilities / total equity)** 
-- - Mattel = 1.28% debt compared to equity. (Loan compared to Down payment) 
+  - Mattel = 1.28% debt compared to equity. (Loan compared to Down payment) 
   - **Smaller ratio the better, shows how much bigger your debt is compared to your equity**
 - **Interest-coverage-ratio = (earnings before interest and taxes / interest expenses)**
-- - Mattel = 8.3% how many times can you pay your interest, in this case 8 times. 
+  - Mattel = 8.3% how many times can you pay your interest, in this case 8 times. 
   - **Bigger interest coverage ratio the better.** 
 
 **Profitability** - what is left over?
 
 - **Profit margin = (net income / sales)**
-- - Mattel = 8.28%
+  - Mattel = 8.28%
   - **bottom line divided by top line**
 - **Return on Equity = (net income / shareholders equity/equity)**
-- - Mattel = 16.91% or $0.1691 for every dollar we invest in the stock we get back $0.1691(17 cents rougly) 
+  - Mattel = 16.91% or $0.1691 for every dollar we invest in the stock we get back $0.1691(17 cents rougly) 
   - **for every $1 I spend on your stock, how much of that $1 becomes profit?**
