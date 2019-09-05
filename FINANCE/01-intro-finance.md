@@ -1,6 +1,6 @@
 # Stocks, The Stock Markets and Stock Splits
 
-**Lesson Objectives**
+**Mini Overview**
 
 - List some types of Financial Markets and describe their purpose
 - List the types of Capital Markets 
