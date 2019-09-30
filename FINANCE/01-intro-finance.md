@@ -1,6 +1,6 @@
 # Stocks, The Stock Markets and Stock Splits
 
-**Lesson Objectives**
+**Overview**
 
 - List some types of Financial Markets and describe their purpose
 - List the types of Capital Markets 
@@ -97,8 +97,10 @@ There are two types of stock:
   - There is a waiting period after a company first goes public where insiders’ restricted stock is frozen. 
   - When insiders want to sell their stock, they must file a form with the SEC declaring their intention. Even insiders of established companies must file with the SEC before selling their restricted stock.
 - **Float Shares:** 
+  
   - Float refers to the number of shares actually available for trade on the open market. You and I can buy these shares.
 - **Outstanding Shares:** 
+  
   - Outstanding shares includes all the shares issued by the company, which would be the restricted shares plus the float.
 
 **What is a Stockbroker?**

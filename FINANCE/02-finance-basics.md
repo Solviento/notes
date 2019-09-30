@@ -1,4 +1,4 @@
-**Mini Overview**
+**Overview**
 
 - Macroeconomics and Microeconomics
   - What is Finance?

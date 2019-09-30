@@ -1,4 +1,4 @@
-**Mini Overview**
+**Overview**
 
 - Describe the 5 stages of the Trade Lifecycle
 - List different reports created by overnight processes.

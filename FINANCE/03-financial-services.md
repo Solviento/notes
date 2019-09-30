@@ -1,4 +1,4 @@
-**Mini Overview**
+**Overview**
 
 - Describe in overview terms the Financial Services industry
 - List the major players in the Financial Services industry

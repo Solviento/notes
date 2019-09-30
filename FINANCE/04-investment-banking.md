@@ -1,4 +1,4 @@
-**Mini Overview**
+**Overview**
 
 - Describe the types of markets that exist in the finance industry.
 - Describe the functions of the Front Office, the Middle Office and the Back Office.
