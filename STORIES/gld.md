@@ -34,27 +34,13 @@ The Light Skinned Latino
 
 The Asian American Man
 
-The Asian American Woman
-
-The Dark Skinned Afro-Latina
-
-The Light Skinned Latina
-
 The Caucasian American Man
-
-The Caucasian American Woman
 
 The South Asian American Man
 
-The Indian American Woman
-
 The Arab American Man
 
-The Arab American Woman
-
 The Black American Man
-
-The Black American Woman
 
 ..?
 
