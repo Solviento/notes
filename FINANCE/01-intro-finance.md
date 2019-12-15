@@ -1,12 +1,9 @@
 # Stocks, The Stock Markets and Stock Splits
 
-<<<<<<< HEAD
 **Overview**
-=======
-**Mini Overview**
->>>>>>> 0a7e87c66a546f97a67be89f768545186708f00d
 
-- List some types of Financial Markets and describe their purpose
+List some types of Financial Markets and describe their purpose
+
 - List the types of Capital Markets 
 - List the types of Stock Markets
 - Define share/stock, dividend and shareholder/stockholder
