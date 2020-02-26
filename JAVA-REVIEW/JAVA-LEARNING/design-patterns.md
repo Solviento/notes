@@ -33,7 +33,7 @@
   - private static variable of own type
   - public static getInstance() method
 
-<img src="../../PHOTOS/design-patt-01.png" height=150px>
+<img src="../PHOTOS/design-patt-01.png" height=150px>
 
 **Singleton - Example**
 
