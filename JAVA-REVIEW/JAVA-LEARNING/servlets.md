@@ -11,13 +11,20 @@
 
 **Recap of Web Architecture**
 
-- What is meant by the terms client and server?
-- What is the World Wide Web?
+- What is meant by the terms client and server?
+	- Client sends the request
+	- Server receives and handles the request, after which send back a response
+- What is the World Wide Web?
+	- Infrastructure of wires and signals that connects devices/machines to other devices/machines
 - What is HTTP and how is it used?
+	- Hyper text transfer protocol
   - What are the key parts of an HTTP request?
-  - What are the key parts of an HTTP response?
+  	- Body params
+	- Headers
+  - What are the key parts of an HTTP response?
+  	- Body params
 - What is the difference between static web pages and dynamically-generated web pages?
-
+	- Static v dynamic differences
 **Introducing the Web Container**
 
 - A simple web server application can only serve static resources
@@ -33,7 +40,7 @@
 
 **Web Container Responsibilities**
 
-- The web container handles incoming HTTP requests by:
+- The web container handles incoming HTTP requests by:
   - Running servlet code to generate responses
   - Security (restricting access to server resources)
   - Concurrency (each request is handled in a new thread)
@@ -55,7 +62,8 @@
 - The methods that handle HTTP requests within a Servlet look like this:
 
 ``` java
-void doPost (HttpServletRequest req, HttpServletResponse resp) {		PrintWriter out = resp.getWriter();
+void doPost (HttpServletRequest req, HttpServletResponse resp) {	
+	PrintWriter out = resp.getWriter();
 	out.println(“<html>”);
 	out.println(“<head><title>view Stock</title></head>”);
 	out.println(“<body><p>” + currStock + ”</p></body>”);
@@ -86,7 +94,7 @@ void doPost (HttpServletRequest req, HttpServletResponse resp) {		PrintWriter o
 - service() calls the corresponding HttpServlet method:
   - doGet()
   - doPost()
-  - etc.
+  - etc.
 - **Override these to give your servlets functionality**!
 - Do not override service()!
 
@@ -173,7 +181,7 @@ void doPost (HttpServletRequest req, HttpServletResponse resp) {		PrintWriter o
 
 **Retrieving Client Information Server-side…**
 
-- Inside a Servlet, user input can be retrieved using parameterName as a lookup key:
+- Inside a Servlet, user input can be retrieved using parameterName as a lookup key:
 
 ``` java
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -206,16 +214,16 @@ protected void doGet (HttpServletRequest req,
 **Demo 4 – Retrieve Input from a Form Server-side**
 
 - Step 1 – Form 
-  - Form input parameters have meaningful attribute ‘name’.
+  - Form input parameters have meaningful attribute ‘name’.
 - Step 2 – Servlet
   - Use the HttpServletRequest object to access the form parameters from within the servlet.
-    Ensure you use the parameter names as they are written in the HTML form.
+    Ensure you use the parameter names as they are written in the HTML form.
 
 - Goals: Access HTML form data from within the servlet, using the request object.
 
 **Request Redirection**
 
-- So far, you have seen how a Servlet can construct an HTML response.
+- So far, you have seen how a Servlet can construct an HTML response.
 - Another thing a Servlet can do is send back a redirect:
 - A redirect tells the client’s browser to send a second request to the specified URL, possibly to a different server.
 
@@ -232,7 +240,7 @@ void doPost (HttpServletRequest req, HttpServletResponse resp) {
 **Demo 5 – Send a Redirect**
 
 - Step 1 – Response object
-  - Use the HttpServletResponse to redirect the user to http://www.google.com.
+  - Use the HttpServletResponse to redirect the user to http://www.google.com.
 - Step 2 – Browser
   - Notice that when the response is loaded, the browser address bar shows the new URL.
 
