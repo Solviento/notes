@@ -1,6 +1,9 @@
+# Quick WeSuite Lessons
+
   Stored Procedures
+
   - Basically a SQL script you can run
-  
+
   Syntax
   ```sql
   create procedure procedure_name
@@ -9,12 +12,12 @@
   
   go
   ```
-  
+
   To execute
   ```sql
   exec procedure_name
   ```
-  
+
   Stored Procedure Example
   - Will create stored procedure that selects all records from a table
   ```sql
@@ -36,13 +39,13 @@
     - Airtame (screen share with tv)
     - Kayako (customer service cases)
     - Keeper (security login information)
-  
+
   - Backend Workflow
     - Database language is MySQL
     - Code base is worked on Visual Studio
 
   Useful SQL Codes
-  
+
   dbo.labordata duplicate key resolution
   ```sql
   update tmpfolders
@@ -56,14 +59,14 @@
   set prt=pos
   where lvl1prt=0 and lvl2prt=0
   ```
-  
+
   Document parameters retrieval for doc editor
   ``` sql
   select priceinfo.priceinfoID, templateID from document
   inner join priceinfo on document.sanum = priceinfo.sanum and document.jobnum=priceinfo.jobnum and document.altnum=priceinfo.altnum
   inner join FolderSummary on priceinfo.priceinfoID=FolderSummary.priceinfoid
   ```
-  
+
   Look through all tables for a column that matches to search term
   ``` sql
   SELECT      c.name  AS 'ColumnName'

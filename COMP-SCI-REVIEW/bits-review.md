@@ -1,4 +1,4 @@
-# Bit basics
+# Bit Basics
 
 1 byte = 8 bits
 
@@ -243,7 +243,6 @@ by reading the corresponding bit using a bitmask.
     assert(!(perm & EXEC)); // cannot execute
 
 Some of this may seem familiar if you've ever used `ls -la` or `chmod`.
-You'll come across this again later when we take a second look at UNIX!
 
 
 #### Bitwise XOR `^`
@@ -285,7 +284,7 @@ each bit in `x` is shifted to the left (towards the MSB) by `n` digits:
 - Left-shifting always fills the vacated bits on the right with 0s
 - The displaced bits on the left are discarded
 
-Note that this is equivalent to mulitplying a number by 2^`n`!
+**Note that this is equivalent to mulitplying a number by 2^`n`!**
 
     int x = 1;              // 0001 in binary
     assert(x << 2 == 4);    // 0100 (4)

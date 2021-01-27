@@ -395,6 +395,7 @@ http://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html
 
 BufferedReader is a high level object that abstracts away much of the complexity of reading from a file. By default, the Reader objects that exist in Java read from files one character at a time, the *Buffered* reader buffers these characters and lets us read whole lines (as Strings).
 
+``` java
 **public** **class** BufferedReaderSyntaxExample {
 
 ​      
@@ -438,6 +439,7 @@ BufferedReader is a high level object that abstracts away much of the complexity
 ​      }
 
 }
+```
 
 The above code is not a million miles away from what we saw before, however, instead of using *Writer*s, we instead use *Reader*s.
 

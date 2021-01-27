@@ -1,5 +1,22 @@
-Git - Quick Sheet:
+Git Review Sheet:
 -------------------------
+
+Usual Git Commands
+
+``` git
+git clone https://something.git
+
+git pull origin release/2021.03.21
+git reset --hard origin/release/2021.03.21
+
+git add something.java
+git commit -m "Added function"
+
+git push origin master:feature/something123
+
+// conflict with remote?
+git pull origin release/2021.03.21
+```
 
 git add ...
 	Tells git to add file(s) to commit stage
@@ -37,11 +54,6 @@ git pull --rebase origin master
 	Attempts to integrate the new commits from GitHub with the new commits
 	on your computer
 
-Normal Workflow:
-	git add -A ..
-	git commit -m "Fixed .."
-	git push origin master
-
 	If Merge Errors occur:
 		git pull --rebase origin master
 		Fix and resolve all conflicts indicated by git
@@ -49,30 +61,3 @@ Normal Workflow:
 		git rebase --continue
 		git push origin master
 
-Industrial Workflow:
-	git checkout master
-	git pull --rebase origin master
-	git checkout -b fix-part-B
-	
-	Once ready to merge to master branch
-		git add -A ..
-		git commit -m "Fixed.."
-		git push origin fix-part-B
-
-		git pull --rebase origin master
-
-Problems and solutions
-
-"updates were rejected because the remote contains work that you do not have"
-// likely due to adding a new README file
-
-git remote add origin [//github url]
-
-git pull origin master
-
-git push origin master
-
-"updates were rejected because the tip of your current branch is behind"
-// likely due to adding mutliple commits from different machines
-
-git push -f origin <branch>

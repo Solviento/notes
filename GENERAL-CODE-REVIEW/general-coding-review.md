@@ -71,7 +71,7 @@ n length = 8
 
 # sorting-algorithms
 
-**Insertion sort**
+## **Insertion sort**
 Insertion sort compares and swaps elements by iteration. We start by selecting the first element, append it to the sorted subarray and then compare the next available unsorted element with all preceding sorted elements.
 
 Best case: O(n) ie. a presorted list
@@ -157,7 +157,7 @@ insertionSort(Array a):
        a[j] = tmp
 ```
 
-**Quick Sort**
+## **Quick Sort**
 Worst case: O(n^2)
 Average case: O(n logn)
 Unsorted array:
@@ -337,7 +337,7 @@ Since subarray contains only 1 element, it is considered fully sorted
 
 Recursively quicksort again ...
 
-**Merge sort**
+## **Merge sort**
 Divide and conquer algorithm.
 
 Best/Average/Worst case: O((nlogn)
@@ -507,7 +507,7 @@ mergeSort(array, first, last):
     merge(array, first, mid, last)  // merges at sort
 ```
 
-**Heapsort**
+## **Heapsort**
 Create a max heap from an array. Use the max heap's properties to sort.
 
 Best/Average/Worst case: O(nlogn)
@@ -1047,7 +1047,7 @@ Heapify(array A, int i, int n)
 
 ```
 
-**Selection Sort**
+## **Selection Sort**
 Using a linear search, the smallest value is located 
 Once linear search is done, the smallest value swaps with leftmost element in the unsorted array
 This element is considered fully sorted
@@ -1104,7 +1104,7 @@ Swap
 
 Repeat until all elements are sorted
 
-**Counting Sort**
+## **Counting Sort**
 Best/Average/Worst case: O(k+n) aka linear time
 
 Counting sort is based on keys in a specific range
@@ -1251,7 +1251,7 @@ countSort(Array A):
 
 ```
 
-**Radix Sort**
+## **Radix Sort**
 Best/Average/Worst case: O(d(n+k)) aka linear time
 
 This algorithm is used only to sort numbers
