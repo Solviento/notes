@@ -1,13 +1,14 @@
 # Ch. 3 Stacks and Queues
 
-Implementation of a Stack
-- LIFO (last in first out)
+**Implementation of a Stack**
+
+- **LIFO** (last in first out)
 - Useful for manipulating data, not so much for storing data
 - Does not offer constant time access to ith item, does allow constant time adds and removes
 - Stacks are useful for certain recursive algorithms
   - Push temp data to a stack as you recurse
   - Remove as you backtrack (recursive check failed)
-- Stacks can also be used to implement a recursive alogrithm iteratively
+- Stacks can also be used to implement a recursive algorithm iteratively
 - Uses the following operations
 ``` Java
 // remove top item from stack
@@ -34,7 +35,7 @@ public class MyStack<T> {
     top = top.next; return item;
   } 
   public void push(T item) {
-    StackNode<T> t = new StackNode<T>(item)j 
+    StackNode<T> t = new StackNode<T>(item);
     t.next = top;
     top = t;
   } 

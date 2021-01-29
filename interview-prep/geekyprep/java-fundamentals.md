@@ -48,6 +48,7 @@ public class EqualTest {
   - Creating String objects with new will always create a new object in heap memory
   - Creating String literals will return an existing object from String pool if it already exists
   
+
 The command javac is used to
 - compile a java program
 

@@ -1,6 +1,7 @@
 # Arrays and Strings
 
-Hash tables
+**Hash tables**
+
 - A data structure that maps keys to values for highly efficient lookups
 - Simple implementations of this consist of:
   - Use an array of linked lists and a hash code function
@@ -14,9 +15,10 @@ Hash tables
   - If number of collisions is HIGH, then runtime is O(N) 
     - N is number of keys
   - Good implementation results in minimum collision which means lookup is O(1)
-  - An alternative way is to use a balanced binary search tree to give a search time of O(logN), note that this uses less memory space and iterates keys in order
+    - An alternative way is to use a balanced binary search tree to give a search time of O(logN), note that this uses less memory space and iterates keys in order
 
-ArrayList, Resizable arrays
+**ArrayList, Resizable arrays**
+
 - ArrayList provides O(1) access
 - One the arraylist is full, doubling it will take O(n)
   - This happens rarely so amortized insertion is still O(1)
@@ -29,7 +31,8 @@ ArrayList, Resizable arrays
     - In worst cases, its O(n)
   
 
-StringBuilder
+**StringBuilder**
+
 - useful for concatenating list of strings
 - Reminder: 1 + 2 + 3 + ... + n = n(n+1)/2 = O(n^2)
 - Below code is inefficient as it results in time O(n^2), do the math on a simple case
@@ -53,3 +56,4 @@ String joinWords(String[] words){
 }
 
 ```
+

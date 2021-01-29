@@ -74,7 +74,8 @@ void printUnorderedPairs(int[] array){
   - *The sum of 1 through N-1 is 𝑵(𝑵−𝟏)/2*
   - *This run time amounts to O(N^2)*
 
-Sample algorithms
+**Sample algorithms**
+
 - Design algorithm that takes in an array of strings, sorts each string, then sorts the full array. What is the runtime?
   - Let s be length of longest string
   - Let a be length of the array

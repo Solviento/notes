@@ -1,22 +1,30 @@
 # Linked Lists
 
-Creating a singly linked list
+**Creating a singly linked list**
 
-Creating a double linked list
 
-Runner technique
 
-Recursive problems
+**Creating a double linked list**
 
-Doubly Linked List
+
+
+**Runner technique**
+
+
+
+**Recursive problems**
+
+
+
+**Doubly Linked List**
 
 head -> |data|next| -> |data|next| -> |data|next| -> null
 null <- |prev|           <- |prev|      <- |prev|
 
 ``` java
 public class doublyLinked { 
-    Node head; // head of list 
-    class Node { 
+    private Node head; // head of list 
+    private class Node { 
       int data; 
       Node prev; 
       Node next; 
@@ -47,7 +55,7 @@ public class doublyLinked {
         /*1. check if the given prev_node is NULL */
         if (prev_Node == null) { 
             System.out.println("The given previous node cannot be NULL "); 
-            return; 
+            return;
         } 
         /* 2. allocate node  
         * 3. put in the data */
