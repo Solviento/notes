@@ -1,6 +1,7 @@
 # Big O
 
-Explaining big O notation to a nontechnical user:
+**Explaining big O notation to a nontechnical user:**
+
 - You have a file stored on a hard drive, how would you send it?
   - If it’s a small file, you send through email or FTP in seconds
     - In this respect, it would run in O(s) time where s is size of file
@@ -8,7 +9,8 @@ Explaining big O notation to a nontechnical user:
     - In this case, you could simply physically take the drive to the destination which would be faster
     - Would run in O(1) time, the time it takes to deliver the file physically
 
-Time complexity
+**Time complexity**
+
 - O, in academia big O describes Upper bound
   - If used, the algorithm is at least fast as this bound
   - Less than or equal to
@@ -17,26 +19,31 @@ Time complexity
 - Theta, tight bound
 - In industry, typically tight bound notation is used
 
-Space complexity
+**Space complexity**
+
 - Roughly equivalent to time
 - Recursive programs can easily take polynomial space
 - Sequential calls usually take O(1) space or similar
 
-Multi part algorithms: add v. multiply
+**Multi part algorithms: add v. multiply**
+
 - If algorithm is in the form: do this, then once that’s done, do that - add the runtimes
 - If algorithm is in the form: do this for each time you do that - multiply the runtimes
 
-Amortized time
+**Amortized time**
+
 - This allows us to describe that the worst case happens every once in a while but once it happens it wont happen again for so long that the cost is amortized
 
-Log n time
+**Log(n) time**
+
 - Binary search typically works as you expect it to: looking for a single element, you first compare it to the midpoint of an array or list (that is sorted). If not the element, continue searching in either the left of right of the midpoint (depending if greater or less than to midpoint element).
   - This will divide number of to be searched elements by 2 in each successive step
   - Typically when you see a problem where the number of elements in the problem space gets halved each time, it will likely be a O(log N) time ***
 - Same concept applies to balanced binary search tree, with each comparison you can go either left or right
   - Half of to be searched nodes lie on each side, so you cut the problem space in half each time
 
-Recursive runtime
+**Recursive runtime**
+
 - Important! Say you are given a simple recursive algorithm
 
 ``` Java

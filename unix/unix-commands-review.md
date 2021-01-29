@@ -186,8 +186,6 @@
 | whoami                                                       | returns your username                                        |
 |                                                              |                                                              |
 |                                                              |                                                              |
-|                                                              |                                                              |
-|                                                              |                                                              |
 | Regular Expressions                                          |                                                              |
 | [0-9]                                                        |                                                              |
 | [a-d]                                                        | matches any digit                                            |
