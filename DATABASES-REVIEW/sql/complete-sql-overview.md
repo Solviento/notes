@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 #  Complete SQL Overview
 
 **SQL Basic Concepts**
