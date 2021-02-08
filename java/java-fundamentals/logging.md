@@ -1,6 +1,6 @@
 **Logging**
 
-- When something goes wrong, the first point of call is the system logs.
+- When something goes wrong, the first point to check is the system logs.
 - Logs provide a trace to figure out circumstances that cause issues, both at runtime and during debugging
 - Logs are the main piece of information available to Support consultants and Developers
 - Almost every large application devotes development efforts to logging, tracing, and/or auditing

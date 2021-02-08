@@ -1,16 +1,18 @@
+# Design Patterns
+
 **Overview**
 
 - Design patterns describe recurring problems and core solutions to these problems
 - Use carefully
 - First formulated by the Gang Of Four
 - www.oodesign.com
-  www.dofactory.com/Patterns/Patterns.aspx
+- www.dofactory.com/Patterns/Patterns.aspx
 
 **Categories**
 
 - There are 3 categories of design patterns
   - Creational
-  - Behavioural
+  - Behavioral
   - Structural
 
 **Design Patterns**
@@ -48,7 +50,7 @@
 
 **Factory Method- UML**
 
-<img src="../../PHOTOS/design-patt-02.png" width=650px>
+<img src="../PHOTOS/design-patt-02.png" width=650px>
 
 **Adapter**
 
@@ -71,8 +73,8 @@ How can we get these two systems to work together?
 
 - The Observer pattern allows one object to observe the state of another object, allowing it to act when that state is changed
 - There are two key constructs
-  - Observable
-  - Observer
+  - **Observable**
+  - **Observer**
 
 - The Observable holds a list of Observers
 - Observers can be added or removed from an Observable by calling attach and detach
@@ -85,7 +87,7 @@ How can we get these two systems to work together?
 - The Command pattern allows us to completely encapsulate method calls
 - This allows us to decouple an object that requests an action from the object that performs it
 
-- We are Abstracting away the behaviour
+- We are Abstracting away the behavior
 - There are 4 main parts to the Command Pattern
   - Client
   - Command Object

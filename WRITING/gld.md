@@ -80,8 +80,6 @@ Answers? Space exploration, virtual reality, ...?
 
 The nuclear option is complete re-do. To reset everything and let humanity start from little.
 
-Aka the Thanos option.
-
 
 
 

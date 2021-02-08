@@ -83,7 +83,7 @@
   - Make the test compile
   - Watch the test fail
   - Do just enough to make all tests pass
-  - Refactor and generalise
+  - Refactor and generalize
 - Arrange-Act-Assert is a pattern for writing unit tests:
   - Arrange – Set up preconditions
   - Act – Call the code under test

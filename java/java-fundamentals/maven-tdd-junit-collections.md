@@ -42,7 +42,7 @@
   A dependency is another project that this one depends on. 
 - Often, it is easiest to think of dependencies as external libraries that we wish to use within our project. JUnit is one such library.
 - Without Maven, we must download and add these libraries to our project manually. Maven takes some of the hard work out of this process by allowing us to simply declare the libraries we want and it will go away and automatically download them for us, installing them into our project.
-- Throughout the course, we will be suing a number of external libraries, the only one we need right now is JUnit, which Maven adds automatically because Test Driven Development is such a popular process; it assumes you will be doing it.
+- Throughout the course, we will be using a number of external libraries, the only one we need right now is JUnit, which Maven adds automatically because Test Driven Development is such a popular process; it assumes you will be doing it.
 
 **JUnit Dependency**
 
