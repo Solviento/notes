@@ -1,3 +1,5 @@
+
+
 # How preprocessing string works
 
 pattern: abcdabca
@@ -64,6 +66,7 @@ a b c d a b c a
 - Then set lps[i] = j
 - Increment i, aka the pattern pointer
   
+
 j = 0+1 = 0
 lps[i=4] = j = 1
 i = 4+1 = 5

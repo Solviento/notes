@@ -6,12 +6,12 @@
   - Helps achieve strong decoupling
 - Designed to address cross cutting concerns
 
-- Key phrase: Cross cutting concerns
-- Concerns that cut across the entire application
-  - Security
-  - Authentication
-  - Validation
-  - Persistence
+- Key phrase: **Cross cutting concerns**
+  - Concerns that cut across the entire application
+    - Security
+    - Authentication
+    - Validation
+    - Persistence
 
 - How do we usually handle such concerns in our application? 
 - Are there any problems with this approach?
