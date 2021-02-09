@@ -2,17 +2,18 @@ package com.practice.code.runner;
 
 import com.practice.code.problems.CodeRunner;
 
-import java.lang.reflect.Constructor;
-
 public class LeetcodeRunner {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println("This is a basic runner for leetcode/algo problems.");
         String className = "Anagram";//args[0];
-        String packagePath = "com.practice.code.problems";
-        // debug below, not taking input
-        Class<?> clazz = Class.forName("THISISACLASS");
-        Object instance = clazz.getDeclaredConstructor().newInstance();
-        ((CodeRunner) instance).run();
+        String packagePath = "com.practice.code.problems.";
+        try {
+            Class clazz = Class.forName(packagePath + className);
+            Object instance = clazz.getDeclaredConstructor().newInstance();
+            ((CodeRunner) instance).run();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
