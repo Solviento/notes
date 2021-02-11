@@ -9,7 +9,7 @@ public class LeetcodeRunner {
         String className = "Anagram";//args[0];
         String packagePath = "com.practice.code.problems.";
         try {
-            Class clazz = Class.forName(packagePath + className);
+            Class<?> clazz = Class.forName(packagePath + className);
             Object instance = clazz.getDeclaredConstructor().newInstance();
             ((CodeRunner) instance).run();
         } catch (Exception e) {
