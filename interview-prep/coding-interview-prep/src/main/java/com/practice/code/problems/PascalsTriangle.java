@@ -11,7 +11,7 @@ package com.practice.code.problems;
 //  [1,4,6,4,1]
 // ]
 import java.util.*;
-class pascalsTriangle {
+class PascalsTriangle {
     static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> pascal = new ArrayList<>();
         for(int i = 0; i < numRows; i++){

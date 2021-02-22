@@ -1,4 +1,4 @@
-package com.practice.code.problems;
+package com.practice.code.runner;
 
 public interface CodeRunner {
     /*

@@ -1,4 +1,7 @@
 package com.practice.code.problems;
+
+import com.practice.code.runner.CodeRunner;
+
 // You are climbing a stair case. It takes n steps to reach to the top.
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 // Note: Given n will be a positive integer.
@@ -8,7 +11,7 @@ package com.practice.code.problems;
 // 1. 1 step + 1 step + 1 step
 // 2. 1 step + 2 steps
 // 3. 2 steps + 1 step
-class climbingStairs {
+public class ClimbingStairs implements CodeRunner {
   public int climbStairs(int n) {
     // n=0, distinct=0, n=1, distinct=1, n=2, distinct=2
     if (n < 3) {
@@ -25,5 +28,12 @@ class climbingStairs {
       memoize[i] = memoize[i - 2] + memoize[i - 1];
     }
     return memoize[n - 1];
+  }
+
+  @Override
+  public void run() {
+    int s = 3;
+    System.out.println("How many step combos (1 step/2 step) can be with a staircase of " + s + " steps?");
+    System.out.println(climbStairs(s));;
   }
 }

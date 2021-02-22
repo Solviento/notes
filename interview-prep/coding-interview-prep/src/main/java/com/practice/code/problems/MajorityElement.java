@@ -2,7 +2,7 @@ package com.practice.code.problems;
 import java.util.HashMap;
 // Given an array of size n, find the majority element. The majority element is the elment
 // that appears MORE THAN n/2 times, may assume array is non empty and majority element DOES exist
-class majorityElement {
+class MajorityElement {
   static int majorityElement_(int[] nums) {
     HashMap<Integer, Integer> maj = new HashMap<>();
     for (Integer e : nums) {

@@ -2,7 +2,7 @@ package com.practice.code.problems;
 // https://www.youtube.com/watch?v=2MmGzdiKR9Y
 // Given an integer array nums, find the contiguous subarray (containing at least one number) 
 // which has the largest sum and return its sum.
-class maximumSubarray{
+class MaximumSubarray {
   public int maxSubArray(int[] nums) {
     int localMax = nums[0];
     int globalMax = nums[0];

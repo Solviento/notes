@@ -1,5 +1,6 @@
 package com.practice.code.problems;
-class MergeSortedArray {
+
+public class MergeSortedArray {
   public void merge(int[] nums1, int m, int[] nums2, int n) {
     // 1 2 3 0 0 0
     //     lP    rP

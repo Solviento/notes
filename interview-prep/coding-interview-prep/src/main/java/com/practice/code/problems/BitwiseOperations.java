@@ -1,6 +1,10 @@
 package com.practice.code.problems;
+
+import com.practice.code.runner.CodeRunner;
+
 // Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.
-class bitwiseOperations {
+public class BitwiseOperations implements CodeRunner {
+
   public int getSum(int a, int b) {
     // a = 0101 (5)
     // b = 0101 (5)
@@ -20,5 +24,12 @@ class bitwiseOperations {
       b = carry << 1;
     }
     return a;
+  }
+
+  @Override
+  public void run() {
+    int a = 4;
+    int b = 10;
+    System.out.println("Output of " + a + " + " + b + " using bitwise operations : " + getSum(a, b));
   }
 }

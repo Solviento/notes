@@ -1,9 +1,12 @@
 package com.practice.code.problems;
+
+import com.practice.code.runner.CodeRunner;
+
 // Count the number of prime numbers less than a non-negative number, n.
 // Input: 10
 // Output: 4
 // Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
-class CountPrimes {
+public class CountPrimes implements CodeRunner {
     // sieve of eratosthenes, use empty boolean array, then utilize all prime numbers from 2 -> n^1.5
     // to mark off booleans as composites IFF they are multiples of those prime numbers
     // any remaining non-marked booleans will be prime
@@ -43,5 +46,11 @@ class CountPrimes {
                 return 0;
         }
         return 1;
+    }
+
+    public void run() {
+        int num = 100;
+        System.out.println("Count the number of prime numbers less than a non-negative number, n");
+        System.out.println(num + " -> " + countPrimes(num));
     }
 }

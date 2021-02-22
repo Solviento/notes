@@ -3,7 +3,7 @@ package com.practice.code.problems;
 // return an array of the squares of each number, also in sorted non-decreasing order.
 import java.util.Arrays;
 
-class sortedSquares{
+class SortedSquares {
   // quicksort O(nlog(n)), space: O(log(n))
   public static int[] sortedSquaresQS(int[] A) {
     int[] sq = new int[A.length];

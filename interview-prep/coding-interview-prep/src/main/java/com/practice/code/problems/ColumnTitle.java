@@ -1,5 +1,8 @@
 package com.practice.code.problems;
-class columnTitle {
+
+import com.practice.code.runner.CodeRunner;
+
+public class ColumnTitle implements CodeRunner {
   static String convertToTitle(int n) {
     String s = "";
     while (n != 0) {
@@ -13,9 +16,10 @@ class columnTitle {
     }
     return s;
   }
-  public static void main(String... args){
+
+  public void run(){
     int n = 52;
     String s = convertToTitle(n);
-    System.out.println(s);
+    System.out.println("Convert " + n + " to Title " + s);
   }
 }
