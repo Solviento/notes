@@ -6,7 +6,7 @@ public class LeetcodeRunner {
 
     public static void main(String[] args) {
         System.out.println("This is a basic runner for leetcode/algo problems.");
-        String className = "Anagram";//args[0];
+        String className = "RunLengthEncoding";//args[0];
         String packagePath = "com.practice.code.problems.";
         try {
             Class clazz = Class.forName(packagePath + className);

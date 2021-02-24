@@ -92,7 +92,35 @@ aaaabbccca
 
 4a2b3c1a
 
+https://www.youtube.com/watch?v=mjZpZ_wcYFg
 
+Basic algorithm for converting image to run length encoding
+
+``` java
+public String encode(String input) {
+    // check for null/ empty input
+    if (input == null || input.length() == 0)
+        return "";
+    
+    char[] inputChars = input.toCharArray();
+    char previousChar = inputChars[0];
+    int counter = 0;
+    StringBuilder output = new StringBuilder();
+    
+    for(char c: inputChars) {
+        if (previousChar == c) {
+            counter++;
+        }
+        else {
+            output.append(counter).append(previousChar);
+            previousChar = c;
+            counter = 1;
+        }
+    }
+    output.append(counter).append(previousChar);
+    return output.toString();
+}
+```
 
 
 
