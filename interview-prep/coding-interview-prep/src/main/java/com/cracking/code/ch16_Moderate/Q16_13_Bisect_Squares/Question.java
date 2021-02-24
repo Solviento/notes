@@ -1,4 +1,4 @@
-package Q16_13_Bisect_Squares;
+package com.cracking.code.ch16_Moderate.Q16_13_Bisect_Squares;
 
 public class Question {
 

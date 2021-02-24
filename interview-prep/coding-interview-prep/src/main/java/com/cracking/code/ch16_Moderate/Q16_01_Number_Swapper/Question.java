@@ -1,4 +1,4 @@
-package Q16_01_Number_Swapper;
+package com.cracking.code.ch16_Moderate.Q16_01_Number_Swapper;
 
 public class Question {
 

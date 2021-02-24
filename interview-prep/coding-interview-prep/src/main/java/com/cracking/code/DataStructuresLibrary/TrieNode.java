@@ -1,4 +1,4 @@
-package CtCILibrary;
+package com.cracking.code.DataStructuresLibrary;
 
 import java.util.HashMap;
 

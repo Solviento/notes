@@ -1,10 +1,11 @@
-package Q4_06_Successor;
+package com.cracking.code.ch4_TreesGraphs.Q4_06_Successor;
 
-import CtCILibrary.TreeNode;
+
+import com.cracking.code.DataStructuresLibrary.TreeNode;
 
 public class Question {
 
-	public static TreeNode inorderSucc(TreeNode n) { 
+	public static TreeNode inorderSucc(TreeNode n) {
 		if (n == null) return null;
 		
 		// Found right children -> return left most node of right subtree
