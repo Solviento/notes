@@ -1,6 +1,6 @@
 package com.practice.code.problems;
 
-class SumNumbers{
+public class SumNumbers{
   static int sumNumbers(String str) {
     int sum = 0;
     String numStr = "";

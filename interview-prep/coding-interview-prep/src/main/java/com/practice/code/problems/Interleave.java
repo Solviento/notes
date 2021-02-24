@@ -12,11 +12,10 @@ package com.practice.code.problems;
 // N      interleave = "AMB"
 //        interleave = "AMBN" *
 // B
-import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-class Interleave{
+import com.practice.code.runner.CodeRunner;
+
+class Interleave implements CodeRunner {
   public static void main(String[] args) {
     String s1 = "abc";
     String s2 = "def";
@@ -37,5 +36,10 @@ class Interleave{
       // interleave += s2.charAt(0);
       printInterleave(s1, s2.substring(1), interleave + s2.charAt(0), m, n-1);
     }
+  }
+
+  @Override
+  public void run() {
+
   }
 }

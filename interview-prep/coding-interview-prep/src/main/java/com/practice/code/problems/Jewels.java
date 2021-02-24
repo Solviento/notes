@@ -2,7 +2,7 @@ package com.practice.code.problems;
 
 import java.util.HashMap;
 
-class Jewels {
+public class Jewels {
   public static int numJewelsInStones(String J, String S) {
     HashMap<Character, Integer> jewels = new HashMap<>();
     for (int i = 0; i < J.length(); i++) {

@@ -2,6 +2,8 @@ package com.practice.code.problems;
 // Given two strings s and t , write a function to determine if t is an anagram of s.
 // Input: s = "anagram", t = "nagaram"
 // Output: true
+import com.practice.code.runner.CodeRunner;
+
 import java.util.HashMap;
 public class Anagram implements CodeRunner {
   // another solution is to sort the strings, use two pointers, if pointers dont match, then false OR use .equals() 
@@ -43,6 +45,7 @@ public class Anagram implements CodeRunner {
     return true;
   }
 
+  @Override
   public void run() {
     String s = "anagram";
     String t = "nagaram";

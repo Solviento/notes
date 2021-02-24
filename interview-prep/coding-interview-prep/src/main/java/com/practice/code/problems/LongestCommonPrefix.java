@@ -6,7 +6,7 @@ import java.util.Arrays;
 // If there is no common prefix, return an empty string "".
 // Input: ["flower","flow","flight"]
 // Output: "fl"
-class LongestCommonPrefix {
+public class LongestCommonPrefix {
   // Time: O(nlogn) Space: O(c) - c is length of string for longest string
   public String longestCommonPrefix(String[] strs) {
     if (strs.length == 0) {

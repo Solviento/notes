@@ -1,5 +1,5 @@
 package com.practice.code.problems;
-class RemoveDuplicates {
+public class RemoveDuplicates {
   public int removeDuplicates(int[] nums) {
     // use two pointers, one slow one fast
     int slow = 0;

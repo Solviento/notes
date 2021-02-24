@@ -1,5 +1,7 @@
 package com.practice.code.problems;
 
+import com.practice.code.runner.CodeRunner;
+
 import java.util.HashMap;
 
 // Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
@@ -7,7 +9,8 @@ import java.util.HashMap;
 // return 0.
 // s = "loveleetcode",
 // return 2
-class FirstUniqueChar {
+public class FirstUniqueChar implements CodeRunner {
+
   public int firstUniqChar(String s) {
     // to save space, we can use int[] votes = new int[256]
     // and then do votes[c-'a']++; during the first for loop
@@ -30,5 +33,10 @@ class FirstUniqueChar {
       }
     }
     return -1;
+  }
+
+  public void run(){
+    System.out.println("Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.");
+    System.out.println("loveleetcode -> " + firstUniqChar("loveleetcode"));
   }
 }

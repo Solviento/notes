@@ -18,7 +18,7 @@ import java.util.List;
 //   [1,2],
 //   []
 // ]
-class Subsets {
+public class Subsets {
   public List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
     backtrack(result, new ArrayList<>(), nums, 0);

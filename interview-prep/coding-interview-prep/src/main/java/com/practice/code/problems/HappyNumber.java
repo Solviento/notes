@@ -1,4 +1,7 @@
 package com.practice.code.problems;
+
+import com.practice.code.runner.CodeRunner;
+
 /*
 Write an algorithm to determine if a number is "happy".
 A happy number is a number defined by the following process: 
@@ -13,10 +16,11 @@ Explanation:
 8^2 + 2^2 = 68
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1 */
-class HappyNumber {
+class HappyNumber implements CodeRunner {
   public boolean isHappy(int n) {
-    boolean hun = false;
-    while (!hun) {
+    int loopCount = 0;
+    boolean happy = false;
+    while (!happy && loopCount < 1000) {
       int sumSquared = 0;
       while (n > 0) {
         int e = (n % 10);
@@ -25,10 +29,16 @@ class HappyNumber {
       }
       n = sumSquared;
       if (sumSquared == 1) {
-        hun = true;
+        happy = true;
       }
-      // can add a condition where after +1000 loops, this ends and returns false
+      loopCount++;
     }
-    return hun;
+    return happy;
+  }
+
+  @Override
+  public void run() {
+    System.out.println("Is 19 a happy number? " + isHappy(19));
+    System.out.println("Is 103 a happy number? " + isHappy(103));
   }
 }

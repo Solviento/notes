@@ -12,7 +12,7 @@ import java.util.Set;
 // and Space: O(1) to iterate through pointers to verify if selected numbers are
 // the same, to iterate compare the two numbers
 // nums1: [4, 5, 5, 7, 9] nums2 = [4, 5, 5, 5, 8, 9, 12]
-class IntersectionArrays {
+public class IntersectionArrays {
   public int[] intersect(int[] nums1, int[] nums2) {
     HashMap<Integer, Integer> fMap = new HashMap<>();
     ArrayList<Integer> arr = new ArrayList<>();

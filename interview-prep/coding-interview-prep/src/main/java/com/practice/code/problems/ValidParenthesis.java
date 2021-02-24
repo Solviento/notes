@@ -6,7 +6,7 @@ package com.practice.code.problems;
 // Note that an empty string is also considered valid.
 import java.util.Stack;
 
-class ValidParenthesis {
+public class ValidParenthesis {
     // add also hashmap implementation too
 
     // Time: O(n) Space: O(n)

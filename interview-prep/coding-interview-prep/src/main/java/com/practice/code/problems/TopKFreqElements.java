@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 // Example 1:
 // Input: nums = [1,1,1,2,2,3], k = 2
 // Output: [1,2]
-class TopKFreqElements {
+public class TopKFreqElements {
     public List<Integer> topKFrequent(int[] nums, int k) {
         // build hash map, integer: frequency
         HashMap<Integer, Integer> map = new HashMap<>();

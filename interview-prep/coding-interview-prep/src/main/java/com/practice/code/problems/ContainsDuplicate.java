@@ -3,9 +3,11 @@ package com.practice.code.problems;
 // Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct
 // Input: [1,2,3,1]
 // Output: true
+import com.practice.code.runner.CodeRunner;
+
 import java.util.Set;
 import java.util.HashSet;
-class ContainsDuplicate {
+public class ContainsDuplicate implements CodeRunner {
 
   // Alternative: sort the array, then use two pointers to iterate and check for duplicates
   // Time: O(nlogn) Space: O(1)
@@ -25,9 +27,9 @@ class ContainsDuplicate {
     }
     return false;
   }
-  public static void main(String[] args){
-    int n = 3;
-    int med = (int) Math.ceil(3/2.0);
-    System.out.println(med);
+  public void run(){
+    int[] nums = {1, 2, 3, 1};
+    System.out.println("Given an array of integers, find if the array contains any duplicates.");
+    System.out.println("1, 2, 3, 1 - > " + containsDuplicate(nums));
   }
 }
