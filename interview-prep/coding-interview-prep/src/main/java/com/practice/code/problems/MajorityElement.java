@@ -1,9 +1,9 @@
 package com.practice.code.problems;
 import java.util.HashMap;
-// Given an array of size n, find the majority element. The majority element is the elment
+// Given an array of size n, find the majority element. The majority element is the element
 // that appears MORE THAN n/2 times, may assume array is non empty and majority element DOES exist
-class MajorityElement {
-  static int majorityElement_(int[] nums) {
+public class MajorityElement {
+  static int majorityElement(int[] nums) {
     HashMap<Integer, Integer> maj = new HashMap<>();
     for (Integer e : nums) {
       if (!maj.containsKey(e)) {
@@ -19,10 +19,5 @@ class MajorityElement {
     }
     // if array is one element, return element
     return nums[0];
-  }
-  public static void main(String[] args){
-    int[] arr = new int[]{3, 2, 3};
-    int m = majorityElement_(arr);
-    System.out.println(m);
   }
 }

@@ -1,6 +1,7 @@
 package com.practice.code.problems;
 // Given an array, rotate the array to the right by k steps, where k is non-negative.
-class RotateArray {
+
+public class RotateArray {
     // Time: O(n) Space: O(n)
     public void rotate(int[] nums, int k) {
         int[] result = new int[nums.length];

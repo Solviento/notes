@@ -1,5 +1,5 @@
 package com.practice.code.problems;
-class MoveZeros {
+public class MoveZeros {
   public void moveZeroes(int[] nums) {
     int lastNonZero = 0;
     // "bubble" non-zero elements to front of list (list is already presorted)

@@ -6,7 +6,7 @@ package com.practice.code.problems;
  * ListNode next; 
  * ListNode(int x) { val = x; } }
  */
-public class LinkedList {
+public class LinkedList_ {
   class SLinkedList{
     ListNode head;
     SLinkedList(){

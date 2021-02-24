@@ -1,6 +1,6 @@
 package com.practice.code.problems;
 
-class ToLowerCase {
+public class ToLowerCase {
   public static String toLowerCase_(String str) {
     char[] c = str.toCharArray();
     for (int i = 0; i < str.length(); i++) {

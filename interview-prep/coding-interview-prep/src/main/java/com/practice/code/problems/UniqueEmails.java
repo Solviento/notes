@@ -7,7 +7,7 @@ package com.practice.code.problems;
 import java.util.HashSet;
 import java.util.Set;
 
-class UniqueEmails {
+public class UniqueEmails {
   public int numUniqueEmails(String[] emails) {
     Set<String> e = new HashSet<>();
     for (int i = 0; i < emails.length; i++) {

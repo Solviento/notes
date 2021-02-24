@@ -8,7 +8,7 @@ package com.practice.code.problems;
 
 import java.util.HashMap;
 
-class TwoSum {
+public class TwoSum {
   public int[] twoSum(int[] nums, int target) {
     if (nums.length == 1)
       return new int[] { 0, 0 };

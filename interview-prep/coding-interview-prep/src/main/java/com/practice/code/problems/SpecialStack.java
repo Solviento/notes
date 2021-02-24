@@ -4,7 +4,7 @@ package com.practice.code.problems;
 // should be O(1) and can only use standard stack data structure, no arrays or list
 import java.util.Stack;
 
-class SpecialStack extends Stack<Integer>{
+public class SpecialStack extends Stack<Integer>{
   
   Stack<Integer> min = new Stack<>();
 

@@ -1,5 +1,6 @@
 package com.practice.code.problems;
-class StrStr {
+
+public class StrStr {
   // KMP is Time: O(m+n) Space: O(n), n = haystack, m = needle
   static int strStr(String haystack, String needle) {
     if(needle.length() == 0){

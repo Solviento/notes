@@ -5,7 +5,7 @@ package com.practice.code.problems;
 // 5, 20, 60, 120 -> 1 trailing zero
 // n = 8
 // 8, 56, 336, 1680, 6720, 20160, 40320 -> 1 trailing zero
-class TrailingZeros {
+public class TrailingZeros {
     public int trailingZeroes(int n) {
         int count = 0;
         for (long i = 5; n / i > 0; i *= 5)
