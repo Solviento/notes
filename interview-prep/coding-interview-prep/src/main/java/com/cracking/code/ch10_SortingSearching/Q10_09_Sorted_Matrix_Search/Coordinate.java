@@ -1,4 +1,4 @@
-package Q10_09_Sorted_Matrix_Search;
+package com.cracking.code.ch10_SortingSearching.Q10_09_Sorted_Matrix_Search;
 
 public class Coordinate implements Cloneable {
 	public int row;

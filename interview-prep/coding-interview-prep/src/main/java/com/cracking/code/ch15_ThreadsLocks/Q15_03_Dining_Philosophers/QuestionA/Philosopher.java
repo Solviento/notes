@@ -1,6 +1,7 @@
-package Q15_03_Dining_Philosophers.QuestionA;
+package com.cracking.code.ch15_ThreadsLocks.Q15_03_Dining_Philosophers.QuestionA;
 
-import CtCILibrary.AssortedMethods;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class Philosopher extends Thread {
 	private final int maxPause = 100;

@@ -1,4 +1,4 @@
-package Q16_21_Sum_Swap;
+package com.cracking.code.ch16_Moderate.Q16_21_Sum_Swap;
 
 public class QuestionB {
 	public static int[] findSwapValues(int[] array1, int[] array2) {

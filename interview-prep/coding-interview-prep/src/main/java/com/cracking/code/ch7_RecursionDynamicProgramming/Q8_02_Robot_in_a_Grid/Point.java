@@ -1,4 +1,4 @@
-package Q8_02_Robot_in_a_Grid;
+package com.cracking.code.ch7_RecursionDynamicProgramming.Q8_02_Robot_in_a_Grid;
 
 public class Point {
 	public int row, column;

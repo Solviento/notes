@@ -1,8 +1,9 @@
-package Q8_02_Robot_in_a_Grid;
+package com.cracking.code.ch7_RecursionDynamicProgramming.Q8_02_Robot_in_a_Grid;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 import java.util.ArrayList;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 	

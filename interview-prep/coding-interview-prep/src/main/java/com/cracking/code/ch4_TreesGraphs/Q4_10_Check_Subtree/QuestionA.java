@@ -1,7 +1,5 @@
 package Q4_10_Check_Subtree;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.TreeNode;
 
 public class QuestionA {
 	

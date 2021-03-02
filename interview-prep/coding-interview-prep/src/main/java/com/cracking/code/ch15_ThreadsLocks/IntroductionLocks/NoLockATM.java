@@ -1,4 +1,4 @@
-package IntroductionLocks;
+package com.cracking.code.ch15_ThreadsLocks.IntroductionLocks;
 
 public class NoLockATM {
 	private int balance = 100;

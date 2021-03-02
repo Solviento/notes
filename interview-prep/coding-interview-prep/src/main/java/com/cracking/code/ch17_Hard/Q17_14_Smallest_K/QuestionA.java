@@ -2,7 +2,6 @@ package Q17_14_Smallest_K;
 
 import java.util.Arrays;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 	

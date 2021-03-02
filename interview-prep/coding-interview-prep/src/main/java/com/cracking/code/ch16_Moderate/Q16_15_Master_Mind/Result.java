@@ -1,4 +1,4 @@
-package Q16_15_Master_Mind;
+package com.cracking.code.ch16_Moderate.Q16_15_Master_Mind;
 
 public class Result {
 	public int hits;

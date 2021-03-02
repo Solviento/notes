@@ -1,4 +1,4 @@
-package IntroductionLocks;
+package com.cracking.code.ch15_ThreadsLocks.IntroductionLocks;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

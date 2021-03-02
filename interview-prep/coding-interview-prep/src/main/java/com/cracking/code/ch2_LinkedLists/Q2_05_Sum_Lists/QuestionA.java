@@ -1,7 +1,6 @@
 package Q2_05_Sum_Lists;
 
 
-import CtCILibrary.LinkedListNode;
 
 public class QuestionA {
 	private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {

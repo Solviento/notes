@@ -1,4 +1,4 @@
-package Q10_02_Group_Anagrams;
+package com.cracking.code.ch10_SortingSearching.Q10_02_Group_Anagrams;
 
 import java.util.Arrays;
 import java.util.Comparator;

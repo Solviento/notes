@@ -1,4 +1,4 @@
-package Q10_08_Find_Duplicates;
+package com.cracking.code.ch10_SortingSearching.Q10_08_Find_Duplicates;
 
 class BitSet {
 	int[] bitset;

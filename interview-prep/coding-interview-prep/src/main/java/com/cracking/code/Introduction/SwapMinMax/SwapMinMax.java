@@ -1,6 +1,5 @@
-package SwapMinMax;
+package com.cracking.code.SwapMinMax;
 
-import CtCILibrary.AssortedMethods;
 
 public class SwapMinMax {
 	

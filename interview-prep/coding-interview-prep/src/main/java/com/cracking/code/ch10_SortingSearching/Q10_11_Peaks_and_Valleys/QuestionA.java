@@ -1,8 +1,9 @@
-package Q10_11_Peaks_and_Valleys;
+package com.cracking.code.ch10_SortingSearching.Q10_11_Peaks_and_Valleys;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 import java.util.Arrays;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 	public static void sortValleyPeak(int[] array) {

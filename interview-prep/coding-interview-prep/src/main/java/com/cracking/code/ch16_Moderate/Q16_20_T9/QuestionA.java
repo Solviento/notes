@@ -1,10 +1,10 @@
-package Q16_20_T9;
+package com.cracking.code.ch16_Moderate.Q16_20_T9;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.TrieNode;
 
 public class QuestionA {
 	public static char[][] t9Letters = {

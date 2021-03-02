@@ -1,6 +1,5 @@
 package Q5_01_Insertion;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {
 

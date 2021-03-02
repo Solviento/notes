@@ -1,6 +1,5 @@
-package Q16_06_Smallest_Difference;
+package com.cracking.code.Q16_06_Smallest_Difference;
 
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 	public static void main(String[] args) {

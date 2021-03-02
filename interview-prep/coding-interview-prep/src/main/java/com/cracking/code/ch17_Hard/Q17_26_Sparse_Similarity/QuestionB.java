@@ -1,4 +1,4 @@
-package Q17_26_Sparse_Similarity;
+package com.cracking.code.ch17_Hard.Q17_26_Sparse_Similarity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.HashMapList;
 
 public class QuestionB {
 	public static HashMap<DocPair, Double> computeSimilarities(HashMap<Integer, Document> documents) {

@@ -1,5 +1,4 @@
-package Q10_09_Sorted_Matrix_Search;
-import CtCILibrary.*;
+package com.cracking.code.Q10_09_Sorted_Matrix_Search;
 
 public class QuestionA {
 

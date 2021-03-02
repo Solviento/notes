@@ -1,4 +1,4 @@
-package Q17_12_BiNode;
+package com.cracking.code.ch17_Hard.Q17_12_BiNode;
 
 public class QuestionA {
 	private static class NodePair {

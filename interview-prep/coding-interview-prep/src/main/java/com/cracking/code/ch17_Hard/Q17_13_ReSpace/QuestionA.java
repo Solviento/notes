@@ -2,8 +2,7 @@ package Q17_13_ReSpace;
 
 import java.util.HashSet;
 
-import CtCILibrary.AssortedMethods;
-public class QuestionA {	
+public class QuestionA {
 	public static String bestSplit(HashSet<String> dictionary, String sentence) {
 		ParseResult r = split(dictionary, sentence, 0);
 		return r == null ? null : r.parsed;

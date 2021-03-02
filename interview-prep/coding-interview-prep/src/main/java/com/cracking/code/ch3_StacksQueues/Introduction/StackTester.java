@@ -3,7 +3,6 @@ package Introduction;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-import CtCILibrary.AssortedMethods;
 
 public class StackTester {
 

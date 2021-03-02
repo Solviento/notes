@@ -1,6 +1,5 @@
 package Q5_07_Pairwise_Swap;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {
 

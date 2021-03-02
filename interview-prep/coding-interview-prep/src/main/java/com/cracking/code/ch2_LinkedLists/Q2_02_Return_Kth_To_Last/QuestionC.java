@@ -1,6 +1,5 @@
-package Q2_02_Return_Kth_To_Last;
+package com.cracking.code.ch2_LinkedLists.Q2_02_Return_Kth_To_Last;
 
-import CtCILibrary.*;
 
 public class QuestionC {
 	public static class Index {

@@ -1,6 +1,7 @@
-package Q16_21_Sum_Swap;
+package com.cracking.code.ch16_Moderate.Q16_21_Sum_Swap;
 
-import CtCILibrary.AssortedMethods;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class Tester {
 	

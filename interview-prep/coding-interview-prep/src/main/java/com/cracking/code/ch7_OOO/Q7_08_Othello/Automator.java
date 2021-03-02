@@ -1,8 +1,7 @@
-package Q7_08_Othello;
+package com.cracking.code.ch7_OOO.Q7_08_Othello;
 
 import java.util.ArrayList;
 
-import CtCILibrary.AssortedMethods;
 
 /* A helper class to automate this game. This is just used for testing purposes. */
 public class Automator {

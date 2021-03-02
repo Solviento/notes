@@ -1,5 +1,7 @@
-package Q10_09_Sorted_Matrix_Search;
-import CtCILibrary.*;
+package com.cracking.code.ch10_SortingSearching.Q10_09_Sorted_Matrix_Search;
+
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class QuestionB {
 	

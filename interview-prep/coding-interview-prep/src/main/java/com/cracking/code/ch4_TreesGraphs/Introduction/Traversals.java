@@ -1,6 +1,5 @@
 package Introduction;
 
-import CtCILibrary.TreeNode;
 
 public class Traversals {
 	public static void visit(TreeNode node) {

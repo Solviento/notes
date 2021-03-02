@@ -1,6 +1,5 @@
 package Q17_16_The_Masseuse;
 
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 	public static int[] generateRandomArray(int size) {

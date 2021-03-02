@@ -1,4 +1,4 @@
-package Q17_26_Sparse_Similarity;
+package com.cracking.code.ch17_Hard.Q17_26_Sparse_Similarity;
 
 public class DocPair {
 	public int doc1;

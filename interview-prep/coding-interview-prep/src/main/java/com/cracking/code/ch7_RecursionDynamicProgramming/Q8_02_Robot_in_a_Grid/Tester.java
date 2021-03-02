@@ -1,8 +1,6 @@
-package Q8_02_Robot_in_a_Grid;
+package com.cracking.code.Q8_02_Robot_in_a_Grid;
 
 import java.util.ArrayList;
-
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 	public static void main(String[] args) {

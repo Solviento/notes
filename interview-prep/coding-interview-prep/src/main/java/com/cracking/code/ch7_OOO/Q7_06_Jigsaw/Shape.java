@@ -1,4 +1,4 @@
-package Q7_06_Jigsaw;
+package com.cracking.code.ch7_OOO.Q7_06_Jigsaw;
 
 public enum Shape {
 	INNER, OUTER, FLAT;

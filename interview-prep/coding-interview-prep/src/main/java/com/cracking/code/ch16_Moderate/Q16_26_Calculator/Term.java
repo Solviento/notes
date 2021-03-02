@@ -1,4 +1,4 @@
-package Q16_26_Calculator;
+package com.cracking.code.ch16_Moderate.Q16_26_Calculator;
 
 import java.util.ArrayList;
 

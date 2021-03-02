@@ -1,6 +1,5 @@
-package Q16_16_Sub_Sort;
+package com.cracking.code.Q16_16_Sub_Sort;
 
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 

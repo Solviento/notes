@@ -1,4 +1,4 @@
-package Q17_26_Sparse_Similarity;
+package com.cracking.code.ch17_Hard.Q17_26_Sparse_Similarity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map.Entry;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionC {
 	public static class Element implements Comparable<Element> {

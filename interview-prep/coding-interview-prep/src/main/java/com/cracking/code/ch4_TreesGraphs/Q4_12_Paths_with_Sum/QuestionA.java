@@ -1,6 +1,6 @@
-package Q4_12_Paths_with_Sum;
+package com.cracking.code.ch4_TreesGraphs.Q4_12_Paths_with_Sum;
 
-import CtCILibrary.TreeNode;
+import com.cracking.code.DataStructuresLibrary.TreeNode;
 
 public class QuestionA {
 	

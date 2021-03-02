@@ -1,8 +1,7 @@
-package Q10_02_Group_Anagrams;
+package com.cracking.code.Q10_02_Group_Anagrams;
 
 import java.util.Arrays;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {
 	public static void main(String[] args) {

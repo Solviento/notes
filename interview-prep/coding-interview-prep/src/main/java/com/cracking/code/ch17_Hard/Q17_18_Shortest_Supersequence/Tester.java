@@ -1,6 +1,5 @@
 package Q17_18_Shortest_Supersequence;
 
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 	public static boolean equivalent(Range[] ranges) {

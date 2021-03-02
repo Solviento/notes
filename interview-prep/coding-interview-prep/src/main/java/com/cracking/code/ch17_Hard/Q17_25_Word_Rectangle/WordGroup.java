@@ -1,4 +1,4 @@
-package Q17_25_Word_Rectangle;
+package com.cracking.code.ch17_Hard.Q17_25_Word_Rectangle;
 
 import java.util.ArrayList;
 import java.util.HashMap;

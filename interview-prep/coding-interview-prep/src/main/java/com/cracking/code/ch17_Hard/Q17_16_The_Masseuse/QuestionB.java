@@ -1,4 +1,4 @@
-package Q17_16_The_Masseuse;
+package com.cracking.code.ch17_Hard.Q17_16_The_Masseuse;
 
 public class QuestionB {
 	

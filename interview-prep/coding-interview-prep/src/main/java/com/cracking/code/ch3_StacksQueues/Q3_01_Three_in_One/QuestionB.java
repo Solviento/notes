@@ -1,6 +1,5 @@
 package Q3_01_Three_in_One;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionB {
 	public static void printStacks(MultiStack stacks) {

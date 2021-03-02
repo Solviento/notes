@@ -1,8 +1,7 @@
-package Q16_08_English_Int;
+package com.cracking.code.Q16_08_English_Int;
 
 import java.util.LinkedList;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {
 	public static String[] smalls = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};

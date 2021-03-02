@@ -1,8 +1,7 @@
-package Q17_02_Shuffle;
+package com.cracking.code.ch17_Hard.Q17_02_Shuffle;
 
 import java.util.Random;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {	
 	public static int[] shuffleArrayRecursively(int[] cards, int i) {

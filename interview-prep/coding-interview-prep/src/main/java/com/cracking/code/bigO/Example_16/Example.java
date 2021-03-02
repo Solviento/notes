@@ -1,4 +1,4 @@
-package Example_16;
+package com.cracking.code.bigO.Example_16;
 
 public class Example {
 

@@ -1,4 +1,4 @@
-package Q17_17_Multi_Search;
+package com.cracking.code.ch17_Hard.Q17_17_Multi_Search;
 
 import java.util.ArrayList;
 import java.util.HashMap;

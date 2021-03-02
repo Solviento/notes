@@ -2,7 +2,6 @@ package Q4_08_First_Common_Ancestor;
 
 import java.util.ArrayList;
 
-import CtCILibrary.TreeNode;
 
 public class Tester {
 	public static String resultToString(String s, TreeNode x, TreeNode y, TreeNode anc) {

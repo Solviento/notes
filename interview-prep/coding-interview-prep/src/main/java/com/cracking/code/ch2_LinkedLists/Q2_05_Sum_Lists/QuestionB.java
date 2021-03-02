@@ -1,5 +1,4 @@
 package Q2_05_Sum_Lists;
-import CtCILibrary.LinkedListNode;
 
 public class QuestionB {
 	private static int length(LinkedListNode l) {

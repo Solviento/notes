@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 
-import CtCILibrary.AssortedMethods;
 
 public class QueueTester {
 

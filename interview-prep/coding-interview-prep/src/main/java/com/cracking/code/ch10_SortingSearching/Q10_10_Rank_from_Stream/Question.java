@@ -1,6 +1,7 @@
-package Q10_10_Rank_from_Stream;
+package com.cracking.code.ch10_SortingSearching.Q10_10_Rank_from_Stream;
 
-import CtCILibrary.AssortedMethods;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class Question {
 	private static RankNode root = null;

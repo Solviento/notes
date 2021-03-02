@@ -1,5 +1,4 @@
 package Q4_04_Check_Balanced;
-import CtCILibrary.TreeNode;
 
 public class QuestionImproved {
 		

@@ -1,6 +1,7 @@
-package Q2_01_Remove_Dups;
+package com.cracking.code.ch2_LinkedLists.Q2_01_Remove_Dups;
 
-import CtCILibrary.LinkedListNode;
+
+import com.cracking.code.DataStructuresLibrary.LinkedListNode;
 
 public class QuestionC {
 	public static void deleteDups(LinkedListNode head) {

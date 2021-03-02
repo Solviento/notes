@@ -1,8 +1,7 @@
-package Q16_02_Word_Frequencies;
+package com.cracking.code.Q16_02_Word_Frequencies;
 
 import java.util.*;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionB {
 	public static HashMap<String, Integer> setupDictionary(String[] book) {

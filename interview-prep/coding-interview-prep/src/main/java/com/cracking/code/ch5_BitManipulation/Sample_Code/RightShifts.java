@@ -1,6 +1,5 @@
 package Sample_Code;
 
-import CtCILibrary.AssortedMethods;
 
 public class RightShifts {
 	public static int repeatedArithmeticShift(int x, int count) {

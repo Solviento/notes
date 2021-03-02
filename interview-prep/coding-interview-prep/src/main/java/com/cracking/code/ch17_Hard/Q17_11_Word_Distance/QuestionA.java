@@ -1,6 +1,5 @@
 package Q17_11_Word_Distance;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 

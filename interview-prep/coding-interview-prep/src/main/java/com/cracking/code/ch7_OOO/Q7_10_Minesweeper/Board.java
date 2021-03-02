@@ -1,4 +1,4 @@
-package Q7_10_Minesweeper;
+package com.cracking.code.ch7_OOO.Q7_10_Minesweeper;
 
 import java.util.LinkedList;
 import java.util.Queue;

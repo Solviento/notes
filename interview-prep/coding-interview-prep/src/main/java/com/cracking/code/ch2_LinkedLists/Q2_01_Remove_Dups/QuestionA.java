@@ -1,7 +1,8 @@
-package Q2_01_Remove_Dups;
+package com.cracking.code.ch2_LinkedLists.Q2_01_Remove_Dups;
+
+import com.cracking.code.DataStructuresLibrary.LinkedListNode;
 
 import java.util.HashSet;
-import CtCILibrary.LinkedListNode;
 
 public class QuestionA {
 	public static void deleteDups(LinkedListNode n) {

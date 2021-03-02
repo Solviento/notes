@@ -1,8 +1,9 @@
-package Q16_04_Tic_Tac_Win;
+package com.cracking.code.ch16_Moderate.Q16_04_Tic_Tac_Win;
 
-import CtCILibrary.AssortedMethods;
 
-public class Tester {	
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
+
+public class Tester {
 	public static Piece convertIntToPiece(int i) {
 		if (i == 1) {
 			return Piece.Blue;

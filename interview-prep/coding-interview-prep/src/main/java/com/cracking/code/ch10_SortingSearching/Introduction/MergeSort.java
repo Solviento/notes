@@ -1,8 +1,8 @@
-package Introduction;
+package com.cracking.code.ch10_SortingSearching.Introduction;
 
-import CtCILibrary.AssortedMethods;
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
-public class MergeSort {	
+public class MergeSort {
 	public static void mergesort(int[] array) {
 		int[] helper = new int[array.length];
 		mergesort(array, helper, 0, array.length - 1);

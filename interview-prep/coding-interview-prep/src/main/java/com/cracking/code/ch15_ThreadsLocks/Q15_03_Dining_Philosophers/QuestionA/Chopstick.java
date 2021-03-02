@@ -1,4 +1,4 @@
-package Q15_03_Dining_Philosophers.QuestionA;
+package com.cracking.code.ch15_ThreadsLocks.Q15_03_Dining_Philosophers.QuestionA;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

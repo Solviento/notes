@@ -1,6 +1,5 @@
-package Q16_02_Word_Frequencies;
+package com.cracking.code.Q16_02_Word_Frequencies;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 	public static int getFrequency(String[] book, String word) {

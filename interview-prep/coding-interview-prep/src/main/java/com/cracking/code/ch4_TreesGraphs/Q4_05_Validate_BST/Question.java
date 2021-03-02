@@ -1,6 +1,5 @@
 package Q4_05_Validate_BST;
 
-import CtCILibrary.TreeNode;
 
 public class Question {
 	public static Integer lastPrinted = null;

@@ -1,6 +1,5 @@
 package Q4_08_First_Common_Ancestor;
 
-import CtCILibrary.TreeNode;
 
 public class QuestionA {
 	public static TreeNode commonAncestor(TreeNode p, TreeNode q) {

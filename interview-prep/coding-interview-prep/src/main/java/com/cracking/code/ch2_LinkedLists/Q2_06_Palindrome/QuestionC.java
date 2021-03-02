@@ -1,6 +1,5 @@
 package Q2_06_Palindrome;
 
-import CtCILibrary.LinkedListNode;
 
 public class QuestionC {
 	public static class Result {

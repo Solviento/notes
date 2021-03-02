@@ -1,9 +1,10 @@
-package IntroductionLocks;
+package com.cracking.code.ch15_ThreadsLocks.IntroductionLocks;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import CtCILibrary.AssortedMethods;
 
 public class MyClass extends Thread  {
 	private NoLockATM noLockATM;

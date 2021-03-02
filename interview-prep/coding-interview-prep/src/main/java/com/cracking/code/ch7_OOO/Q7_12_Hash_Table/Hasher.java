@@ -1,4 +1,4 @@
-package Q7_12_Hash_Table;
+package com.cracking.code.ch7_OOO.Q7_12_Hash_Table;
 
 import java.util.ArrayList;
 

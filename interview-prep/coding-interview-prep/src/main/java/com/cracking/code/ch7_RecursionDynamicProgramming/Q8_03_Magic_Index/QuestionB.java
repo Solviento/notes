@@ -1,8 +1,7 @@
-package Q8_03_Magic_Index;
+package com.cracking.code.Q8_03_Magic_Index;
 
 import java.util.Arrays;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionB {
 

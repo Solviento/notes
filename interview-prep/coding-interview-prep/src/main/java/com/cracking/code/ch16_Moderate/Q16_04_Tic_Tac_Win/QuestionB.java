@@ -1,9 +1,9 @@
-package Q16_04_Tic_Tac_Win;
+package com.cracking.code.ch16_Moderate.Q16_04_Tic_Tac_Win;
 
 
-import CtCILibrary.AssortedMethods;
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
-public class QuestionB {	
+public class QuestionB {
 	public static Piece hasWon(Piece[][] board, int row, int column) {
 		if (board.length != board[0].length) return Piece.Empty;
 		
@@ -68,7 +68,7 @@ public class QuestionB {
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				int x = board_t[i][j];
-				board[i][j] = Tester.convertIntToPiece(x);
+//				board[i][j] = Q16_04_Tic_Tac_Win.Tester.convertIntToPiece(x);
 			}
 		}
 

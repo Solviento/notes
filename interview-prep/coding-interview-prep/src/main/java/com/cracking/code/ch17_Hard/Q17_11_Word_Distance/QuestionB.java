@@ -3,8 +3,6 @@ package Q17_11_Word_Distance;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.HashMapList;
 
 public class QuestionB {
 	

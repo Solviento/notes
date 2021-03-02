@@ -3,7 +3,6 @@ package Q17_17_Multi_Search;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import CtCILibrary.HashMapList;
 
 public class QuestionA {
 	public static boolean isSubstringAtLocation(String big, String small, int offset) {

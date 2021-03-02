@@ -1,6 +1,7 @@
-package Introduction;
+package com.cracking.code.ch10_SortingSearching.Introduction;
 
-import CtCILibrary.AssortedMethods;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class Quicksort {
 	public static void swap(int[] array, int i, int j) {

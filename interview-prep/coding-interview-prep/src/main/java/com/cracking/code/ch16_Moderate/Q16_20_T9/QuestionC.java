@@ -1,10 +1,11 @@
-package Q16_20_T9;
+package com.cracking.code.ch16_Moderate.Q16_20_T9;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
+import com.cracking.code.DataStructuresLibrary.HashMapList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.HashMapList;
 
 public class QuestionC {
 	public static int numLetters = 26;
@@ -55,7 +56,7 @@ public class QuestionC {
 		HashMap<Character, Character> letterToNumberMap = createLetterToNumberMap();
 		
 		/* Create word -> number map */
-		HashMapList<String, String> wordsToNumbers = new HashMapList<String, String>(); 
+		HashMapList<String, String> wordsToNumbers = new HashMapList<String, String>();
 		for (String word : words) {
 			String numbers = convertToT9(word, letterToNumberMap);
 			wordsToNumbers.put(numbers, word);

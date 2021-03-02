@@ -1,4 +1,4 @@
-package Q16_14_Best_Line;
+package com.cracking.code.ch16_Moderate.Q16_14_Best_Line;
 
 public class Line {
 	public static double epsilon = .5;

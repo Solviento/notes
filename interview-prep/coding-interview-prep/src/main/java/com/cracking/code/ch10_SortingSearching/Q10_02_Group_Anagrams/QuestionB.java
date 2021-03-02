@@ -1,10 +1,8 @@
-package Q10_02_Group_Anagrams;
+package com.cracking.code.Q10_02_Group_Anagrams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.HashMapList;
 
 public class QuestionB {
 	public static void sort(String[] array) {

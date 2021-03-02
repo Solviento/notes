@@ -1,4 +1,4 @@
-package Q17_05_Letters_and_Numbers;
+package com.cracking.code.ch17_Hard.Q17_05_Letters_and_Numbers;
 
 public class Tester {
 

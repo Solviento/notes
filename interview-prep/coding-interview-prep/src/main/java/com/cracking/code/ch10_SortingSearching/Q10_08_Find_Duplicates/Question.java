@@ -1,6 +1,5 @@
-package Q10_08_Find_Duplicates;
+package com.cracking.code.Q10_08_Find_Duplicates;
 
-import CtCILibrary.AssortedMethods;
 
 public class Question {
 

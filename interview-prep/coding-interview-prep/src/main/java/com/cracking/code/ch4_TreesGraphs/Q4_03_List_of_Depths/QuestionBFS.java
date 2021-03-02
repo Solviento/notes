@@ -1,6 +1,5 @@
 package Q4_03_List_of_Depths;
 
-import CtCILibrary.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;

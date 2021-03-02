@@ -1,4 +1,4 @@
-package Q1_02_Check_Permutation;
+package com.cracking.code.ch1_ArraysStrings.Q1_02_Check_Permutation;
 
 public class QuestionB {	
 	public static boolean permutation(String s, String t) {

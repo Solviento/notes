@@ -1,6 +1,7 @@
-package Q10_01_Sorted_Merge;
+package com.cracking.code.ch10_SortingSearching.Q10_01_Sorted_Merge;
 
-import CtCILibrary.AssortedMethods;
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
 
 public class Question {
 

@@ -1,4 +1,4 @@
-package Q1_01_Is_Unique;
+package com.cracking.code.ch1_ArraysStrings.Q1_01_Is_Unique;
 
 public class Tester {
 	

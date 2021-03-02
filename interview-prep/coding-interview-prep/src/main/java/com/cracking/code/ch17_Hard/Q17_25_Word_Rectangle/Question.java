@@ -1,8 +1,10 @@
-package Q17_25_Word_Rectangle;
+package com.cracking.code.ch17_Hard.Q17_25_Word_Rectangle;
+
+
+import com.cracking.code.DataStructuresLibrary.AssortedMethods;
+import com.cracking.code.DataStructuresLibrary.Trie;
 
 import java.util.ArrayList;
-import CtCILibrary.AssortedMethods;
-import CtCILibrary.Trie;
 
 public class Question {
 	private int maxWordLength;
@@ -58,7 +60,7 @@ public class Question {
 		}
 		if (trieList[height - 1] == null) {
 			ArrayList<String> words = groupList[height - 1].getWords();
-			trieList[height - 1] = new Trie(words); 
+			trieList[height - 1] = new Trie(words);
 		}
 		return makePartialRectangle(length, height, new Rectangle(length));
 	}

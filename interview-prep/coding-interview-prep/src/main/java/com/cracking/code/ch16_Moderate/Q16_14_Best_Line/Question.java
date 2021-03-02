@@ -1,10 +1,11 @@
-package Q16_14_Best_Line;
+package com.cracking.code.ch16_Moderate.Q16_14_Best_Line;
+
+import com.cracking.code.DataStructuresLibrary.HashMapList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
-import CtCILibrary.HashMapList;
 
 public class Question {	
 	/* Find line that goes through most number of points. */

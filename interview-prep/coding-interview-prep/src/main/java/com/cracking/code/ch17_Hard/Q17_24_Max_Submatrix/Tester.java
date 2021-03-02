@@ -1,6 +1,5 @@
 package Q17_24_Max_Submatrix;
 
-import CtCILibrary.AssortedMethods;
 
 public class Tester {
 

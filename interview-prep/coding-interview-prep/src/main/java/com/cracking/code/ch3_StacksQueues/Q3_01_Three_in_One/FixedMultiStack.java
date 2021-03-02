@@ -2,7 +2,6 @@ package Q3_01_Three_in_One;
 
 import java.util.EmptyStackException;
 
-import CtCILibrary.AssortedMethods;
 
 public class FixedMultiStack {
 	private int numberOfStacks = 3;

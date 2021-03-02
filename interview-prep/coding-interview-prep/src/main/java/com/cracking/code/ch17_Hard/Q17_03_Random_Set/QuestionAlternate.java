@@ -2,7 +2,6 @@ package Q17_03_Random_Set;
 
 import java.util.Random;
 
-import CtCILibrary.AssortedMethods;
 
 public class QuestionAlternate {
 	

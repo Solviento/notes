@@ -1,4 +1,4 @@
-package Q15_05_Call_In_Order;
+package com.cracking.code.ch15_ThreadsLocks.Q15_05_Call_In_Order;
 
 public class MyThread extends Thread {
 	private String method;
