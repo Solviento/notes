@@ -1,4 +1,4 @@
-package Q10_07_Missing_Int;
+package com.cracking.code.ch10_SortingSearching.Q10_07_Missing_Int;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ public class QuestionA {
 	public static byte[] bitfield = new byte [(int) (numberOfInts / 8)];
 	
 	public static void findOpenNumber() throws FileNotFoundException {
-		Scanner in = new Scanner(new FileReader("Ch 10. Sorting and Searching/Q10_07_Missing_Int/input.txt"));
+		Scanner in = new Scanner(new FileReader("Q10_07_Missing_Int/input.txt"));
 		while (in.hasNextInt()) {
 			int n = in.nextInt ();
 			/* Finds the corresponding number in the bitfield by using

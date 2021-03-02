@@ -6,9 +6,6 @@ public class LeetcodeRunner {
 
     public static void main(String[] args) {
         System.out.println("This is a basic runner for leetcode/algo problems.");
-<<<<<<< HEAD
-        String className = "RunLengthEncoding";//args[0];
-=======
         runAllPracticeClasses(practiceClasses());
     }
 
@@ -32,7 +29,6 @@ public class LeetcodeRunner {
     }
 
     public static void runAllPracticeClasses(ArrayList<String> classes) {
->>>>>>> e8f20c8a8a0b5f669a30487c394dd78772bad29c
         String packagePath = "com.practice.code.problems.";
         System.out.println("----------------------------------------------------------------------------------\n");
         for (String className : classes) {

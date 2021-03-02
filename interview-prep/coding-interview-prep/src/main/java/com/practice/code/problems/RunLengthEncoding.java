@@ -1,5 +1,7 @@
 package com.practice.code.problems;
 
+import com.practice.code.runner.CodeRunner;
+
 public class RunLengthEncoding implements CodeRunner {
 
     public String encode(String input) {
