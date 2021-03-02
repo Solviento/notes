@@ -4,40 +4,44 @@ import com.practice.code.runner.CodeRunner;
 
 public class ReorganizeString implements CodeRunner {
 
+    // good to remember
+    // char a - 'a' = int 0
+    // char b - 'a' = int 1
+    // ...
+    // char z - 'a' = 25
     public String reorganizeString(String S) {
-        int[] hash = new int[26];
+        int[] letterFrequencyArray = new int[26];
         for (int i = 0; i < S.length(); i++) {
-            int charVal = S.charAt(i) - 'a';
-            hash[S.charAt(i) - 'a']++;
+            letterFrequencyArray[S.charAt(i) - 'a']++;
         }
         int max = 0, letter = 0;
-        for (int i = 0; i < hash.length; i++) {
-            if (hash[i] > max) {
-                max = hash[i];
+        for (int i = 0; i < letterFrequencyArray.length; i++) {
+            if (letterFrequencyArray[i] > max) {
+                max = letterFrequencyArray[i];
                 letter = i;
             }
         }
         if (max > (S.length() + 1) / 2) {
             return "";
         }
-        char[] res = new char[S.length()];
-        int idx = 0;
-        while (hash[letter] > 0) {
-            res[idx] = (char) (letter + 'a');
-            idx += 2;
-            hash[letter]--;
+        char[] reorganizedString = new char[S.length()];
+        int indexPointer = 0;
+        while (letterFrequencyArray[letter] > 0) {
+            reorganizedString[indexPointer] = (char) (letter + 'a');
+            indexPointer += 2;
+            letterFrequencyArray[letter]--;
         }
-        for (int i = 0; i < hash.length; i++) {
-            while (hash[i] > 0) {
-                if (idx >= res.length) {
-                    idx = 1;
+        for (int i = 0; i < letterFrequencyArray.length; i++) {
+            while (letterFrequencyArray[i] > 0) {
+                if (indexPointer >= reorganizedString.length) {
+                    indexPointer = 1;
                 }
-                res[idx] = (char) (i + 'a');
-                idx += 2;
-                hash[i]--;
+                reorganizedString[indexPointer] = (char) (i + 'a');
+                indexPointer += 2;
+                letterFrequencyArray[i]--;
             }
         }
-        return String.valueOf(res);
+        return String.valueOf(reorganizedString);
     }
 
     // helper method to verify if string is a reoccurring letter string
@@ -60,6 +64,7 @@ public class ReorganizeString implements CodeRunner {
 
     @Override
     public void run() {
-
+        reorganizeString("aabza");
+        System.out.println("Does this string have consecutive reoccurring letters? : " + reorganizeString("aabza"));
     }
 }

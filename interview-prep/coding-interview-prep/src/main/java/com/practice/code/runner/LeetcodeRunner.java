@@ -11,20 +11,22 @@ public class LeetcodeRunner {
 
     public static ArrayList<String> practiceClasses() {
         ArrayList<String> classes = new ArrayList<>();
-        classes.add("Anagram");
-        classes.add("BitwiseOperations");
-        classes.add("BuySellStock");
-        classes.add("ClimbingStairs");
-        classes.add("ColumnNumber");
-        classes.add("ColumnTitle");
-        classes.add("ContainsDuplicate");
-        classes.add("CountPrimes");
-        classes.add("FirstLastPositionInteger");
-        classes.add("FirstUniqueChar");
-        classes.add("FizzBuzz");
-        classes.add("FourSumII");
-        classes.add("GenerateParenthesis");
-        classes.add("HappyNumber");
+//        classes.add("Anagram");
+//        classes.add("BitwiseOperations");
+//        classes.add("BuySellStock");
+//        classes.add("ClimbingStairs");
+//        classes.add("ColumnNumber");
+//        classes.add("ColumnTitle");
+//        classes.add("ContainsDuplicate");
+//        classes.add("CountPrimes");
+//        classes.add("FirstLastPositionInteger");
+//        classes.add("FirstUniqueChar");
+//        classes.add("FizzBuzz");
+//        classes.add("FourSumII");
+//        classes.add("GenerateParenthesis");
+//        classes.add("HappyNumber");
+//        classes.add("ReorganizeString");
+        classes.add("DiameterBinaryTree");
         return classes;
     }
 

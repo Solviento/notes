@@ -16,7 +16,7 @@ Explanation:
 8^2 + 2^2 = 68
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1 */
-class HappyNumber implements CodeRunner {
+public class HappyNumber implements CodeRunner {
   public boolean isHappy(int n) {
     int loopCount = 0;
     boolean happy = false;
@@ -36,7 +36,6 @@ class HappyNumber implements CodeRunner {
     return happy;
   }
 
-  @Override
   public void run() {
     System.out.println("Is 19 a happy number? " + isHappy(19));
     System.out.println("Is 103 a happy number? " + isHappy(103));
