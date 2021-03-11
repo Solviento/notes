@@ -27,6 +27,7 @@ public class LeetcodeRunner {
 //        classes.add("HappyNumber");
 //        classes.add("ReorganizeString");
         classes.add("DiameterBinaryTree");
+        classes.add("LongestIncreasingSubsequence");
         return classes;
     }
 
