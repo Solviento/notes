@@ -26,8 +26,10 @@ public class LeetcodeRunner {
 //        classes.add("GenerateParenthesis");
 //        classes.add("HappyNumber");
 //        classes.add("ReorganizeString");
-        classes.add("DiameterBinaryTree");
-        classes.add("LongestIncreasingSubsequence");
+//        classes.add("DiameterBinaryTree");
+//        classes.add("LongestIncreasingSubsequence");
+//        classes.add("CommonChars");
+        classes.add("UniqueEmailAddresses");
         return classes;
     }
 

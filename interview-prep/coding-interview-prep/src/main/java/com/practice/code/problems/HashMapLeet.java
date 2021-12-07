@@ -3,11 +3,11 @@ package com.practice.code.problems;
 import java.util.Arrays;
 
 // simple hash map
-public class HashMap {
+public class HashMapLeet<C, I extends Number> {
   int[] arr;
 
   /** Initialize your data structure here. */
-  public HashMap() {
+  public HashMapLeet() {
     arr = new int[1000000];
     Arrays.fill(arr, -1);
   }
