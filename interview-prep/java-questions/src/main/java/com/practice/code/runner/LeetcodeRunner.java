@@ -30,7 +30,8 @@ public class LeetcodeRunner {
 //        classes.add("LongestIncreasingSubsequence");
 //        classes.add("CommonChars");
 //        classes.add("UniqueEmailAddresses");
-        classes.add("OddEvenJump");
+//        classes.add("OddEvenJump");
+        classes.add("LicenseKeyFormatting");
         return classes;
     }
 

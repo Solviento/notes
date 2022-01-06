@@ -1,1 +1,0 @@
-Think about that feeling when your sense of self goes outside of your own body.
