@@ -1,8 +1,10 @@
 package com.practice.code.problems;
 
+import com.practice.code.runner.CodeRunner;
+
 import java.util.HashMap;
 
-public class Jewels {
+public class Jewels implements CodeRunner {
   public static int numJewelsInStones(String J, String S) {
     HashMap<Character, Integer> jewels = new HashMap<>();
     for (int i = 0; i < J.length(); i++) {
@@ -16,10 +18,9 @@ public class Jewels {
     }
     return unique;
   }
-  public static void main(String... args){
-    String J = "aA";
-    String S = "aAAbbb";
-    int j = numJewelsInStones(J, S);
-    System.out.println(j);
+
+  @Override
+  public void run() {
+
   }
 }
