@@ -2,15 +2,16 @@
 
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 
-Return the maximum amount of water a container can store.*/
+Return the maximum amount of water a container can store.
+The aim is to maximize the area formed between the vertical lines. The area of any container is calculated using the
+shorter line as length and the distance between the lines as the width of the rectangle.
+Area = length of shorter vertical line * distance between lines
+*/
 
 package com.practice.code.problems;
 
 import com.practice.code.runner.CodeRunner;
 
-// The aim is to maximize the area formed between the vertical lines. The area of any container is calculated using the
-// shorter line as length and the distance between the lines as the width of the rectangle.
-// Area = length of shorter vertical line * distance between lines
 public class MaxArea implements CodeRunner {
     public int maxArea(int[] height) {
         int max = Integer.MIN_VALUE;
@@ -33,7 +34,7 @@ public class MaxArea implements CodeRunner {
     @Override
     public void run() {
 
-        int[] height = {1,8,6,2,5,4,8,3,7};
+        int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         int max = maxArea(height);
         System.out.println("Max area : " + max);
     }

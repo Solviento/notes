@@ -3,7 +3,9 @@ package com.practice.code.problems;
 // Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 // You may assume all the characters consist of printable ascii characters.
 
-class ReverseString {
+import com.practice.code.runner.CodeRunner;
+
+class ReverseString implements CodeRunner {
   static void reverseString(char[] s) {
     int left = 0, right = s.length - 1;
     while (left < right) {
@@ -14,7 +16,9 @@ class ReverseString {
       right--;
     }
   }
-  public static void main(String... args){
+
+  @Override
+  public void run() {
     char[] c = new char[]{'H', 'a', 'p', 'p', 'y'};
     reverseString(c);
   }
