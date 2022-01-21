@@ -17,15 +17,6 @@ package com.practice.code.problems;
 import com.practice.code.runner.CodeRunner;
 
 class Interleave implements CodeRunner {
-    public static void main(String[] args) {
-        String s1 = "abc";
-        String s2 = "def";
-
-        int m = s1.length();
-        int n = s2.length();
-        String interleave = "";
-        printInterleave(s1, s2, interleave, m, n);
-    }
 
     static void printInterleave(String s1, String s2, String interleave, int m, int n) {
         if (m == 0 && n == 0)
@@ -42,6 +33,12 @@ class Interleave implements CodeRunner {
 
     @Override
     public void run() {
+        String s1 = "abc";
+        String s2 = "def";
 
+        int m = s1.length();
+        int n = s2.length();
+        String interleave = "";
+        printInterleave(s1, s2, interleave, m, n);
     }
 }

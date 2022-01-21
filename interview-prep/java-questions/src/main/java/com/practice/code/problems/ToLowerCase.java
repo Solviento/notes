@@ -1,6 +1,15 @@
+/*Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+
+Example 1:
+
+Input: s = "Hello"
+Output: "hello"*/
+
 package com.practice.code.problems;
 
-public class ToLowerCase {
+import com.practice.code.runner.CodeRunner;
+
+public class ToLowerCase implements CodeRunner {
   public static String toLowerCase_(String str) {
     char[] c = str.toCharArray();
     for (int i = 0; i < str.length(); i++) {
@@ -11,7 +20,9 @@ public class ToLowerCase {
     }
     return String.valueOf(c);
   }
-  public static void main(String... args){
+
+  @Override
+  public void run() {
     String h = "HelloABXZz";
     String h_ = toLowerCase_(h);
     System.out.println(h_);

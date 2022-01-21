@@ -1,9 +1,20 @@
+/*Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+Example 1:
+
+Input: nums = [-4,-1,0,3,10]
+Output: [0,1,9,16,100]
+Explanation: After squaring, the array becomes [16,1,0,9,100].
+After sorting, it becomes [0,1,9,16,100].*/
+
 package com.practice.code.problems;
 // Given an array of integers A sorted in non-decreasing order,
 // return an array of the squares of each number, also in sorted non-decreasing order.
+import com.practice.code.runner.CodeRunner;
+
 import java.util.Arrays;
 
-public class SortedSquares {
+public class SortedSquares implements CodeRunner {
   // quicksort O(nlog(n)), space: O(log(n))
   public static int[] sortedSquaresQS(int[] A) {
     int[] sq = new int[A.length];
@@ -33,13 +44,15 @@ public class SortedSquares {
 
     return sq;
   }
-  public static void main(String... args){
+
+  @Override
+  public void run() {
     // ASSUME: input array is already sorted, which makes the O(n) method possible
     // Going backwards on the array and comparing left
-    int[] a = new int[]{-4,-1,0,3,10};
+    int[] a = new int[]{-4, -1, 0, 3, 10};
     int[] A = sortedSquaresN(a);
-    for(Integer e: A){
-      System.out.print(e +" ");
+    for (Integer e : A) {
+      System.out.print(e + " ");
     }
   }
 }

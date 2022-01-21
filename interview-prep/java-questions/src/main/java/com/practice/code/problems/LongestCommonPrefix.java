@@ -1,11 +1,15 @@
+/*Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+Example 1:
+
+Input: strs = ["flower","flow","flight"]
+Output: "fl"*/
 package com.practice.code.problems;
 
 import java.util.Arrays;
 
-// Write a function to find the longest common prefix string amongst an array of strings.
-// If there is no common prefix, return an empty string "".
-// Input: ["flower","flow","flight"]
-// Output: "fl"
 public class LongestCommonPrefix {
   // Time: O(nlogn) Space: O(c) - c is length of string for longest string
   public String longestCommonPrefix(String[] strs) {

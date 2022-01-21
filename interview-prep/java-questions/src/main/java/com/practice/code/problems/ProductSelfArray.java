@@ -1,7 +1,16 @@
+/*Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+
+You must write an algorithm that runs in O(n) time and without using the division operation.
+
+Example 1:
+
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]*/
+
 package com.practice.code.problems;
-// Given an array nums of n integers where n > 1,
-// return an array output such that output[i] is
-// equal to the product of all the elements of nums except nums[i].
+
 class ProductSelfArray {
     // Intuitive way of building left and right arrays to produce a product array using left[i]*right[i]
     // Time: O(n) Space: O(n)

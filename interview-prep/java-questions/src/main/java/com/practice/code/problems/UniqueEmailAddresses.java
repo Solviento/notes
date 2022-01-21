@@ -1,7 +1,3 @@
-package com.practice.code.problems;
-
-import com.practice.code.runner.CodeRunner;
-
 /*
 Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, the email may contain one or more '.' or '+'.
 
@@ -20,6 +16,11 @@ Input: emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.
 Output: 2
 Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails.
  */
+
+package com.practice.code.problems;
+
+import com.practice.code.runner.CodeRunner;
+
 public class UniqueEmailAddresses implements CodeRunner {
 
     public int numUniqueEmails(String[] emails) {

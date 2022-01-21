@@ -1,35 +1,56 @@
 package com.practice.code.problems;
 
+import com.practice.code.runner.CodeRunner;
+
 import java.util.*;
 
 // INORDER:   LEFT, ROOT, RIGHT ------------------------------
 // PREORDER:  ROOT, LEFT, RIGHT ------------------------------
 // POSTORDEr: LEFT, RIGHT, ROOT ------------------------------
 // Has problems: Maximum Depth of Binary Tree,
-class Tree {
+class Tree implements CodeRunner {
+    @Override
+    public void run() {
+        BinaryTree bt = new BinaryTree();
+        bt.root = new TreeNode(1);
+        bt.root.left = new TreeNode(2);
+        bt.root.right = new TreeNode(3);
+        bt.root.left.left = new TreeNode(4);
+        bt.root.left.right = new TreeNode(5);
+        List<Integer> in = bt.inorder();
+        for (Integer e : in) {
+            System.out.print(e + " ");
+        }
+    }
+
     static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x){
+
+        TreeNode(int x) {
             val = x;
             left = null;
             right = null;
         }
     }
-    static class BinaryTree{
+
+    static class BinaryTree {
         TreeNode root;
-        BinaryTree(){
+
+        BinaryTree() {
             root = null;
         }
+
         // inorder traversal algorithm using recursion
         List<Integer> inorderTraversal(TreeNode root) {
             List<Integer> inorder = new ArrayList<>();
             inorderRecursive(root, inorder);
             return inorder;
         }
-        void inorderRecursive(TreeNode root, List<Integer> arr){
-            if (root == null){
+
+        void inorderRecursive(TreeNode root, List<Integer> arr) {
+            if (root == null) {
                 return;
             }
             // left node first, then root, then right node
@@ -37,14 +58,15 @@ class Tree {
             arr.add(root.val);
             inorderRecursive(root.right, arr);
         }
+
         // inorder traversal but using iterative loop
         List<Integer> inorderTraversalIterative(TreeNode root) {
             List<Integer> inorderList = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
             // TreeNode prev = null;
-            while(root != null || stack.isEmpty() == false){
+            while (root != null || stack.isEmpty() == false) {
                 // traverse and collect all left child nodes
-                while(root!=null){
+                while (root != null) {
                     stack.push(root);
                     root = root.left;
                 }
@@ -55,12 +77,14 @@ class Tree {
             }
             return inorderList;
         }
+
         // preorder traversal using recursion
         List<Integer> preorderTraversal(TreeNode root) {
             List<Integer> preorder = new ArrayList<>();
             preorderRecursive(root, preorder);
             return preorder;
         }
+
         void preorderRecursive(TreeNode root, List<Integer> preorder) {
             if (root == null) {
                 return;
@@ -70,12 +94,15 @@ class Tree {
             preorderRecursive(root.left, preorder);
             preorderRecursive(root.right, preorder);
         }
-        List<Integer> inorder(){
+
+        List<Integer> inorder() {
             return inorderTraversal(root);
         }
-        List<Integer> preorder(){
+
+        List<Integer> preorder() {
             return preorderTraversal(root);
         }
+
         // Given a binary tree, find its maximum depth.
         // The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
         // The trick here is to reach all the way down using the left child node, once a leaf is found, we work back up and THEN use the right child node
@@ -89,6 +116,7 @@ class Tree {
 //            return Math.max(depthL, depthR) + 1;    // add current level once recursive calls go back up
             return 1;
         }
+
         // Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
         // For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
         public TreeNode sortedArrayToBST(int[] nums) {
@@ -105,6 +133,7 @@ class Tree {
             head.right = sortedArrayToBST(numsRight);
             return head;
         }
+
         // Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
         // For example, this binary tree [1,2,2,3,4,4,3] is symmetric
         // But the following [1,2,2,null,3,null,3] is not
@@ -114,6 +143,7 @@ class Tree {
                 return true;
             return isSymRecursive(root.left, root.right);
         }
+
         boolean isSymRecursive(TreeNode leftChild, TreeNode rightChild) {
             if (leftChild == null && rightChild == null)
                 return true;
@@ -125,6 +155,7 @@ class Tree {
                         && isSymRecursive(leftChild.right, rightChild.left);
             }
         }
+
         // iterative version of tree symmetry
         public boolean isSymmetricIt(TreeNode root) {
             Queue<TreeNode> queue_ = new LinkedList<>();
@@ -193,6 +224,7 @@ class Tree {
                 return -1; // no kth element
             }
         }
+
         // Invert a binary tree.
         // Input:
         //       4
@@ -225,6 +257,7 @@ class Tree {
             invertRecursive(right);
             return root;
         }
+
         public void invertRecursive(TreeNode node) {
             if (node == null) {
                 return;
@@ -239,40 +272,29 @@ class Tree {
             invertRecursive(left);
             invertRecursive(right);
         }
+
         // to do iterative search, we use BFS algorithm (queue), DFS requires stack
-        public TreeNode invertTreeBFS(TreeNode root){
-            if (root == null){
+        public TreeNode invertTreeBFS(TreeNode root) {
+            if (root == null) {
                 return null;
             }
             Queue<TreeNode> queue = new java.util.LinkedList<>();
             queue.add(root);
-            while(!queue.isEmpty()){
+            while (!queue.isEmpty()) {
                 TreeNode node = queue.poll();
                 TreeNode left = node.left;
                 // transfer pointers
                 node.left = node.right;
                 node.right = left;
                 // add children to queue (BFS)
-                if(node.left != null){
+                if (node.left != null) {
                     queue.add(node.left);
                 }
-                if(node.right != null){
+                if (node.right != null) {
                     queue.add(node.right);
                 }
             }
             return root;
-        }
-    }
-    public static void main(String... args){
-        BinaryTree bt = new BinaryTree();
-        bt.root = new TreeNode(1);
-        bt.root.left = new TreeNode(2);
-        bt.root.right = new TreeNode(3);
-        bt.root.left.left = new TreeNode(4);
-        bt.root.left.right = new TreeNode(5);
-        List<Integer> in = bt.inorder();
-        for(Integer e: in ){
-            System.out.print(e+ " ");
         }
     }
 }

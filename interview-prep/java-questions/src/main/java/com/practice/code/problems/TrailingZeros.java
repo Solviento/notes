@@ -1,11 +1,17 @@
+/*Given an integer n, return the number of trailing zeroes in n!.
+
+Note that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.
+
+Example 1:
+
+Input: n = 3
+Output: 0
+Explanation: 3! = 6, no trailing zero.*/
 package com.practice.code.problems;
 
-// Given an integer n, return the number of trailing zeroes in n!.
-// n = 5
-// 5, 20, 60, 120 -> 1 trailing zero
-// n = 8
-// 8, 56, 336, 1680, 6720, 20160, 40320 -> 1 trailing zero
-public class TrailingZeros {
+import com.practice.code.runner.CodeRunner;
+
+public class TrailingZeros implements CodeRunner {
     public int trailingZeroes(int n) {
         int count = 0;
         for (long i = 5; n / i > 0; i *= 5)
@@ -19,5 +25,10 @@ public class TrailingZeros {
         }
         return zeros;
         */
+    }
+
+    @Override
+    public void run() {
+
     }
 }
