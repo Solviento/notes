@@ -5,6 +5,7 @@ Output: [1,2,3,5]
  */
 package com.practice.code.problems;
 
+import com.practice.code.model.ListNode;
 import com.practice.code.runner.CodeRunner;
 
 public class RemoveNthFromEnd implements CodeRunner {

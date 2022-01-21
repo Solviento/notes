@@ -9,7 +9,9 @@ Output: 1*/
 
 package com.practice.code.problems;
 
-class SingleNumber {
+import com.practice.code.runner.CodeRunner;
+
+class SingleNumber implements CodeRunner {
     static int singleNumber(int[] nums) {
         // a XOR 0 = a    DO THE BIT MATH CALCULATIONS BY HAND TO VERIFY
         // a XOR a = 0
@@ -21,8 +23,8 @@ class SingleNumber {
         return rem;
     }
 
-    // Input:[4,1,2,1,2] Output:4
-    public static void main(String... args) {
+    @Override
+    public void run() {
         // int[] nums = new int[]{1,1,2,3,3};
         int[] nums = new int[]{1, 2};
         int uni = singleNumber(nums);

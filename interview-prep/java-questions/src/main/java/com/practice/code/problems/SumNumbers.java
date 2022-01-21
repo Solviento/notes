@@ -10,7 +10,9 @@ sumNumbers("7 11") → 18
 
 package com.practice.code.problems;
 
-public class SumNumbers{
+import com.practice.code.runner.CodeRunner;
+
+public class SumNumbers implements CodeRunner {
   static int sumNumbers(String str) {
     int sum = 0;
     String numStr = "";
@@ -47,7 +49,9 @@ public class SumNumbers{
       sum += Integer.valueOf(numStr);
     return sum;
   }
-  public static void main(String... args){
+
+  @Override
+  public void run() {
     String s = "aa11b33";
     int sum = sumNumbers(s);
     System.out.println("Sum: " + sum);

@@ -11,7 +11,7 @@ public class LeetcodeRunner {
 
     public static ArrayList<String> practiceClasses() {
         ArrayList<String> classes = new ArrayList<>();
-        classes.add("FindAndReplaceInString");
+        classes.add("Anagram");
         return classes;
     }
 

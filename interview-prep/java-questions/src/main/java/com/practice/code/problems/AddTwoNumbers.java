@@ -10,29 +10,39 @@ Explanation: 342 + 465 = 807.
 https://leetcode.com/explore/interview/card/google/60/linked-list-5/3063/discuss/1340/A-summary-about-how-to-solve-Linked-List-problem-C++*/
 package com.practice.code.problems;
 
+import com.practice.code.model.ListNode;
 import com.practice.code.runner.CodeRunner;
 
 public class AddTwoNumbers implements CodeRunner {
 
     @Override
     public void run() {
-
+        // 15/10 = 1
+        int carryOver = 15/10;
+        // 8/10 = 0
+        int carrOver2 = 8/10;
+        System.out.println("c1: " + 15/10 + " c2: " + 8/10);
     }
 
     public ListNode addTwoNumbersFirst(ListNode l1, ListNode l2) {
-        int c = 0;
-        ListNode prev = new ListNode();
-        ListNode head = prev;
-        while (c != 0 || l1 != null || l2 != null) {
+        int carryOver = 0;
+        ListNode returnNode = new ListNode();
+        ListNode head = returnNode;
+        // if we run out of nodes in either l1 or l2, we need to calculate the final node value using carryOver
+        while (carryOver != 0 || l1 != null || l2 != null) {
             if (l1 != null) {
-                c += l1.val;
+                carryOver += l1.val;
             }
             if (l2 != null) {
-                c += l2.val;
+                carryOver += l2.val;
             }
-            head.next = new ListNode(c % 10);
+            // create new resultant sum node
+            head.next = new ListNode(carryOver % 10);
+            // iterate to next node
             head = head.next;
-            c /= 10;
+            // eliminate small carryOvers less than 10 to proceed to next node
+            carryOver /= 10;
+            // iterate to next nodes in lists
             if (l1 != null) {
                 l1 = l1.next;
             }
@@ -40,6 +50,7 @@ public class AddTwoNumbers implements CodeRunner {
                 l2 = l2.next;
             }
         }
-        return prev.next;
+        // start of returned linked list
+        return returnNode.next;
     }
 }

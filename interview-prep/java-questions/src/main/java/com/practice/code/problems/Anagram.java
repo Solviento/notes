@@ -25,21 +25,11 @@ public class Anagram implements CodeRunner {
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (map.containsKey(c)) {
-                int val = map.get(c);
-                map.put(c, val + 1);
-            } else {
-                map.put(c, 1);
-            }
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         for (int i = 0; i < t.length(); i++) {
             char c = t.charAt(i);
-            if (map.containsKey(c)) {
-                int val = map.get(c);
-                map.put(c, val - 1);
-            } else {
-                map.put(c, 1);
-            }
+            map.put(c, map.getOrDefault(c, 2) - 1);
         }
         for (Character key : map.keySet()) {
             int val = map.get(key);
@@ -52,8 +42,8 @@ public class Anagram implements CodeRunner {
 
     @Override
     public void run() {
-        String s = "anagram";
-        String t = "nagaram";
+        String s = "anagramq";
+        String t = "nagarams";
         boolean output = isAnagram(s, t);
         System.out.println("Are s and t anagrams? : " + s + " " + t + " : " + output);
     }

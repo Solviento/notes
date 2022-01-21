@@ -15,7 +15,9 @@ Output: 2*/
 
 package com.practice.code.problems;
 
-public class StrStr {
+import com.practice.code.runner.CodeRunner;
+
+public class StrStr implements CodeRunner {
   // KMP is Time: O(m+n) Space: O(n), n = haystack, m = needle
   static int strStr(String haystack, String needle) {
     if(needle.length() == 0){
@@ -78,7 +80,9 @@ public class StrStr {
     }
     return lps;
   }
-  public static void main(String... args){
+
+  @Override
+  public void run() {
     String hay = "blakinpockiyabkinkmkinkibiko";
     String n = "kinki";
     int index = strStr(hay, n);

@@ -11,6 +11,7 @@ Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 
 
 package com.practice.code.problems;
 
+import com.practice.code.model.TreeNode;
 import com.practice.code.runner.CodeRunner;
 
 public class BinaryTreeMaximumPathSum implements CodeRunner {
