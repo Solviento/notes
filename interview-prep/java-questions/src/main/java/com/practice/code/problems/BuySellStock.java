@@ -25,7 +25,7 @@ public class BuySellStock implements CodeRunner {
         int currentMax = 0;
         int maxSoFar = 0;
         for (int i = 1; i < prices.length; i++) {
-            currentMax = Math.max(0, currentMax += prices[i] - prices[i - 1]);
+            currentMax = Math.max(0, currentMax + (prices[i] - prices[i - 1]));
             maxSoFar = Math.max(currentMax, maxSoFar);
         }
         return maxSoFar;
