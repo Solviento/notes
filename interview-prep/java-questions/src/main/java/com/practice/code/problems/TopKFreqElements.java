@@ -7,13 +7,15 @@ Output: [1,2*/
 
 package com.practice.code.problems;
 
+import com.practice.code.runner.CodeRunner;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class TopKFreqElements {
+public class TopKFreqElements implements CodeRunner {
     public List<Integer> topKFrequent(int[] nums, int k) {
         // build hash map, integer: frequency
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -36,5 +38,10 @@ public class TopKFreqElements {
         }
         Collections.reverse(topKElements);
         return topKElements;
+    }
+
+    @Override
+    public void run() {
+
     }
 }
