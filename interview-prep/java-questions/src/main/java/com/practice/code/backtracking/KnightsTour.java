@@ -83,8 +83,7 @@ public class KnightsTour implements CodeRunner {
         return true;
     }
 
-    /* A recursive utility function to solve Knight
-       Tour problem */
+    /* A recursive utility function to solve KTP */
     static boolean solveKTUtil(int x, int y, int movei,
                                int sol[][], int xMove[],
                                int yMove[]) {
@@ -92,8 +91,7 @@ public class KnightsTour implements CodeRunner {
         if (movei == N * N)
             return true;
 
-        /* Try all next moves from the current coordinate
-            x, y */
+        /* Try all next moves from the current coordinate x, y */
         for (k = 0; k < 8; k++) {
             next_x = x + xMove[k];
             next_y = y + yMove[k];

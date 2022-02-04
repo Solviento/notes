@@ -11,12 +11,12 @@ public class LeetcodeRunner {
 
     public static ArrayList<String> practiceClasses() {
         ArrayList<String> classes = new ArrayList<>();
-        classes.add("Anagram");
+        classes.add("sorting.FindFirstAndLastPositionOfElementInSortedArray");
         return classes;
     }
 
     public static void runAllPracticeClasses(ArrayList<String> classes) {
-        String packagePath = "com.practice.code.problems.";
+        String packagePath = "com.practice.code.";
         System.out.println("----------------------------------------------------------------------------------\n");
         for (String className : classes) {
             try {

@@ -14,9 +14,27 @@ import com.practice.code.runner.CodeRunner;
 
 public class ReadNCharactersGivenRead4II implements CodeRunner {
 
+    private int buffPtr = 0;
+    private int buffCnt = 0;
+    private char[] buff = new char[4];
     public int read(char[] buf, int n) {
+        int ptr = 0;
+        while (ptr < n) {
+            if (buffPtr == 0) {
+                buffCnt = read4(buff);
+            }
+            if (buffCnt == 0) break;
+            while (ptr < n && buffPtr < buffCnt) {
+                buf[ptr++] = buff[buffPtr++];
+            }
+            if (buffPtr >= buffCnt) buffPtr = 0;
+        }
+        return ptr;
+    }
 
-        return 0;
+    // API not included
+    private int read4(char[] buff) {
+        return 1;
     }
 
     @Override
