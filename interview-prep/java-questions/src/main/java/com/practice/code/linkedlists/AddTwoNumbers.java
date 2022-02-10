@@ -8,7 +8,7 @@ Output: [7,0,8]
 Explanation: 342 + 465 = 807.
 
 https://leetcode.com/explore/interview/card/google/60/linked-list-5/3063/discuss/1340/A-summary-about-how-to-solve-Linked-List-problem-C++*/
-package com.practice.code.problems;
+package com.practice.code.linkedlists;
 
 import com.practice.code.model.ListNode;
 import com.practice.code.runner.CodeRunner;
