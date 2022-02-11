@@ -6,13 +6,14 @@ Input: jewels = "aA", stones = "aAAbbbb"
 Output: 3
 */
 
-package com.practice.code.arraysandstrings;
+package com.practice.code.other;
 
 import com.practice.code.runner.CodeRunner;
 
 import java.util.HashMap;
 
 public class Jewels implements CodeRunner {
+
   public static int numJewelsInStones(String J, String S) {
     HashMap<Character, Integer> jewels = new HashMap<>();
     for (int i = 0; i < J.length(); i++) {
