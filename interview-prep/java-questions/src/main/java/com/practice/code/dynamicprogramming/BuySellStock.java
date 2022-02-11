@@ -13,7 +13,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 *
 * */
 
-package com.practice.code.arraysandstrings;
+package com.practice.code.dynamicprogramming;
 
 import com.practice.code.runner.CodeRunner;
 
@@ -33,7 +33,7 @@ public class BuySellStock implements CodeRunner {
 
     // plot array onto a graph
     // must find smallest valley and highest peak
-    public int maxProfit_(int prices[]) {
+    public int maxProfitN(int prices[]) {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -51,6 +51,6 @@ public class BuySellStock implements CodeRunner {
         int[] prices = {1, 3, 5, 1, 10, 2, 5, 10, 3, 4};
         System.out.println("Max profit for prices array : " + "1, 3, 5, 1, 10, 2, 5, 10, 3, 4");
         System.out.println("Using Kadane's algorithm : " + maxProfit(prices));
-        System.out.println("Using basic algorithm : " + maxProfit_(prices));
+        System.out.println("Using O(n) algorithm : " + maxProfitN(prices));
     }
 }
