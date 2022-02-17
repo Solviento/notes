@@ -19,7 +19,7 @@ public class BinarySearchIterative implements CodeRunner {
             if (arr[m] < x)
                 l = m + 1;
 
-                // If x is smaller, ignore right half
+            // If x is smaller, ignore right half
             else
                 r = m - 1;
         }
@@ -32,7 +32,7 @@ public class BinarySearchIterative implements CodeRunner {
     @Override
     public void run() {
         BinarySearchIterative ob = new BinarySearchIterative();
-        int arr[] = {2, 3, 4, 10, 40};
+        int[] arr = {2, 3, 4, 10, 40};
         int n = arr.length;
         int x = 10;
         int result = ob.binarySearch(arr, x);

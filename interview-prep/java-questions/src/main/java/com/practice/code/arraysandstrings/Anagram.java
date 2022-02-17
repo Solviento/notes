@@ -1,13 +1,16 @@
 /*
-* Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+* Given two strings s and t, return true if t
+* is an anagram of s, and false otherwise.
 
-An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+An Anagram is a word or phrase formed by rearranging
+* the letters of a different word or phrase, typically using all the original letters exactly once.
 * */
 
 package com.practice.code.arraysandstrings;
 
 import com.practice.code.runner.CodeRunner;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Anagram implements CodeRunner {
@@ -21,16 +24,21 @@ public class Anagram implements CodeRunner {
         if (s.length() != t.length()) {
             return false;
         }
-        // can be used for unicode letters as well
+        // character mapped to frequency (int)
         HashMap<Character, Integer> map = new HashMap<>();
+        // run through first string s
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
+            // getOrDefault, useful to know
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
+        // now run through second string t and decrement
         for (int i = 0; i < t.length(); i++) {
             char c = t.charAt(i);
-            map.put(c, map.getOrDefault(c, 2) - 1);
+            //
+            map.put(c, map.getOrDefault(c, 0) - 1);
         }
+        // go through map and verify if counter is set to 0
         for (Character key : map.keySet()) {
             int val = map.get(key);
             if (val != 0) {
@@ -40,10 +48,21 @@ public class Anagram implements CodeRunner {
         return true;
     }
 
+    public boolean isAnagramSort(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        char[] str1 = s.toCharArray();
+        char[] str2 = t.toCharArray();
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+        return Arrays.equals(str1, str2);
+    }
+
     @Override
     public void run() {
-        String s = "anagramq";
-        String t = "nagarams";
+        String s = "anagramaa";
+        String t = "anagarmzz";
         boolean output = isAnagram(s, t);
         System.out.println("Are s and t anagrams? : " + s + " " + t + " : " + output);
     }

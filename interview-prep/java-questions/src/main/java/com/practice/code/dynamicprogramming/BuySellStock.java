@@ -48,7 +48,7 @@ public class BuySellStock implements CodeRunner {
 
     @Override
     public void run() {
-        int[] prices = {1, 3, 5, 1, 10, 2, 5, 10, 3, 4};
+        int[] prices = {7,1,5,3,6,4};
         System.out.println("Max profit for prices array : " + "1, 3, 5, 1, 10, 2, 5, 10, 3, 4");
         System.out.println("Using Kadane's algorithm : " + maxProfit(prices));
         System.out.println("Using O(n) algorithm : " + maxProfitN(prices));

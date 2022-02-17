@@ -14,6 +14,12 @@ package com.practice.code.arraysandstrings;
 import com.practice.code.runner.CodeRunner;
 
 public class MaximumSubarray implements CodeRunner {
+
+    @Override
+    public void run() {
+
+    }
+
     // kadane algorithm O(n)
     public int maxSubArray(int[] nums) {
         int localMax = nums[0];
@@ -23,11 +29,6 @@ public class MaximumSubarray implements CodeRunner {
             globalMax = Math.max(localMax, globalMax);
         }
         return globalMax;
-    }
-
-    @Override
-    public void run() {
-
     }
 
     private int[] numsArray;

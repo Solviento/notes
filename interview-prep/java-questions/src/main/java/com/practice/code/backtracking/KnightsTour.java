@@ -22,6 +22,8 @@ package com.practice.code.backtracking;
 
 import com.practice.code.runner.CodeRunner;
 
+import java.util.Arrays;
+
 public class KnightsTour implements CodeRunner {
     @Override
     public void run() {
@@ -32,7 +34,7 @@ public class KnightsTour implements CodeRunner {
 
     /* A utility function to check if i,j are
        valid indexes for N*N chessboard */
-    static boolean isSafe(int x, int y, int sol[][]) {
+    static boolean isSafe(int x, int y, int[][] sol) {
         return (x >= 0 && x < N && y >= 0 && y < N
                 && sol[x][y] == -1);
     }
@@ -84,11 +86,11 @@ public class KnightsTour implements CodeRunner {
     }
 
     /* A recursive utility function to solve KTP */
-    static boolean solveKTUtil(int x, int y, int movei,
-                               int sol[][], int xMove[],
-                               int yMove[]) {
+    static boolean solveKTUtil(int x, int y, int ithMove,
+                               int[][] sol, int[] xMove,
+                               int[] yMove) {
         int k, next_x, next_y;
-        if (movei == N * N)
+        if (ithMove == N * N)
             return true;
 
         /* Try all next moves from the current coordinate x, y */
@@ -96,8 +98,8 @@ public class KnightsTour implements CodeRunner {
             next_x = x + xMove[k];
             next_y = y + yMove[k];
             if (isSafe(next_x, next_y, sol)) {
-                sol[next_x][next_y] = movei;
-                if (solveKTUtil(next_x, next_y, movei + 1,
+                sol[next_x][next_y] = ithMove;
+                if (solveKTUtil(next_x, next_y, ithMove + 1,
                         sol, xMove, yMove))
                     return true;
                 else

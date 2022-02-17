@@ -1,7 +1,8 @@
 /*Design a search autocomplete system for a search engine. Users may input a sentence (at least one word
 and end with a special character '#').
 You are given a string array sentences and an integer array times both of length n where sentences[i] is
-a previously typed sentence and times[i] is the corresponding number of times the sentence was typed. For each input character except '#', return the top 3 historical hot sentences that have the same prefix as the part of the sentence already typed.
+a previously typed sentence and times[i] is the corresponding number of times the sentence was typed.
+For each input character except '#', return the top 3 historical hot sentences that have the same prefix as the part of the sentence already typed.
 
 Here are the specific rules:
 The hot degree for a sentence is defined as the number of times a user typed the exactly same sentence before.
@@ -51,8 +52,8 @@ public class DesignSearchAutocompleteSystem implements CodeRunner {
         boolean isWord;
 
         public TrieNode() {
-            children = new HashMap<Character, TrieNode>();
-            counts = new HashMap<String, Integer>();
+            children = new HashMap<>();
+            counts = new HashMap<>();
             isWord = false;
         }
     }
