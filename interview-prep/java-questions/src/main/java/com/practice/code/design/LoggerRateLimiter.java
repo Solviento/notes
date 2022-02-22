@@ -40,7 +40,7 @@ public class LoggerRateLimiter implements CodeRunner {
      * Initialize your data structure here.
      */
     public LoggerRateLimiter() {
-        msgDict = new HashMap<String, Integer>();
+        msgDict = new HashMap<>();
     }
 
     /**
