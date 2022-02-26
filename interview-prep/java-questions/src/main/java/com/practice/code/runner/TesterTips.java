@@ -6,6 +6,41 @@ public class TesterTips implements CodeRunner {
     @Override
     public void run() {
 
+        // Priority Queue
+        PriorityQueue<String> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add("Geeks");
+        priorityQueue.add("For");
+        priorityQueue.add("Geeks");
+        priorityQueue.remove();
+        Iterator<String> iterator = priorityQueue.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+
+        // priority queue uses min heap as default
+        PriorityQueue<Integer> priorityQueueInt = new PriorityQueue<>();
+        priorityQueueInt.add(12);
+        priorityQueueInt.add(18);
+        priorityQueueInt.add(100);
+        priorityQueueInt.add(1);
+        System.out.println("\nBefore remove(): " + priorityQueueInt);
+        priorityQueueInt.remove();
+        System.out.println("After remove(): " + priorityQueueInt);
+        System.out.println("poll() returns: " + priorityQueueInt.poll());
+        System.out.println("After poll(): " + priorityQueueInt);
+
+        // priority queue using max heap
+        Comparator<Integer> cmp = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer x, Integer y) {
+                return y - x;
+            }
+        };
+        // comparator using lambdas
+        Comparator<Integer> cmpLambda = (x, y) -> y - x;
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(cmp);
+
         /* MAPS */
 
         LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<>();
@@ -108,5 +143,9 @@ public class TesterTips implements CodeRunner {
         int div4 = big % ten;
         System.out.println("9 / 10 = " + div1 + " | 9 % 10 = " + div2 + " | 18 / 10 = " + div3 + " | 18 % 10 = " + div4);
 
+        // Random
+        Random rand = new Random();
+        int numrand = rand.nextInt(100);
+        System.out.println("\nRandom number from 0 - 100: " + numrand);
     }
 }
