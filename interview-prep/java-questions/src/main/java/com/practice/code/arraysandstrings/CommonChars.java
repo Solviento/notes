@@ -35,7 +35,6 @@ public class CommonChars implements CodeRunner {
                 }
             }
         }
-        // NOT A VALID SOLUTION!!!!!!!!!!!!!!!
         return out;
     }
 

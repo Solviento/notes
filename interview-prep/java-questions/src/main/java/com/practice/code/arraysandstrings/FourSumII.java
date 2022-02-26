@@ -2,8 +2,8 @@
 
 0 <= i, j, k, l < n
 nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
-Example 1:
 
+Example 1:
 Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
 Output: 2
 Explanation:
@@ -19,11 +19,13 @@ import com.practice.code.runner.CodeRunner;
 import java.util.HashMap;
 
 public class FourSumII implements CodeRunner {
+
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < A.length; i++) {
-            for (int j = 0; j < B.length; j++) {
-                int sum = A[i] + B[j];
+        // go through i, j arrays and calculate pair sum then store this sum and its respective frequency
+        for (int i : A) {
+            for (int j : B) {
+                int sum = i + j;
                 if (map.containsKey(sum)) {
                     // needs to store how frequent this sum value comes up in A[] and B[]
                     map.put(sum, map.get(sum) + 1);
@@ -33,9 +35,10 @@ public class FourSumII implements CodeRunner {
             }
         }
         int count = 0;
-        for (int i = 0; i < C.length; i++) {
-            for (int j = 0; j < D.length; j++) {
-                int counterSum = C[i] + D[j];
+        // go through k, l arrays and calculate pair counter sum and then add its recorded frequency
+        for (int k : C) {
+            for (int l : D) {
+                int counterSum = k + l;
                 counterSum *= -1;
                 if (map.containsKey(counterSum)) {
                     // frequency of counterSum in map added to overall count of zero sum tuples

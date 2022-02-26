@@ -25,7 +25,7 @@ class Permutations {
         int L = 0;
         int R = nums.length;
         List<List<Integer>> res = new ArrayList<>();
-        List<Integer> numbers = new ArrayList<Integer>();
+        List<Integer> numbers = new ArrayList<>();
         for (int i : nums) {
             numbers.add(i);
         }
