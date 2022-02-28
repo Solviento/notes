@@ -13,7 +13,7 @@ Example 3:
 Input: nums = [1]
 Output: [[1]]*/
 
-package com.practice.code.recursion;
+package com.practice.code.backtracking;
 
 import com.practice.code.runner.CodeRunner;
 
