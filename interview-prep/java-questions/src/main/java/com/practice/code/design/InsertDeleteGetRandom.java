@@ -34,41 +34,55 @@ public class InsertDeleteGetRandom implements CodeRunner {
     }
 
     // approach using hashmap + arraylist functions
-    Map<Integer, Integer> dict;
+    Map<Integer, Integer> map;
     List<Integer> list;
     Random rand = new Random();
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
     public InsertDeleteGetRandom() {
-        dict = new HashMap();
-        list = new ArrayList();
+        map = new HashMap<>();
+        list = new ArrayList<>();
     }
 
-    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
+    /**
+     * Inserts a value to the set. Returns true if the set did not already contain the specified element.
+     * TIME: O(1)
+     */
     public boolean insert(int val) {
-        if (dict.containsKey(val)) return false;
-
-        dict.put(val, list.size());
+        if (map.containsKey(val)) {
+            return false;
+        }
+        // add to both internal data structures for storage (map, list)
+        map.put(val, list.size());
         list.add(list.size(), val);
         return true;
     }
 
-    /** Removes a value from the set. Returns true if the set contained the specified element. */
+    /**
+     * Removes a value from the set. Returns true if the set contained the specified element.
+     */
     public boolean remove(int val) {
-        if (! dict.containsKey(val)) return false;
-
-        // move the last element to the place idx of the element to delete
-        int lastElement = list.get(list.size() - 1);
-        int idx = dict.get(val);
+        if (!map.containsKey(val)) {
+            return false;
+        }
+        int lastElementIndex = list.size() - 1;
+        // swap last element with element to be deleted
+        int lastElement = list.get(lastElementIndex);
+        int idx = map.get(val);
+        // overwrite value in list, update index in map
         list.set(idx, lastElement);
-        dict.put(lastElement, idx);
+        map.put(lastElement, idx);
         // delete the last element
-        list.remove(list.size() - 1);
-        dict.remove(val);
+        list.remove(lastElementIndex);
+        map.remove(val);
         return true;
     }
 
-    /** Get a random element from the set. */
+    /**
+     * Get a random element from the set.
+     */
     public int getRandom() {
         return list.get(rand.nextInt(list.size()));
     }

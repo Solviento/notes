@@ -2,6 +2,24 @@ Big O
 
 ## Common Data Structure Operations
 
+Java Collections
+
+// non thread safe
+ArrayList
+add() - O(1)
+add(index, element) - O(n)
+get() - O(1)
+remove() - O(n)
+indexOf() - O(n)
+contains() - O(n)
+
+// multi thread safe
+CopyOnWriteArrayList
+add() - O(n)
+get() - O(1)
+remove - O(n)
+contains() - O(n)
+
 | Data Structure                                               | Time Complexity |             |             |             |             |             |             |             | Space Complexity |
 | :----------------------------------------------------------- | :-------------- | :---------- | :---------- | :---------- | :---------- | :---------- | :---------- | :---------- | :--------------- |
 |                                                              | Average         |             |             |             | Worst       |             |             |             | Worst            |
