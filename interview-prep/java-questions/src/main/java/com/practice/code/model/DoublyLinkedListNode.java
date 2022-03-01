@@ -2,14 +2,19 @@ package com.practice.code.model;
 
 public class DoublyLinkedListNode {
 
-    int data;
-    DoublyLinkedListNode head; // head of list
-    DoublyLinkedListNode prev;
-    DoublyLinkedListNode next;
+    public int val;
+    public DoublyLinkedListNode left;
+    public DoublyLinkedListNode right;
 
-    // Constructor to create a new node
-    // next and prev is by default initialized as null
-    DoublyLinkedListNode(int d) {
-        data = d;
+    public DoublyLinkedListNode() {}
+
+    public DoublyLinkedListNode(int _val) {
+        val = _val;
+    }
+
+    public DoublyLinkedListNode(int _val,DoublyLinkedListNode _left,DoublyLinkedListNode _right) {
+        val = _val;
+        left = _left;
+        right = _right;
     }
 }
