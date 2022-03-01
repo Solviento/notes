@@ -33,9 +33,16 @@ import java.util.List;
 public class CombinationSumI implements CodeRunner {
     @Override
     public void run() {
-
+        int[] nums = {2, 3};
+        int target = 6;
+        List<List<Integer>> output = combinationSum(nums, target);
+        for(List<Integer> e: output) {
+            System.out.println(e);
+        }
     }
 
+    // sort the array
+    // backtrack
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
@@ -43,16 +50,21 @@ public class CombinationSumI implements CodeRunner {
         return list;
     }
 
-    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int remain, int start) {
-        if (remain < 0) {
+    // output list, possible combinations list, possible values set
+    private void backtrack(List<List<Integer>> list, List<Integer> comboList, int[] numberSet, int target, int start) {
+        if (target < 0) {
             return;
-        } else if (remain == 0) {
-            list.add(new ArrayList<>(tempList));
+        } else if (target == 0) {
+            list.add(new ArrayList<>(comboList));
         } else {
-            for (int i = start; i < nums.length; i++) {
-                tempList.add(nums[i]);
-                backtrack(list, tempList, nums, remain - nums[i], i); // not i + 1 because we can reuse same elements
-                tempList.remove(tempList.size() - 1);
+            // nums = {2, 3}, target = 6
+            // for each possible number, add it to the combinations list, then backtrack using this list
+            for (int i = start; i < numberSet.length; i++) {
+                comboList.add(numberSet[i]);
+                // 6 - 2 = 4
+                // target - nums[i]
+                backtrack(list, comboList, numberSet, target - numberSet[i], i); // not i + 1 because we can reuse same elements
+                comboList.remove(comboList.size() - 1);
             }
         }
     }

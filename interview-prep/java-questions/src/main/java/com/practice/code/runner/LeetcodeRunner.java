@@ -1,7 +1,6 @@
 package com.practice.code.runner;
 
-import com.practice.code.design.LoggerRateLimiter;
-import com.practice.code.recursion.FactorCombinations;
+import com.practice.code.other.*;
 
 import java.util.ArrayList;
 
@@ -17,7 +16,7 @@ public class LeetcodeRunner {
     private static void runPracticeClass() {
 //        TesterTips testerTips = new TesterTips();
 //        testerTips.run();
-        FactorCombinations commonChars = new FactorCombinations();
+        RotationalCipher commonChars = new RotationalCipher();
         commonChars.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

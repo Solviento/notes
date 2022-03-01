@@ -42,7 +42,9 @@ public class CombinationSumII {
         else if(remain == 0) list.add(new ArrayList<>(tempList));
         else{
             for(int i = start; i < nums.length; i++){
-                if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
+                if(i > start && nums[i] == nums[i-1]) {
+                    continue; // skip duplicates
+                }
                 tempList.add(nums[i]);
                 backtrack(list, tempList, nums, remain - nums[i], i + 1);
                 tempList.remove(tempList.size() - 1);
