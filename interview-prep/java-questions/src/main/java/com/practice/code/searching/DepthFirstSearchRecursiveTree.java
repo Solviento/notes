@@ -1,46 +1,37 @@
 package com.practice.code.searching;
 
+import com.practice.code.model.TreeNode;
 import com.practice.code.runner.CodeRunner;
 
 public class DepthFirstSearchRecursiveTree implements CodeRunner {
     @Override
     public void run() {
         BinaryTree tree = new BinaryTree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
+        tree.root = new TreeNode(1);
+        tree.root.left = new TreeNode(2);
+        tree.root.right = new TreeNode(3);
+        tree.root.left.left = new TreeNode(4);
+        tree.root.left.right = new TreeNode(5);
 
         System.out.println("Preorder traversal of binary tree is ");
         tree.printPreorder();
     }
 
-    class Node {
-        int key;
-        Node left, right;
-
-        public Node(int item) {
-            key = item;
-            left = right = null;
-        }
-    }
-
     class BinaryTree {
         // Root of Binary Tree
-        Node root;
+        TreeNode root;
 
         BinaryTree() {
             root = null;
         }
 
         /* Given a binary tree, print its nodes in preorder*/
-        void printPreorder(Node node) {
+        void printPreorder(TreeNode node) {
             if (node == null)
                 return;
 
             /* first print data of node */
-            System.out.print(node.key + " ");
+            System.out.print(node.val + " ");
 
             /* then recur on left subtree */
             printPreorder(node.left);
@@ -49,8 +40,7 @@ public class DepthFirstSearchRecursiveTree implements CodeRunner {
             printPreorder(node.right);
         }
 
-        void printPostorder(Node node)
-        {
+        void printPostorder(TreeNode node) {
             if (node == null)
                 return;
 
@@ -61,12 +51,11 @@ public class DepthFirstSearchRecursiveTree implements CodeRunner {
             printPostorder(node.right);
 
             // now deal with the node
-            System.out.print(node.key + " ");
+            System.out.print(node.val + " ");
         }
 
         /* Given a binary tree, print its nodes in inorder*/
-        void printInorder(Node node)
-        {
+        void printInorder(TreeNode node) {
             if (node == null)
                 return;
 
@@ -74,7 +63,7 @@ public class DepthFirstSearchRecursiveTree implements CodeRunner {
             printInorder(node.left);
 
             /* then print the data of node */
-            System.out.print(node.key + " ");
+            System.out.print(node.val + " ");
 
             /* now recur on right child */
             printInorder(node.right);

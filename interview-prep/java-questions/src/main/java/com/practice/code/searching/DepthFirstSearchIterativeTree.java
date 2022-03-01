@@ -11,6 +11,7 @@ public class DepthFirstSearchIterativeTree implements CodeRunner {
 
     }
 
+    // root, left, right
     public void traversePreOrder(TreeNode node) {
         Stack<TreeNode> stack = new Stack<>();
         stack.push(node);
@@ -26,6 +27,7 @@ public class DepthFirstSearchIterativeTree implements CodeRunner {
         }
     }
 
+    // left, root, right
     public void traverseInOrder(TreeNode node){
         Stack<TreeNode> stack = new Stack<>();
         stack.add(node);
@@ -40,10 +42,11 @@ public class DepthFirstSearchIterativeTree implements CodeRunner {
         }
     }
 
+    // left, right, root
     public void traversePostOrder(TreeNode node){
         Stack<TreeNode> stack = new Stack<>();
         TreeNode prev = node;
-        TreeNode current = node;
+        TreeNode current;
         stack.push(node);
         while(!stack.isEmpty()) {
             current = stack.peek();
