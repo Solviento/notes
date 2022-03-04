@@ -10,7 +10,7 @@ Explanation: The longest increasing path is [1, 2, 6, 9].
 INCREASING -> PATH CANNOT CONTAIN EQUAL OR LESSER VALUES THAN STARTING POINT
 */
 
-package com.practice.code.treesgraphs;
+package com.practice.code.graphs;
 
 import com.practice.code.runner.CodeRunner;
 

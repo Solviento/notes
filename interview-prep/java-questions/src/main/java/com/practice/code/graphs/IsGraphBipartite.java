@@ -25,7 +25,7 @@ Example 2:
 Input: graph = [[1,3],[0,2],[1,3],[0,2]]
 Output: true
 Explanation: We can partition the nodes into two sets: {0, 2} and {1, 3}.*/
-package com.practice.code.treesgraphs;
+package com.practice.code.graphs;
 
 import com.practice.code.runner.CodeRunner;
 

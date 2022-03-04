@@ -28,7 +28,7 @@ Example 3:
 Input: adjList = []
 Output: []
 Explanation: This an empty graph, it does not have any nodes.*/
-package com.practice.code.treesgraphs;
+package com.practice.code.graphs;
 
 import com.practice.code.model.GraphNode;
 import com.practice.code.runner.CodeRunner;
