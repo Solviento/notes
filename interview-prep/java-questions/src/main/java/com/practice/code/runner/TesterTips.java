@@ -147,5 +147,10 @@ public class TesterTips implements CodeRunner {
         Random rand = new Random();
         int numrand = rand.nextInt(100);
         System.out.println("\nRandom number from 0 - 100: " + numrand);
+
+        /* COLLECTIONS */
+        Set<String> bannedWords = new HashSet<>();
+        String[] banned = {};
+        Collections.addAll(bannedWords, banned);
     }
 }

@@ -19,11 +19,22 @@ package com.practice.code.problems;
 
 import com.practice.code.runner.CodeRunner;
 
+import java.util.HashMap;
+
 
 // If we take XOR of zero and some bit, it will return that bit
 // If we take XOR of two same bits, it will return 0
 // So we can XOR all bits together to find the unique number.
 class SingleNumber implements CodeRunner {
+
+    @Override
+    public void run() {
+        // int[] nums = new int[]{1,1,2,3,3};
+        int[] nums = new int[]{1, 2};
+        int uni = singleNumber(nums);
+        System.out.println(uni);
+    }
+
     static int singleNumber(int[] nums) {
         // a XOR 0 = a    DO THE BIT MATH CALCULATIONS BY HAND TO VERIFY
         // a XOR a = 0
@@ -35,11 +46,17 @@ class SingleNumber implements CodeRunner {
         return rem;
     }
 
-    @Override
-    public void run() {
-        // int[] nums = new int[]{1,1,2,3,3};
-        int[] nums = new int[]{1, 2};
-        int uni = singleNumber(nums);
-        System.out.println(uni);
+    public int singleNumberHashmap(int[] nums) {
+        HashMap<Integer, Integer> hash_table = new HashMap<>();
+
+        for (int i : nums) {
+            hash_table.put(i, hash_table.getOrDefault(i, 0) + 1);
+        }
+        for (int i : nums) {
+            if (hash_table.get(i) == 1) {
+                return i;
+            }
+        }
+        return 0;
     }
 }
