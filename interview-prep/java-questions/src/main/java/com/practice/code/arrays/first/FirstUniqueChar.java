@@ -1,9 +1,17 @@
-/*Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
-*Example 1:
+/*Given a string s, find the first non-repeating character
+in it and return its index. If it does not exist, return -1.
 
+Example 1:
 Input: s = "leetcode"
 Output: 0
-* */
+
+Example 2:
+Input: s = "loveleetcode"
+Output: 2
+
+Example 3:
+Input: s = "aabb"
+Output: -1*/
 
 package com.practice.code.arrays.first;
 
@@ -14,32 +22,38 @@ import java.util.HashMap;
 
 public class FirstUniqueChar implements CodeRunner {
 
+    public void run() {
+        System.out.println("Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.");
+        System.out.println("loveleetcode -> " + firstUniqueChar("loveleetcode"));
+    }
+
     public int firstUniqueChar(String s) {
-        // to save space, we can use int[] votes = new int[256]
-        // and then do votes[c-'a']++; during the first for loop
-        // in second for loop, just check for votes[c-'a'] == 1
-        HashMap<Character, Integer> votes = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (votes.containsKey(c)) {
-                int vote = votes.get(c);
-                votes.put(c, vote + 1);
-            } else {
-                votes.put(c, 1);
-            }
+        // character frequency map
+        HashMap<Character, Integer> frequencyMap = new HashMap<>();
+        for (char ch : s.toCharArray()) {
+            frequencyMap.merge(ch, 1, (x, y) -> x + y);
         }
+        // if frequency of char is found, return index
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            int vote = votes.get(c);
-            if (vote == 1) {
+            int frequency = frequencyMap.get(c);
+            if (frequency == 1) {
                 return i;
             }
         }
         return -1;
     }
 
-    public void run() {
-        System.out.println("Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.");
-        System.out.println("loveleetcode -> " + firstUniqueChar("loveleetcode"));
+    // fixed array
+    public int firstUniqChar(String s) {
+        int[] freq = new int[26];
+        for (int i = 0; i < s.length(); i++)
+            // to store in fixed array, subtract char 'a' from char element
+            // 'a' - 'a' = 0, 'b' - 'a' = 1, etc.
+            freq[s.charAt(i) - 'a']++;
+        for (int i = 0; i < s.length(); i++)
+            if (freq[s.charAt(i) - 'a'] == 1)
+                return i;
+        return -1;
     }
 }

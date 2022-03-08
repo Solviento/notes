@@ -1,7 +1,6 @@
 /*Given an integer n, return the number of prime numbers that are strictly less than n.
 
 Example 1:
-
 Input: n = 10
 Output: 4
 Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.*/
@@ -11,6 +10,13 @@ package com.practice.code.arrays.first;
 import com.practice.code.runner.CodeRunner;
 
 public class CountPrimes implements CodeRunner {
+
+    public void run() {
+        int num = 100;
+        System.out.println("Count the number of prime numbers less than a non-negative number, n");
+        System.out.println(num + " -> " + countPrimes(num));
+    }
+
     // sieve of eratosthenes, use empty boolean array, then utilize all prime numbers from 2 -> n^1.5
     // to mark off booleans as composites IFF they are multiples of those prime numbers
     // any remaining non-marked booleans will be prime
@@ -22,7 +28,7 @@ public class CountPrimes implements CodeRunner {
         }
         for (int i = 2; i * i < n; i++) {
             // check if some previous iteration marked off current boolean[i] as non prime
-            if (primeArr[i] == false) {
+            if (!primeArr[i]) {
                 continue;
             }
             for (int j = i * i; j < n; j += i) {
@@ -30,8 +36,8 @@ public class CountPrimes implements CodeRunner {
             }
         }
         int count = 0;
-        for (int i = 0; i < primeArr.length; i++) {
-            if (primeArr[i] == true) {
+        for (boolean b : primeArr) {
+            if (b) {
                 count++;
             }
         }
@@ -51,11 +57,5 @@ public class CountPrimes implements CodeRunner {
                 return 0;
         }
         return 1;
-    }
-
-    public void run() {
-        int num = 100;
-        System.out.println("Count the number of prime numbers less than a non-negative number, n");
-        System.out.println(num + " -> " + countPrimes(num));
     }
 }

@@ -36,7 +36,7 @@ public class TesterTips implements CodeRunner {
                 return y - x;
             }
         };
-        // comparator using lambdas
+        // comparator using lambdas (use this cleaner approach)
         Comparator<Integer> cmpLambda = (x, y) -> y - x;
 
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(cmp);
@@ -50,6 +50,7 @@ public class TesterTips implements CodeRunner {
         linkedHashMap.put(1, "abc");
         System.out.println("Mappings of LinkedHashMap: " + linkedHashMap);
 
+        // Hashmap Functionality
         HashMap<Integer, String> hashMap = new HashMap<>();
         hashMap.put(10, "abc");
         hashMap.put(3, "xyz");
@@ -62,17 +63,19 @@ public class TesterTips implements CodeRunner {
         }
 
         for (Integer key : hashMap.keySet()) {
-            //
+            System.out.print(key);
         }
 
         for (String value : hashMap.values()) {
-            //
+            System.out.print(value);
         }
 
+        // HashMap Merge function
         hashMap.put(100, "init");
-        // merge into map using lambda function
+        // merge using lambda function
         hashMap.merge(100, "mergedValue", (oldValue, newValue) -> oldValue + newValue);
 
+        // merged value will be "initmergedValue"
         System.out.println("New merged value in map: " + hashMap.get(100));
 
         // additional methods for map
@@ -93,6 +96,15 @@ public class TesterTips implements CodeRunner {
 
         /* STRINGS */
 
+        // print stack using String.valueOf()
+        Stack<Character> stackChars = new Stack<>();
+        stackChars.push('P');
+        stackChars.push('O');
+        stackChars.push('P');
+        // "[P, O, P]"
+        String stackString = String.valueOf(stackChars);
+        System.out.println("String value of stack: " + stackString);
+
         // splitting a string by formatting and delimiting
         String splitMe = "This is a long sentence. Defined by periods. And commas.";
         // IMPORTANT, REPLACEALL USES REGEX SO TO REPLACE PERIODS, ETC MUST PREFIX WITH \\
@@ -111,6 +123,14 @@ public class TesterTips implements CodeRunner {
 
         // converting string to char array
         char[] chars = compareMe.toCharArray();
+
+        // extracting substring
+        String subStringMe = "subThisSandwich";
+        // will extract from index to the end of string
+        String sub1 = subStringMe.substring(3);
+        // extract between indexes
+        String sub2 = subStringMe.substring(3, 7);
+        System.out.println("substring(3): " + sub1 + " substring(3, 7): " + sub2);
 
         /* QUEUES */
 

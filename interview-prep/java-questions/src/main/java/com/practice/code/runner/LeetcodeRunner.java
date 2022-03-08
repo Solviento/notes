@@ -1,5 +1,8 @@
 package com.practice.code.runner;
 
+import com.practice.code.arrays.first.*;
+import com.practice.code.arrays.second.*;
+import com.practice.code.arrays.third.*;
 import com.practice.code.other.*;
 
 import java.util.ArrayList;
@@ -14,10 +17,9 @@ public class LeetcodeRunner {
     }
 
     private static void runPracticeClass() {
-//        TesterTips testerTips = new TesterTips();
-//        testerTips.run();
-        RotationalCipher commonChars = new RotationalCipher();
-        commonChars.run();
+        TesterTips runMe = new TesterTips();
+//        FirstUniqueChar runMe = new FirstUniqueChar();
+        runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }
 

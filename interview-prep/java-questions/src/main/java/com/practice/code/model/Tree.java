@@ -64,7 +64,7 @@ class Tree implements CodeRunner {
             List<Integer> inorderList = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
             // TreeNode prev = null;
-            while (root != null || stack.isEmpty() == false) {
+            while (root != null || !stack.isEmpty()) {
                 // traverse and collect all left child nodes
                 while (root != null) {
                     stack.push(root);
@@ -150,7 +150,7 @@ class Tree implements CodeRunner {
             if (leftChild == null || rightChild == null)
                 return false;
             else {
-                boolean valCheck = (leftChild.val == rightChild.val) ? true : false;
+                boolean valCheck = leftChild.val == rightChild.val;
                 return valCheck && isSymRecursive(leftChild.left, rightChild.right)
                         && isSymRecursive(leftChild.right, rightChild.left);
             }
@@ -199,7 +199,7 @@ class Tree implements CodeRunner {
         // \
         // 2
         // Output: 1
-        class KthSmallestBST {
+        static class KthSmallestBST {
             public int kthSmallest(TreeNode root, int k) {
                 Stack<TreeNode> stack = new Stack<>();
                 // performs DFS to bottom leaf node
@@ -278,7 +278,7 @@ class Tree implements CodeRunner {
             if (root == null) {
                 return null;
             }
-            Queue<TreeNode> queue = new java.util.LinkedList<>();
+            Queue<TreeNode> queue = new LinkedList<>();
             queue.add(root);
             while (!queue.isEmpty()) {
                 TreeNode node = queue.poll();

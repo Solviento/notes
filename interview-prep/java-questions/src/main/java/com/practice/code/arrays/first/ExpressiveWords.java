@@ -30,7 +30,7 @@ Output: 3
 
 Solution explained:
 
-We have two pointers, use i to scan S, and use j to scan each word in words.
+We have two pointers, use i to scan input S, and use j to scan each base word in words.
 Firstly, for S and word, we can calculate the length of the substrings which contains
 the repeated letters of the letter currently pointed by the two pointers, and get len1 and len2.
 
@@ -72,28 +72,32 @@ public class ExpressiveWords implements CodeRunner {
         return count;
     }
 
-    public boolean stretchy(String S, String word) {
-        if (word == null) {
+    public boolean stretchy(String stretchedInput, String baseWord) {
+        if (baseWord == null) {
             return false;
         }
         int i = 0;
         int j = 0;
-        while (i < S.length() && j < word.length()) {
-            if (S.charAt(i) == word.charAt(j)) {
-                int len1 = getRepeatedLength(S, i);
-                int len2 = getRepeatedLength(word, j);
-                if (len1 < 3 && len1 != len2 || len1 >= 3 && len1 < len2) {
+        // two pointers on two words
+        while (i < stretchedInput.length() && j < baseWord.length()) {
+            if (stretchedInput.charAt(i) == baseWord.charAt(j)) {
+                // two rules, stretchiness is greater than 3 characters and base letters are equal or lesser than stretched letter count
+                int stretchedCount = getRepeatedLength(stretchedInput, i);
+                int baseCount = getRepeatedLength(baseWord, j);
+                if (stretchedCount < 3 && stretchedCount != baseCount || stretchedCount >= 3 && stretchedCount < baseCount) {
                     return false;
                 }
-                i += len1;
-                j += len2;
+                // move pointers respectively
+                i += stretchedCount;
+                j += baseCount;
             } else {
                 return false;
             }
         }
-        return i == S.length() && j == word.length();
+        return i == stretchedInput.length() && j == baseWord.length();
     }
 
+    // use pointer to track how many times a character is repeated in the string
     public int getRepeatedLength(String str, int i) {
         int j = i;
         while (j < str.length() && str.charAt(j) == str.charAt(i)) {

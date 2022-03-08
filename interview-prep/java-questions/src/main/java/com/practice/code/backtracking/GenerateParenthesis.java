@@ -1,11 +1,16 @@
-/*Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+/*Given n pairs of parentheses, write a function
+to generate all combinations of well-formed parentheses.
 Example 1:
 
 Input: n = 3
 Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+Example 2:
+Input: n = 1
+Output: ["()"]
  */
 
-package com.practice.code.arrays.first;
+package com.practice.code.backtracking;
 
 import com.practice.code.runner.CodeRunner;
 
@@ -14,6 +19,21 @@ import java.util.List;
 
 public class GenerateParenthesis implements CodeRunner {
 
+    @Override
+    public void run() {
+        System.out.println("// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n" +
+                "For example, given n = 3, a solution set is:\n" +
+                "[\n" +
+                "  \"((()))\",\n" +
+                "  \"(()())\",\n" +
+                "  \"(())()\",\n" +
+                "  \"()(())\",\n" +
+                "  \"()()()\"\n" +
+                "]");
+        System.out.println("solution in class file");
+    }
+
+    // t: 4^n/sqrt(n) s: 4^n/sqrt(n)
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
         // number of left parenthesis remaining = n, number of right parenthesis remaining = n
@@ -22,10 +42,10 @@ public class GenerateParenthesis implements CodeRunner {
         return result;
     }
 
-    // constraints:
-    // a ')' must always have a corresponding '('
-    // if string is equal to n letters, return recursion call
-    // say '(((' exists, we still have 3 ')' remaining
+    // backtracking
+    // once numLeft and numRight are exhausted, return
+    // else if numLeft is positive, continue enumerating left parenthesis and decrease numLeft
+    // else if numLeft is less than numRight, continue enumerating right parenthesis and decrease numRight
     void backtrackParenthesis(List<String> result, int numOfLeftParenthesis, int numOfRightParenthesis, String str) {
         // no more left or right parenthesis to add
         if (numOfLeftParenthesis == 0 && numOfRightParenthesis == 0) {
@@ -43,19 +63,5 @@ public class GenerateParenthesis implements CodeRunner {
         if (numOfLeftParenthesis < numOfRightParenthesis) {
             backtrackParenthesis(result, numOfLeftParenthesis, numOfRightParenthesis - 1, str + ")");
         }
-    }
-
-    @Override
-    public void run() {
-        System.out.println("// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n" +
-                "For example, given n = 3, a solution set is:\n" +
-                "[\n" +
-                "  \"((()))\",\n" +
-                "  \"(()())\",\n" +
-                "  \"(())()\",\n" +
-                "  \"()(())\",\n" +
-                "  \"()()()\"\n" +
-                "]");
-        System.out.println("solution in class file");
     }
 }
