@@ -34,8 +34,10 @@ public class BinaryTreeInorderTraversal implements CodeRunner {
         return res;
     }
 
+    // t: o(v) s: o(v)
     public void helper(TreeNode root, List<Integer> res) {
         if (root != null) {
+            // inorder: left, middle, right
             helper(root.left, res);
             res.add(root.val);
             helper(root.right, res);
@@ -43,15 +45,18 @@ public class BinaryTreeInorderTraversal implements CodeRunner {
     }
 
     // stack (dfs)
+    // t: o(v) s: o(v)
     public List<Integer> inorderTraversalDFS(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode curr = root;
         while (curr != null || !stack.isEmpty()) {
+            // keep pushing left nodes to stack
             while (curr != null) {
                 stack.push(curr);
                 curr = curr.left;
             }
+            // we can now start popping and go from left, middle, right
             curr = stack.pop();
             res.add(curr.val);
             curr = curr.right;

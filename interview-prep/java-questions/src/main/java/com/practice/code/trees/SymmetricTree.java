@@ -28,12 +28,20 @@ public class SymmetricTree implements CodeRunner {
         return isMirror(root, root);
     }
 
-    public boolean isMirror(TreeNode t1, TreeNode t2) {
-        if (t1 == null && t2 == null) return true;
-        if (t1 == null || t2 == null) return false;
-        return (t1.val == t2.val)
-                && isMirror(t1.right, t2.left)
-                && isMirror(t1.left, t2.right);
+    // null edge case
+    // null and non null edge case
+    public boolean isMirror(TreeNode tree1, TreeNode tree2) {
+        if (tree1 == null && tree2 == null) {
+            return true;
+        }
+        if (tree1 == null || tree2 == null) {
+            return false;
+        }
+        // ensure root val is equivalent
+        // likewise ensure opposing left and right subtrees for 1 and 2 are the same
+        return (tree1.val == tree2.val)
+                && isMirror(tree1.right, tree2.left)
+                && isMirror(tree1.left, tree2.right);
     }
 
     // bfs iterative
@@ -42,15 +50,25 @@ public class SymmetricTree implements CodeRunner {
         q.add(root);
         q.add(root);
         while (!q.isEmpty()) {
-            TreeNode t1 = q.poll();
-            TreeNode t2 = q.poll();
-            if (t1 == null && t2 == null) continue;
-            if (t1 == null || t2 == null) return false;
-            if (t1.val != t2.val) return false;
-            q.add(t1.left);
-            q.add(t2.right);
-            q.add(t1.right);
-            q.add(t2.left);
+            TreeNode tree1 = q.poll();
+            TreeNode tree2 = q.poll();
+            // leaves previously encountered, continue
+            if (tree1 == null && tree2 == null) {
+                continue;
+            }
+            // unequal tree length, return false
+            if (tree1 == null || tree2 == null) {
+                return false;
+            }
+            // unequivalent node value, return false
+            if (tree1.val != tree2.val) {
+                return false;
+            }
+            // bfs, add left and right nodes for each tree
+            q.add(tree1.left);
+            q.add(tree2.right);
+            q.add(tree1.right);
+            q.add(tree2.left);
         }
         return true;
     }
