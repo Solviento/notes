@@ -6,24 +6,20 @@ public class BinarySearchIterative implements CodeRunner {
 
     // Returns index of x if it is present in arr[],
     // else return -1
-    int binarySearch(int arr[], int x) {
-        int l = 0, r = arr.length - 1;
-        while (l <= r) {
-            int m = l + (r - l) / 2;
-
+    int binarySearch(int[] arr, int target) {
+        int leftIndex = 0, rightIndex = arr.length - 1;
+        while (leftIndex <= rightIndex) {
+            int midIndex = leftIndex + (rightIndex - leftIndex) / 2;
             // Check if x is present at mid
-            if (arr[m] == x)
-                return m;
-
+            if (arr[midIndex] == target)
+                return midIndex;
             // If x greater, ignore left half
-            if (arr[m] < x)
-                l = m + 1;
-
-            // If x is smaller, ignore right half
+            if (arr[midIndex] < target)
+                leftIndex = midIndex + 1;
+                // If x is smaller, ignore right half
             else
-                r = m - 1;
+                rightIndex = midIndex - 1;
         }
-
         // if we reach here, then element was
         // not present
         return -1;

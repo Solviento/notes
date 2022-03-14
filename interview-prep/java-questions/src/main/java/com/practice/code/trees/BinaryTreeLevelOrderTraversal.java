@@ -24,25 +24,26 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeLevelOrderTraversal implements CodeRunner {
+
     @Override
     public void run() {
 
     }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> levels = new ArrayList<List<Integer>>();
+        List<List<Integer>> levels = new ArrayList<>();
         if (root == null) return levels;
 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         int level = 0;
-        while ( !queue.isEmpty() ) {
+        while (!queue.isEmpty()) {
             // start the current level
-            levels.add(new ArrayList<Integer>());
+            levels.add(new ArrayList<>());
 
             // number of elements in the current level
             int level_length = queue.size();
-            for(int i = 0; i < level_length; ++i) {
+            for (int i = 0; i < level_length; ++i) {
                 TreeNode node = queue.remove();
 
                 // fulfill the current level
@@ -50,8 +51,12 @@ public class BinaryTreeLevelOrderTraversal implements CodeRunner {
 
                 // add child nodes of the current level
                 // in the queue for the next level
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
             }
             // go to next level
             level++;

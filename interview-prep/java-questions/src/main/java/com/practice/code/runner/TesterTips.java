@@ -63,17 +63,17 @@ public class TesterTips implements CodeRunner {
         }
 
         for (Integer key : hashMap.keySet()) {
-            System.out.print(key);
+            System.out.print("key: " + key +" ");
         }
 
         for (String value : hashMap.values()) {
-            System.out.print(value);
+            System.out.print("value: " + value + " ");
         }
 
         // HashMap Merge function
         hashMap.put(100, "init");
         // merge using lambda function
-        hashMap.merge(100, "mergedValue", (oldValue, newValue) -> oldValue + newValue);
+        hashMap.merge(100, "mergedValue", (x, y) -> x + y);
 
         // merged value will be "initmergedValue"
         System.out.println("New merged value in map: " + hashMap.get(100));
@@ -87,7 +87,7 @@ public class TesterTips implements CodeRunner {
 
         //
         int[] array = new int[]{1, 2, 3};
-
+        int[] cloneArr = array.clone();
 
         /* LIST */
 
@@ -107,7 +107,7 @@ public class TesterTips implements CodeRunner {
 
         // splitting a string by formatting and delimiting
         String splitMe = "This is a long sentence. Defined by periods. And commas.";
-        // IMPORTANT, REPLACEALL USES REGEX SO TO REPLACE PERIODS, ETC MUST PREFIX WITH \\
+        // IMPORTANT, REPLACEALL USES REGEX SO TO REPLACE PERIODS, COMMAS, ETC. MUST PREFIX WITH \\
         splitMe = splitMe.replaceAll("\\.", "");
         splitMe = splitMe.toLowerCase();
         System.out.println("Formatted string: " + splitMe);
@@ -170,7 +170,21 @@ public class TesterTips implements CodeRunner {
 
         /* COLLECTIONS */
         Set<String> bannedWords = new HashSet<>();
-        String[] banned = {};
+        String[] banned = {"bann", "morebanned"};
         Collections.addAll(bannedWords, banned);
+
+        // addAll for Lists
+        List<String> bannedList = new ArrayList<>();
+        List<String> moreBan = new ArrayList<>();
+        moreBan.add("banme");
+        bannedList.addAll(moreBan);
+
+        /* MATH */
+        int lesser = 100;
+        int greater = 140;
+        int pow = 2;
+        int max = Math.max(lesser, greater);
+        double sqrt = Math.sqrt(lesser);
+        double exp = Math.pow(lesser, pow);
     }
 }
