@@ -11,7 +11,7 @@ package com.practice.code.arrays.second;
 
 import com.practice.code.runner.CodeRunner;
 
-public class MoveZeros implements CodeRunner {
+public class   MoveZeros implements CodeRunner {
 
     @Override
     public void run() {
