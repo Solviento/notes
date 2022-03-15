@@ -18,7 +18,7 @@ public class LeetcodeRunner {
 
     private static void runPracticeClass() {
         TesterTips runMe = new TesterTips();
-//        FirstUniqueChar runMe = new FirstUniqueChar();
+//        FourSumII runMe = new FourSumII();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

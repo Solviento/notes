@@ -85,9 +85,25 @@ public class TesterTips implements CodeRunner {
 
         /* ARRAYS */
 
-        //
+        // cloning
         int[] array = new int[]{1, 2, 3};
         int[] cloneArr = array.clone();
+
+        // basic array sort (using Integers since primitives don't support lambda functions)
+        Integer[] basicSort = new Integer[]{5, 3, 9};
+        Arrays.sort(basicSort, (x, y) -> x - y);
+        System.out.println("Sorted basic array: " + Arrays.toString(Arrays.stream(basicSort).toArray()));
+        // reversed int sort
+        Arrays.sort(basicSort, (x, y) -> y - x);
+        System.out.println("Reversed sorted basic array: " + Arrays.toString(Arrays.stream(basicSort).toArray()));
+
+        // grid sort
+        int[][] grid = new int[][]{{15, 20}, {5, 30}, {6, 10}};
+        Arrays.sort(grid, (x, y) -> x[0] - y[0]);
+        System.out.println("Sorted grid: " + Arrays.deepToString(grid));
+
+        Arrays.sort(grid, (x, y) -> y[0] - x[0]);
+        System.out.println("Reversed sorted grid: " + Arrays.deepToString(grid));
 
         /* LIST */
 
