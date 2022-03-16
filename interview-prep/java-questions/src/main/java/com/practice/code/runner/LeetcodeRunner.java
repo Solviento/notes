@@ -3,6 +3,14 @@ package com.practice.code.runner;
 import com.practice.code.arrays.first.*;
 import com.practice.code.arrays.second.*;
 import com.practice.code.arrays.third.*;
+import com.practice.code.linkedlists.*;
+import com.practice.code.backtracking.*;
+import com.practice.code.design.*;
+import com.practice.code.dynamicprogramming.*;
+import com.practice.code.graphs.*;
+import com.practice.code.model.*;
+import com.practice.code.problems.*;
+import com.practice.code.recursion.*;
 import com.practice.code.other.*;
 
 import java.util.ArrayList;
@@ -17,8 +25,8 @@ public class LeetcodeRunner {
     }
 
     private static void runPracticeClass() {
-        TesterTips runMe = new TesterTips();
-//        FourSumII runMe = new FourSumII();
+//        TesterTips runMe = new TesterTips();
+        MergeKSortedLinkedLists runMe = new MergeKSortedLinkedLists();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }
