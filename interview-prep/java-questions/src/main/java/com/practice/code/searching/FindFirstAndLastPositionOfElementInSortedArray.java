@@ -1,4 +1,4 @@
-package com.practice.code.sorting;
+package com.practice.code.searching;
 
 import com.practice.code.runner.CodeRunner;
 
