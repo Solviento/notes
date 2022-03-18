@@ -31,17 +31,23 @@ public class AddTwoNumbers implements CodeRunner {
 
     @Override
     public void run() {
-        // 15/10 = 1
-        int carryOver = 15/10;
-        // 8/10 = 0
-        int carrOver2 = 8/10;
-        System.out.println("c1: " + 15/10 + " c2: " + 8/10);
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
+        ListNode sum = addTwoNumbersFirst(l1, l2);
+        while(sum != null) {
+            System.out.print(sum.val + " ");
+            sum = sum.next;
+        }
     }
 
     public ListNode addTwoNumbersFirst(ListNode l1, ListNode l2) {
         int carryOver = 0;
-        ListNode returnNode = new ListNode();
-        ListNode head = returnNode;
+        ListNode dummyRoot = new ListNode();
+        ListNode currentHead = dummyRoot;
         // if we run out of nodes in either l1 or l2, we need to calculate the final node value using carryOver
         while (carryOver != 0 || l1 != null || l2 != null) {
             if (l1 != null) {
@@ -51,9 +57,9 @@ public class AddTwoNumbers implements CodeRunner {
                 carryOver += l2.val;
             }
             // create new resultant sum node
-            head.next = new ListNode(carryOver % 10);
+            currentHead.next = new ListNode(carryOver % 10);
             // iterate to next node
-            head = head.next;
+            currentHead = currentHead.next;
             // eliminate small carryOvers less than 10 to proceed to next node
             carryOver /= 10;
             // iterate to next nodes in lists
@@ -65,6 +71,6 @@ public class AddTwoNumbers implements CodeRunner {
             }
         }
         // start of returned linked list
-        return returnNode.next;
+        return dummyRoot.next;
     }
 }

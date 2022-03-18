@@ -58,7 +58,7 @@ public class KClosestPointsToOrigin implements CodeRunner {
                 maxPQ.add(entry);
             } else if (entry[0] < maxPQ.peek()[0]) {
                 // If the max PQ is full and a closer point is found,
-                // discard the farthest point and add this one
+                // discard the  farthest point and add this one
                 maxPQ.poll();
                 maxPQ.add(entry);
             }

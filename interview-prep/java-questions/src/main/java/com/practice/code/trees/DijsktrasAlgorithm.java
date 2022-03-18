@@ -8,12 +8,12 @@ public class DijsktrasAlgorithm implements CodeRunner {
     // from the set of vertices not yet included in shortest path tree
     static final int V = 9;
 
-    int minDistance(int dist[], Boolean sptSet[]) {
+    int minDistance(int[] dist, Boolean[] sptSet) {
         // Initialize min value
         int min = Integer.MAX_VALUE, min_index = -1;
 
         for (int v = 0; v < V; v++)
-            if (sptSet[v] == false && dist[v] <= min) {
+            if (!sptSet[v] && dist[v] <= min) {
                 min = dist[v];
                 min_index = v;
             }
@@ -31,8 +31,8 @@ public class DijsktrasAlgorithm implements CodeRunner {
     // Function that implements Dijkstra's single source shortest path
     // algorithm for a graph represented using adjacency matrix
     // representation
-    void dijkstra(int graph[][], int src) {
-        int dist[] = new int[V]; // The output array. dist[i] will hold
+    void dijkstra(int[][] graph) {
+        int[] dist = new int[V]; // The output array. dist[i] will hold
         // the shortest distance from src to i
 
         // sptSet[i] will true if vertex i is included in shortest
@@ -46,7 +46,7 @@ public class DijsktrasAlgorithm implements CodeRunner {
         }
 
         // Distance of source vertex from itself is always 0
-        dist[src] = 0;
+        dist[0] = 0;
 
         // Find shortest path for all vertices
         for (int count = 0; count < V - 1; count++) {
@@ -86,6 +86,6 @@ public class DijsktrasAlgorithm implements CodeRunner {
                 {8, 11, 0, 0, 0, 0, 1, 0, 7},
                 {0, 0, 2, 0, 0, 0, 6, 7, 0}};
         DijsktrasAlgorithm t = new DijsktrasAlgorithm();
-        t.dijkstra(graph, 0);
+        t.dijkstra(graph);
     }
 }

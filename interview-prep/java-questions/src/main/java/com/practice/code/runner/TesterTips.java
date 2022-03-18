@@ -185,6 +185,7 @@ public class TesterTips implements CodeRunner {
         System.out.println("\nRandom number from 0 - 100: " + numrand);
 
         /* COLLECTIONS */
+
         Set<String> bannedWords = new HashSet<>();
         String[] banned = {"bann", "morebanned"};
         Collections.addAll(bannedWords, banned);
@@ -196,11 +197,13 @@ public class TesterTips implements CodeRunner {
         bannedList.addAll(moreBan);
 
         /* MATH */
+
         int lesser = 100;
         int greater = 140;
         int pow = 2;
         int max = Math.max(lesser, greater);
         double sqrt = Math.sqrt(lesser);
         double exp = Math.pow(lesser, pow);
+
     }
 }

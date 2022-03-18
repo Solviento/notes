@@ -26,7 +26,7 @@ public class LeetcodeRunner {
 
     private static void runPracticeClass() {
 //        TesterTips runMe = new TesterTips();
-        MergeKSortedLinkedLists runMe = new MergeKSortedLinkedLists();
+        AddTwoNumbersII runMe = new AddTwoNumbersII();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }
