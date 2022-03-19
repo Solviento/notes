@@ -33,34 +33,28 @@ public class BinaryTreeVerticalOrderTraversal implements CodeRunner {
         if (root == null) {
             return output;
         }
-
         Map<Integer, ArrayList<Integer>> columnTable = new HashMap<>();
         Queue<Pair<TreeNode, Integer>> queue = new ArrayDeque<>();
         int column = 0;
         queue.offer(new Pair<>(root, column));
-
         while (!queue.isEmpty()) {
             Pair<TreeNode, Integer> p = queue.poll();
             root = p.getKey();
             column = p.getValue();
-
             if (root != null) {
                 if (!columnTable.containsKey(column)) {
                     columnTable.put(column, new ArrayList<>());
                 }
                 columnTable.get(column).add(root.val);
-
-                queue.offer(new Pair<>(root.left, column - 1));
-                queue.offer(new Pair<>(root.right, column + 1));
+                queue.add(new Pair<>(root.left, column - 1));
+                queue.add(new Pair<>(root.right, column + 1));
             }
         }
-
         List<Integer> sortedKeys = new ArrayList<>(columnTable.keySet());
         Collections.sort(sortedKeys);
         for (int k : sortedKeys) {
             output.add(columnTable.get(k));
         }
-
         return output;
     }
 }

@@ -12,6 +12,7 @@ import com.practice.code.model.*;
 import com.practice.code.problems.*;
 import com.practice.code.recursion.*;
 import com.practice.code.other.*;
+import com.practice.code.trees.*;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class LeetcodeRunner {
 
     private static void runPracticeClass() {
 //        TesterTips runMe = new TesterTips();
-        AddTwoNumbersII runMe = new AddTwoNumbersII();
+        DecodeString runMe = new DecodeString();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

@@ -61,6 +61,7 @@ public class MergeKSortedLinkedLists implements CodeRunner {
                         min_index = i;
                         min = lists[i].val;
                     }
+                    // no minimum found, break. see below
                     isBreak = false;
                 }
 
@@ -79,26 +80,23 @@ public class MergeKSortedLinkedLists implements CodeRunner {
 
     // t: o(logn) s: o(n)
     public ListNode mergeKListsLog(ListNode[] lists) {
-        Comparator<ListNode> cmp;
-        cmp = (x, y) -> x.val - y.val;
-
-        PriorityQueue<ListNode> q = new PriorityQueue<>(cmp);
+        PriorityQueue<ListNode> q = new PriorityQueue<>((x, y) -> x.val - y.val);
         for (ListNode l : lists) {
             if (l != null) {
                 q.add(l);
             }
         }
-        ListNode head = new ListNode(0);
-        ListNode point = head;
+        ListNode dummyRoot = new ListNode();
+        ListNode currentHead = dummyRoot;
         while (!q.isEmpty()) {
-            point.next = q.poll();
-            point = point.next;
-            ListNode next = point.next;
+            currentHead.next = q.poll();
+            currentHead = currentHead.next;
+            ListNode next = currentHead.next;
             if (next != null) {
                 q.add(next);
             }
         }
-        return head.next;
+        return dummyRoot.next;
     }
 
 }

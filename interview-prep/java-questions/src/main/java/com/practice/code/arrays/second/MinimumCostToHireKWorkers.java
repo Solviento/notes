@@ -32,32 +32,37 @@ import java.util.PriorityQueue;
 public class MinimumCostToHireKWorkers implements CodeRunner {
     @Override
     public void run() {
-
+        int[] quality = {3, 1, 10, 10, 1};
+        int[] wage = {4, 8, 2, 2, 7};
+        int k = 3;
+        double output = mincostToHireWorkers(quality, wage, k);
+        System.out.println(output);
     }
 
+    // t: o(nlogn) s: o(n)
     public double mincostToHireWorkers(int[] quality, int[] wage, int K) {
-        int N = quality.length;
-        Worker[] workers = new Worker[N];
-        for (int i = 0; i < N; ++i)
+        Worker[] workers = new Worker[quality.length];
+        for (int i = 0; i < quality.length; ++i) {
             workers[i] = new Worker(quality[i], wage[i]);
+        }
         Arrays.sort(workers);
-
-        double ans = 1e9;
+        double ans = Double.MAX_VALUE;
         int sumq = 0;
-        PriorityQueue<Integer> pool = new PriorityQueue();
-        for (Worker worker: workers) {
-            pool.offer(-worker.quality);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+        for (Worker worker : workers) {
+            maxHeap.add(-worker.quality);
             sumq += worker.quality;
-            if (pool.size() > K)
-                sumq += pool.poll();
-            if (pool.size() == K)
+            if (maxHeap.size() > K)
+                sumq += maxHeap.poll();
+            if (maxHeap.size() == K)
                 ans = Math.min(ans, sumq * worker.ratio());
         }
-
         return ans;
     }
+
     static class Worker implements Comparable<Worker> {
         public int quality, wage;
+
         public Worker(int q, int w) {
             quality = q;
             wage = w;
@@ -72,14 +77,16 @@ public class MinimumCostToHireKWorkers implements CodeRunner {
         }
     }
 
-    public double mincostToHireWorkers2(int[] q, int[] w, int K) {
-        double[][] workers = new double[q.length][2];
-        for (int i = 0; i < q.length; ++i)
-            workers[i] = new double[]{(double)(w[i]) / q[i], (double)q[i]};
+    public double mincostToHireWorkers2(int[] quality, int[] wage, int K) {
+        double[][] workers = new double[quality.length][2];
+        for (int i = 0; i < quality.length; ++i) {
+            workers[i] = new double[]{(double) (wage[i]) / quality[i], (double) quality[i]};
+        }
         Arrays.sort(workers, (a, b) -> Double.compare(a[0], b[0]));
-        double res = Double.MAX_VALUE, qsum = 0;
+        double res = Double.MAX_VALUE;
+        double qsum = 0;
         PriorityQueue<Double> pq = new PriorityQueue<>();
-        for (double[] worker: workers) {
+        for (double[] worker : workers) {
             qsum += worker[1];
             pq.add(-worker[1]);
             if (pq.size() > K) qsum += pq.poll();

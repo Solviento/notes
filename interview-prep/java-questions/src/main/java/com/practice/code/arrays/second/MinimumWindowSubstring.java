@@ -31,23 +31,31 @@ import com.practice.code.runner.CodeRunner;
 
 public class MinimumWindowSubstring implements CodeRunner {
 
-    public String minWindow(String s, String t) {
+    @Override
+    public void run() {
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        String res = minWindow(s, t);
+        System.out.println("Minimum substring: " + res);
+    }
 
+    public String minWindow(String s, String t) {
         if (s == null || t == null) {
             return "";
         }
         String outputString = "";
-        int[] letterCount = new int[128];
+        int[] charFrequencyMap = new int[128];
         int left = 0;
         int count = 0;
         int minimumSubstringLength = Integer.MAX_VALUE;
         // create character frequency array map of target string t
         for (char c : t.toCharArray()) {
-            ++letterCount[c];
+            ++charFrequencyMap[c];
         }
         for (int right = 0; right < s.length(); ++right) {
             // selected character was found in array map, increase count
-            if (--letterCount[s.charAt(right)] >= 0) {
+            int frequency = --charFrequencyMap[s.charAt(right)];
+            if (frequency >= 0) {
                 ++count;
             }
             // sufficient t characters were found in the substring
@@ -58,22 +66,12 @@ public class MinimumWindowSubstring implements CodeRunner {
                     // extract
                     outputString = s.substring(left, right + 1);
                 }
-                //
-                if (++letterCount[s.charAt(left)] > 0) {
-                    --count;
+                if (++charFrequencyMap[s.charAt(left)] > 0) {
+                    count--;
                 }
-                ++left;
+                left++;
             }
         }
         return outputString;
-    }
-
-    @Override
-    public void run() {
-
-        String s = "ADOBECODEBANC";
-        String t = "ABC";
-        String res = minWindow(s, t);
-        System.out.println("Minimum substring: " + res);
     }
 }

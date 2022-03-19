@@ -21,27 +21,35 @@ package com.practice.code.arrays.second;
 
 import com.practice.code.runner.CodeRunner;
 
+import java.util.Arrays;
+
 public class MergeSortedArray implements CodeRunner {
+
+    @Override
+    public void run() {
+        int[] nums1 = new int[]{1,2,3,0,0,0};
+        int[] nums2 = new int[]{2,5,6};
+        merge(nums1, 3, nums2, 3);
+        System.out.println("Merged num array: " + Arrays.toString(nums1));
+    }
+
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        // 1 2 3 0 0 0
-        //     lP    rP
-        // 2 5 6
-        //     tP
-        int lPointer = m - 1;
-        int rPointer = m + n - 1;
+        int leftPointer = m - 1;
+        int rightPointer = m + n - 1;
         int thirdPointer = n - 1;
-        while (thirdPointer >= 0 && lPointer >= 0) {
+        // bubble largest elements to the right
+        while (thirdPointer >= 0 && leftPointer >= 0) {
+            int n1 = nums1[leftPointer];
             int n2 = nums2[thirdPointer];
-            int n1 = nums1[lPointer];
             if (n2 >= n1) {
-                nums1[rPointer] = n2;
+                nums1[rightPointer] = n2;
                 thirdPointer--;
-                rPointer--;
+                rightPointer--;
             } else {
-                nums1[rPointer] = n1;
-                nums1[lPointer] = n2;
-                rPointer--;
-                lPointer--;
+                nums1[rightPointer] = n1;
+                nums1[leftPointer] = n2;
+                rightPointer--;
+                leftPointer--;
             }
         }
         // if nums1 array is empty (no elements), we just fill in with nums2 arr
@@ -51,8 +59,24 @@ public class MergeSortedArray implements CodeRunner {
         }
     }
 
-    @Override
-    public void run() {
-
-    }
+    // 1 2 3 0 0 0
+    //     l     r
+    // 2 5 6
+    //     t
+    // 1 2 3 0 0 6
+    //     l   r
+    // 2 5 6
+    //   t
+    // 1 2 3 0 5 6
+    //     l r
+    // 2 5 6
+    // t
+    // 1 2 2 3 5 6
+    //   l r
+    // 2 5 6
+    // t
+    // 1 2 2 3 5 6
+    //   lr
+    // 2 5 6
+    //
 }

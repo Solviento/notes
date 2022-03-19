@@ -30,23 +30,20 @@ public class BinaryTreeRightSideView implements CodeRunner {
 
     // BFS Approach using Queue
     public List<Integer> rightSideView(TreeNode root) {
-        if (root == null) return new ArrayList<>();
-
-        ArrayDeque<TreeNode> nextLevel = new ArrayDeque<TreeNode>() {{
-            offer(root);
-        }};
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        ArrayDeque<TreeNode> nextLevel = new ArrayDeque<>();
+        nextLevel.add(root);
         ArrayDeque<TreeNode> currLevel;
         List<Integer> rightside = new ArrayList<>();
-
         TreeNode node = null;
         while (!nextLevel.isEmpty()) {
             // prepare for the next level
             currLevel = nextLevel.clone();
             nextLevel.clear();
-
             while (!currLevel.isEmpty()) {
                 node = currLevel.poll();
-
                 // add child nodes of the current level
                 // in the queue for the next level
                 if (node.left != null)
@@ -54,7 +51,6 @@ public class BinaryTreeRightSideView implements CodeRunner {
                 if (node.right != null)
                     nextLevel.offer(node.right);
             }
-
             // The current level is finished.
             // Its last element is the rightmost one.
             rightside.add(node.val);

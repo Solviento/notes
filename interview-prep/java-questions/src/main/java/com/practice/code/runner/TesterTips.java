@@ -1,5 +1,7 @@
 package com.practice.code.runner;
 
+import com.practice.code.arrays.second.MinimumCostToHireKWorkers;
+
 import java.util.*;
 
 public class TesterTips implements CodeRunner {
@@ -63,7 +65,7 @@ public class TesterTips implements CodeRunner {
         }
 
         for (Integer key : hashMap.keySet()) {
-            System.out.print("key: " + key +" ");
+            System.out.print("key: " + key + " ");
         }
 
         for (String value : hashMap.values()) {
@@ -108,7 +110,10 @@ public class TesterTips implements CodeRunner {
         /* LIST */
 
         // convert elements into array list
-        List<Integer> arrayList = Arrays.asList(10, 12, 14);
+        List<Integer> arrayList = Arrays.asList(10, 12, 14, 1, 5);
+
+        // sort list
+        Collections.sort(arrayList);
 
         /* STRINGS */
 
@@ -205,5 +210,34 @@ public class TesterTips implements CodeRunner {
         double sqrt = Math.sqrt(lesser);
         double exp = Math.pow(lesser, pow);
 
+        /* POJO IMPLEMENTING COMPARABLE */
+        Worker bob = new Worker("BobBoss", 100);
+        Worker pietro = new Worker("Pietro", 50);
+        Worker ceo = new Worker("CEO", 1000);
+        ArrayList<Worker> workers = new ArrayList<>();
+        workers.add(bob);
+        workers.add(pietro);
+        workers.add(ceo);
+        Collections.sort(workers);
+        System.out.println(workers);
+    }
+
+    static class Worker implements Comparable<Worker> {
+        public String name;
+        public int wage;
+
+        public Worker(String n, int w) {
+            name = n;
+            wage = w;
+        }
+
+        public int compareTo(Worker other) {
+            return this.wage - other.wage;
+        }
+
+        @Override
+        public String toString() {
+            return "Worker " + name + " + Wage: " + wage;
+        }
     }
 }

@@ -35,20 +35,16 @@ public class CalculateDivision implements CodeRunner {
 
     public double[] calcEquation(List<List<String>> equations, double[] values,
                                  List<List<String>> queries) {
-
         HashMap<String, HashMap<String, Double>> graph = new HashMap<>();
-
         // Step 1). build the graph from the equations
         for (int i = 0; i < equations.size(); i++) {
             List<String> equation = equations.get(i);
             String dividend = equation.get(0), divisor = equation.get(1);
             double quotient = values[i];
-
             if (!graph.containsKey(dividend))
-                graph.put(dividend, new HashMap<String, Double>());
+                graph.put(dividend, new HashMap<>());
             if (!graph.containsKey(divisor))
-                graph.put(divisor, new HashMap<String, Double>());
-
+                graph.put(divisor, new HashMap<>());
             graph.get(dividend).put(divisor, quotient);
             graph.get(divisor).put(dividend, 1 / quotient);
         }
@@ -59,10 +55,9 @@ public class CalculateDivision implements CodeRunner {
         for (int i = 0; i < queries.size(); i++) {
             List<String> query = queries.get(i);
             String dividend = query.get(0), divisor = query.get(1);
-
             if (!graph.containsKey(dividend) || !graph.containsKey(divisor))
                 results[i] = -1.0;
-            else if (dividend == divisor)
+            else if (dividend.equals(divisor))
                 results[i] = 1.0;
             else {
                 HashSet<String> visited = new HashSet<>();
@@ -73,12 +68,11 @@ public class CalculateDivision implements CodeRunner {
         return results;
     }
 
-    private double backtrackEvaluate(HashMap<String, HashMap<String, Double>> graph, String currNode, String targetNode, double accProduct, Set<String> visited) {
-
+    private double backtrackEvaluate(HashMap<String, HashMap<String, Double>> graph,
+                                     String currNode, String targetNode, double accProduct, Set<String> visited) {
         // mark the visit
         visited.add(currNode);
         double ret = -1.0;
-
         Map<String, Double> neighbors = graph.get(currNode);
         if (neighbors.containsKey(targetNode))
             ret = accProduct * neighbors.get(targetNode);
@@ -93,7 +87,6 @@ public class CalculateDivision implements CodeRunner {
                     break;
             }
         }
-
         // unmark the visit, for the next backtracking
         visited.remove(currNode);
         return ret;

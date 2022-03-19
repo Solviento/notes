@@ -29,21 +29,17 @@ public class BinaryTreeZigzagLevelOrderTraversal implements CodeRunner {
 
     }
 
-
     // bfs
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null) {
-            return new ArrayList<List<Integer>>();
+            return new ArrayList<>();
         }
-
-        List<List<Integer>> results = new ArrayList<List<Integer>>();
-
+        List<List<Integer>> results = new ArrayList<>();
         // add the root element with a delimiter to kick off the BFS loop
-        LinkedList<TreeNode> node_queue = new LinkedList<TreeNode>();
+        LinkedList<TreeNode> node_queue = new LinkedList<>();
         node_queue.addLast(root);
         node_queue.addLast(null);
-
-        LinkedList<Integer> level_list = new LinkedList<Integer>();
+        LinkedList<Integer> level_list = new LinkedList<>();
         boolean is_order_left = true;
 
         while (node_queue.size() > 0) {
@@ -53,12 +49,10 @@ public class BinaryTreeZigzagLevelOrderTraversal implements CodeRunner {
                     level_list.addLast(curr_node.val);
                 else
                     level_list.addFirst(curr_node.val);
-
                 if (curr_node.left != null)
                     node_queue.addLast(curr_node.left);
                 if (curr_node.right != null)
                     node_queue.addLast(curr_node.right);
-
             } else {
                 // we finish the scan of one level
                 results.add(level_list);
@@ -75,25 +69,29 @@ public class BinaryTreeZigzagLevelOrderTraversal implements CodeRunner {
     // dfs
     protected void DFS(TreeNode node, int level, List<List<Integer>> results) {
         if (level >= results.size()) {
-            LinkedList<Integer> newLevel = new LinkedList<Integer>();
+            LinkedList<Integer> newLevel = new LinkedList<>();
             newLevel.add(node.val);
             results.add(newLevel);
         } else {
-            if (level % 2 == 0)
+            if (level % 2 == 0) {
                 results.get(level).add(node.val);
-            else
+            } else {
                 results.get(level).add(0, node.val);
+            }
         }
-
-        if (node.left != null) DFS(node.left, level + 1, results);
-        if (node.right != null) DFS(node.right, level + 1, results);
+        if (node.left != null) {
+            DFS(node.left, level + 1, results);
+        }
+        if (node.right != null) {
+            DFS(node.right, level + 1, results);
+        }
     }
 
     public List<List<Integer>> zigzagLevelOrderDFS(TreeNode root) {
         if (root == null) {
             return new ArrayList<List<Integer>>();
         }
-        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        List<List<Integer>> results = new ArrayList<>();
         DFS(root, 0, results);
         return results;
     }

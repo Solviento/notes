@@ -90,11 +90,9 @@ public class AlienDictionary implements CodeRunner {
         return sb.toString();
     }
 
-
     private final Map<Character, List<Character>> reverseAdjList = new HashMap<>();
     private final Map<Character, Boolean> seen = new HashMap<>();
     private final StringBuilder output = new StringBuilder();
-
 
     // DFS
     public String alienOrderDFS(String[] words) {
@@ -128,7 +126,6 @@ public class AlienDictionary implements CodeRunner {
             boolean result = dfs(c);
             if (!result) return "";
         }
-
 
         if (output.length() < reverseAdjList.size()) {
             return "";
