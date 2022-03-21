@@ -4,8 +4,7 @@ import com.practice.code.runner.CodeRunner;
 
 public class BinarySearchIterative implements CodeRunner {
 
-    // Returns index of x if it is present in arr[],
-    // else return -1
+    // t: o(logn) s: o(1)
     int binarySearch(int[] arr, int target) {
         int leftIndex = 0, rightIndex = arr.length - 1;
         while (leftIndex <= rightIndex) {

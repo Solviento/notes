@@ -1,14 +1,13 @@
-/*Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
-
+/*Given two sorted arrays nums1 and nums2 of size m
+and n respectively, return the median of the two sorted arrays.
 The overall run time complexity should be O(log (m+n)).
 
 Example 1:
-
 Input: nums1 = [1,3], nums2 = [2]
 Output: 2.00000
 Explanation: merged array = [1,2,3] and median is 2.
-Example 2:
 
+Example 2:
 Input: nums1 = [1,2], nums2 = [3,4]
 Output: 2.50000
 Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
@@ -22,34 +21,48 @@ import com.practice.code.runner.CodeRunner;
 
 public class MedianOfTwoSortedArrays implements CodeRunner {
 
-    public double findMedianSortedArrays(int[] A1, int[] A2) {
-        int m = A1.length, n = A2.length;
-        int mid1 = (m + n + 1) / 2, mid2 = (m + n + 2) / 2;
-        // [      ] m
-        // [      ] n
-        // mid1 = [       ] + [       ] = [           ] + 1 /2
-        return (findKth(A1, 0, m, A2, 0, n, mid1) + findKth(A1, 0, m, A2, 0, n, mid2)) / 2;
+    @Override
+    public void run() {
+
     }
 
-    private double findKth(int[] A1, int s1, int m, int[] A2, int s2, int n, int k) {
-        if (m > n) return findKth(A2, s2, n, A1, s1, m, k);
-        if (m == 0) return A2[s2 + k - 1];
-        if (k == 1) return Math.min(A1[s1], A2[s2]);
+    public double findMedianSortedArraysRecursive(int[] array1, int[] array2) {
+        int length1 = array1.length;
+        int length2 = array2.length;
+        int mid1 = (length1 + length2 + 1) / 2;
+        int mid2 = (length1 + length2 + 2) / 2;
+        // [      ] m
+        // [      ] n
+        // mid1 = [       ] + [       ] = [           ] + 1 / 2
+        return (findKth(array1, 0, length1, array2, 0, length2, mid1) + findKth(array1, 0, length1, array2, 0, length2, mid2)) / 2;
+    }
 
-        int i = Math.min(m, k / 2), j = Math.min(n, k / 2);
-        if (A1[s1 + i - 1] < A2[s2 + j - 1]) {
-            return findKth(A1, s1 + i, m - i, A2, s2, n, k - i);
+    private double findKth(int[] array1, int s1, int m, int[] array2, int s2, int n, int k) {
+        if (m > n) {
+            return findKth(array2, s2, n, array1, s1, m, k);
+        }
+        if (m == 0) {
+            return array2[s2 + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(array1[s1], array2[s2]);
+        }
+
+        int i = Math.min(m, k / 2);
+        int j = Math.min(n, k / 2);
+        if (array1[s1 + i - 1] < array2[s2 + j - 1]) {
+            return findKth(array1, s1 + i, m - i, array2, s2, n, k - i);
         } else {
-            return findKth(A1, s1, m, A2, s2 + j, n - j, k - j);
+            return findKth(array1, s1, m, array2, s2 + j, n - j, k - j);
         }
     }
 
     // second approach
-    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+    public double findMedianSortedArraysIterative(int[] nums1, int[] nums2) {
         // Check if num1 is smaller than num2
         // If not, then we will swap num1 with num2
         if (nums1.length > nums2.length) {
-            return findMedianSortedArrays2(nums2, nums1);
+            return findMedianSortedArraysIterative(nums2, nums1);
         }
         // Lengths of two arrays
         int m = nums1.length;
@@ -90,10 +103,5 @@ public class MedianOfTwoSortedArrays implements CodeRunner {
         }
         // If we reach here, it means the arrays are not sorted
         throw new IllegalArgumentException();
-    }
-
-    @Override
-    public void run() {
-
     }
 }

@@ -12,6 +12,9 @@ import com.practice.code.model.*;
 import com.practice.code.problems.*;
 import com.practice.code.recursion.*;
 import com.practice.code.other.*;
+import com.practice.code.searching.*;
+import com.practice.code.sorting.*;
+import com.practice.code.strings.*;
 import com.practice.code.trees.*;
 
 import java.util.ArrayList;
@@ -27,7 +30,7 @@ public class LeetcodeRunner {
 
     private static void runPracticeClass() {
 //        TesterTips runMe = new TesterTips();
-        DecodeString runMe = new DecodeString();
+        MergeIntervals runMe = new MergeIntervals();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

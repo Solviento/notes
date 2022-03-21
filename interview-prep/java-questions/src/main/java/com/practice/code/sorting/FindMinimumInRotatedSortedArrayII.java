@@ -31,19 +31,20 @@ public class FindMinimumInRotatedSortedArrayII implements CodeRunner {
 //    Usually we shift one of pointers to the mid point between low and high, (i.e. pivot = (low+high)/2),
 //    which reduces the search scope down to half. This is also where the name of the algorithm comes from.
 //    The reduction of the search scope would stop, either we find the desired element or the two pointers converge (i.e. low == high).
-    // binary search variant
+//    binary search variant
     public int findMin(int[] nums) {
-        int low = 0, high = nums.length - 1;
+        int startIndex = 0;
+        int endIndex = nums.length - 1;
 
-        while (low < high) {
-            int pivot = low + (high - low) / 2;
-            if (nums[pivot] < nums[high])
-                high = pivot;
-            else if (nums[pivot] > nums[high])
-                low = pivot + 1;
+        while (startIndex < endIndex) {
+            int midIndex = startIndex + (endIndex - startIndex) / 2;
+            if (nums[midIndex] < nums[endIndex])
+                endIndex = midIndex;
+            else if (nums[midIndex] > nums[endIndex])
+                startIndex = midIndex + 1;
             else
-                high -= 1;
+                endIndex -= 1;
         }
-        return nums[low];
+        return nums[startIndex];
     }
 }

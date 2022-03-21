@@ -31,61 +31,35 @@ public class SearchInRotatedSortedArray implements CodeRunner {
     }
 
     // binary search using one pass
+    // t: logn s: 1
     public int searchOnePass(int[] nums, int target) {
-        int start = 0, end = nums.length - 1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == target) return mid;
-            else if (nums[mid] >= nums[start]) {
-                if (target >= nums[start] && target < nums[mid]) end = mid - 1;
-                else start = mid + 1;
+        int startIndex = 0;
+        int endIndex = nums.length - 1;
+        while (startIndex <= endIndex) {
+            int midIndex = startIndex + (endIndex - startIndex) / 2;
+            if (nums[midIndex] == target) {
+                return midIndex;
+            } else if (nums[midIndex] >= nums[startIndex]) {
+                if (target >= nums[startIndex] && target < nums[midIndex]) {
+                    endIndex = midIndex - 1;
+                } else {
+                    startIndex = midIndex + 1;
+                }
             } else {
-                if (target <= nums[end] && target > nums[mid]) start = mid + 1;
-                else end = mid - 1;
+                if (target <= nums[endIndex] && target > nums[midIndex]) {
+                    startIndex = midIndex + 1;
+                }
+                else {
+                    endIndex = midIndex - 1;
+                }
             }
         }
         return -1;
     }
 
-    // binary search method using two passes
+    // binary search recursion using two passes
     int[] nums;
     int target;
-
-    public int find_rotate_index(int left, int right) {
-        if (nums[left] < nums[right])
-            return 0;
-
-        while (left <= right) {
-            int pivot = (left + right) / 2;
-            if (nums[pivot] > nums[pivot + 1])
-                return pivot + 1;
-            else {
-                if (nums[pivot] < nums[left])
-                    right = pivot - 1;
-                else
-                    left = pivot + 1;
-            }
-        }
-        return 0;
-    }
-
-    public int search(int left, int right) {
-    /*
-    Binary search
-    */
-        while (left <= right) {
-            int pivot = (left + right) / 2;
-            if (nums[pivot] == target)
-                return pivot;
-            else {
-                if (target < nums[pivot])
-                    right = pivot - 1;
-                else
-                    left = pivot + 1;
-            }
-        }
-        return -1;
-    }
 
     public int search(int[] nums, int target) {
         this.nums = nums;
@@ -109,5 +83,37 @@ public class SearchInRotatedSortedArray implements CodeRunner {
             return search(rotate_index, n - 1);
         // search in the left side
         return search(0, rotate_index);
+    }
+
+    public int find_rotate_index(int left, int right) {
+        if (nums[left] < nums[right])
+            return 0;
+        while (left <= right) {
+            int pivot = (left + right) / 2;
+            if (nums[pivot] > nums[pivot + 1])
+                return pivot + 1;
+            else {
+                if (nums[pivot] < nums[left])
+                    right = pivot - 1;
+                else
+                    left = pivot + 1;
+            }
+        }
+        return 0;
+    }
+
+    public int search(int left, int right) {
+        while (left <= right) {
+            int pivot = (left + right) / 2;
+            if (nums[pivot] == target)
+                return pivot;
+            else {
+                if (target < nums[pivot])
+                    right = pivot - 1;
+                else
+                    left = pivot + 1;
+            }
+        }
+        return -1;
     }
 }

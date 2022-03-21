@@ -2,63 +2,46 @@
 
 package com.practice.code.searching;
 
+import com.practice.code.model.TreeNode;
 import com.practice.code.runner.CodeRunner;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BreadthFirstSearchIterativeTree implements CodeRunner {
+
     @Override
     public void run() {
-        /* creating a binary tree and entering
-         the nodes */
-        BinaryTree tree_level = new BinaryTree();
-        tree_level.root = new Node(1);
-        tree_level.root.left = new Node(2);
-        tree_level.root.right = new Node(3);
-        tree_level.root.left.left = new Node(4);
-        tree_level.root.left.right = new Node(5);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
         System.out.println("Level order traversal" +
                 "of binary tree is - ");
-        tree_level.printLevelOrder();
+        printLevelOrder(root);
     }
 
-    class Node {
-        int data;
-        Node left, right;
+    /* Given a binary tree. Print its nodes in level order using array for implementing queue  */
+    // 1) queue 2) add root 3) poll queue, check node value 4) check left child, enqueue it 5) check right child, enqueue it
+    void printLevelOrder(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
 
-        public Node(int item) {
-            data = item;
-            left = null;
-            right = null;
-        }
-    }
+            /* poll() removes the present head.*/
+            TreeNode tempNode = queue.poll();
+            System.out.print(tempNode.val + " ");
 
-    /* Class to print Level Order Traversal */
-    class BinaryTree {
+            /*Enqueue left child */
+            if (tempNode.left != null) {
+                queue.add(tempNode.left);
+            }
 
-        Node root;
-
-        /* Given a binary tree. Print its nodes in level order using array for implementing queue  */
-        void printLevelOrder() {
-            Queue<Node> queue = new LinkedList<>();
-            queue.add(root);
-            while (!queue.isEmpty()) {
-
-                /* poll() removes the present head.*/
-                Node tempNode = queue.poll();
-                System.out.print(tempNode.data + " ");
-
-                /*Enqueue left child */
-                if (tempNode.left != null) {
-                    queue.add(tempNode.left);
-                }
-
-                /*Enqueue right child */
-                if (tempNode.right != null) {
-                    queue.add(tempNode.right);
-                }
+            /*Enqueue right child */
+            if (tempNode.right != null) {
+                queue.add(tempNode.right);
             }
         }
     }

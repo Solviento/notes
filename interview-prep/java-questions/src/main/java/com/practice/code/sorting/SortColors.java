@@ -24,30 +24,28 @@ public class SortColors implements CodeRunner {
     }
 
     // 3 pointers solution
+    // only 0, 1, 2 in array -> use this property to sort in place
+    // [2  0  1]
+    //  S     E
+    //  C
+    // keep swapping elements until elements are sorted from 0's to 2's
     public void sortColors(int[] nums) {
-        // for all idx < i : nums[idx < i] = 0
-        // j is an index of element under consideration
-        int p0 = 0, curr = 0;
-        // for all idx > k : nums[idx > k] = 2
-        int p2 = nums.length - 1;
-
+        int startIndex = 0;
+        int currentIndex = 0;
+        int endIndex = nums.length - 1;
         int tmp;
-        while (curr <= p2) {
-            if (nums[curr] == 0) {
-                // swap p0-th and curr-th elements
-                // i++ and j++
-                tmp = nums[p0];
-                nums[p0++] = nums[curr];
-                nums[curr++] = tmp;
+        while (currentIndex <= endIndex) {
+            if (nums[currentIndex] == 0) {
+                tmp = nums[startIndex];
+                nums[startIndex++] = nums[currentIndex];
+                nums[currentIndex++] = tmp;
             }
-            else if (nums[curr] == 2) {
-                // swap k-th and curr-th elements
-                // p2--
-                tmp = nums[curr];
-                nums[curr] = nums[p2];
-                nums[p2--] = tmp;
+            else if (nums[currentIndex] == 2) {
+                tmp = nums[currentIndex];
+                nums[currentIndex] = nums[endIndex];
+                nums[endIndex--] = tmp;
             }
-            else curr++;
+            else currentIndex++;
         }
     }
 }

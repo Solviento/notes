@@ -4,8 +4,7 @@ import com.practice.code.runner.CodeRunner;
 
 public class BinarySearchRecursive implements CodeRunner {
 
-    // Returns index of x if it is present in arr[l..
-    // r], else return -1
+    // t: o(logn) s: o(logn)
     int binarySearch(int[] arr, int leftIndex, int rightIndex, int target) {
         if (rightIndex >= leftIndex) {
             int mid = leftIndex + (rightIndex - leftIndex) / 2;

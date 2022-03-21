@@ -9,9 +9,11 @@ arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 
 Example 1:
 Input: arr = [0,1,0]
 Output: 1
+
 Example 2:
 Input: arr = [0,2,1,0]
 Output: 1
+
 Example 3:
 Input: arr = [0,10,5,2]
 Output: 1*/
@@ -26,20 +28,24 @@ public class PeakIndexInAMountainArray implements CodeRunner {
     }
 
     public int peakIndexInMountainArray(int[] A) {
-        int i = 0;
-        while (A[i] < A[i+1]) i++;
-        return i;
+        int index = 0;
+        while (A[index] < A[index + 1]) {
+            index++;
+        }
+        return index;
     }
 
     public int peakIndexInMountainArrayBinarySearch(int[] A) {
-        int lo = 0, hi = A.length - 1;
-        while (lo < hi) {
-            int mi = lo + (hi - lo) / 2;
-            if (A[mi] < A[mi + 1])
-                lo = mi + 1;
-            else
-                hi = mi;
+        int startIndex = 0;
+        int endIndex = A.length - 1;
+        while (startIndex < endIndex) {
+            int midIndex = startIndex + (endIndex - startIndex) / 2;
+            if (A[midIndex] < A[midIndex + 1]) {
+                startIndex = midIndex + 1;
+            } else {
+                endIndex = midIndex;
+            }
         }
-        return lo;
+        return startIndex;
     }
 }

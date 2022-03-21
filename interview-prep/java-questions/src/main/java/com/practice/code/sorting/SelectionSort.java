@@ -3,7 +3,7 @@ package com.practice.code.sorting;
 import com.practice.code.runner.CodeRunner;
 
 public class SelectionSort implements CodeRunner {
-    void sort(int arr[])
+    void sort(int[] arr)
     {
         int n = arr.length;
 
@@ -25,11 +25,10 @@ public class SelectionSort implements CodeRunner {
     }
 
     // Prints the array
-    void printArray(int arr[])
+    void printArray(int[] arr)
     {
         int n = arr.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i]+" ");
+        for (int j : arr) System.out.print(j + " ");
         System.out.println();
     }
 

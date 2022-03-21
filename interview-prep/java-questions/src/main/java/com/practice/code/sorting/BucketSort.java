@@ -9,7 +9,7 @@ public class BucketSort implements CodeRunner {
 
     // Function to sort arr[] of size n
     // using bucket sort
-    static void bucketSort(float arr[], int n) {
+    static void bucketSort(float[] arr, int n) {
         if (n <= 0)
             return;
 
@@ -43,7 +43,7 @@ public class BucketSort implements CodeRunner {
 
     @Override
     public void run() {
-        float arr[] = {(float) 0.897, (float) 0.565,
+        float[] arr = {(float) 0.897, (float) 0.565,
                 (float) 0.656, (float) 0.1234,
                 (float) 0.665, (float) 0.3434};
 

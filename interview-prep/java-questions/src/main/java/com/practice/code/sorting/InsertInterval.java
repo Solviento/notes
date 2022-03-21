@@ -19,68 +19,44 @@ package com.practice.code.sorting;
 import com.practice.code.runner.CodeRunner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class InsertInterval implements CodeRunner {
     @Override
     public void run() {
-
+        int[][] arr = {{1,3},{6,9}};
+        int[] newInterval = {2, 5};
+        int[][] res = insert(arr, newInterval);
+        System.out.println(Arrays.deepToString(res));
     }
 
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        // init data
-        int newStart = newInterval[0], newEnd = newInterval[1];
-        int idx = 0, n = intervals.length;
-        ArrayList<int[]> output = new ArrayList<int[]>();
-
-        // add all intervals before newInterval
-        while (idx < n && intervals[idx][1] < newStart)
-            output.add(intervals[idx++]);
-
-        // merge newInterval
-        int[] interval = new int[2];
-        while(idx < n && intervals[idx][0] <= newEnd)
-        {
-            newStart = Math.min(newStart, intervals[idx][0]);
-            newEnd = Math.max(newEnd, intervals[idx][1]);
-            ++idx;
-        }
-        output.add(new int[]{newStart, newEnd});
-
-        // add all intervals after newInterval
-        while (idx < n)
-            output.add(intervals[idx++]);
-
-        return output.toArray(new int[0][0]);
-    }
-
-    public int[][] insert2(int[][] intervals, int[] newInterval) {
         List<int[]> result = new LinkedList<>();
-        int i = 0;
+        int currentIndex = 0;
         // add all the intervals ending before newInterval starts
-        while (i < intervals.length && intervals[i][1] < newInterval[0]){
-            result.add(intervals[i]);
-            i++;
+        while (currentIndex < intervals.length && intervals[currentIndex][1] < newInterval[0]) {
+            result.add(intervals[currentIndex]);
+            currentIndex++;
         }
-
         // merge all overlapping intervals to one considering newInterval
-        while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
-            // we could mutate newInterval here also
-            newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
-            newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
-            i++;
+        while (currentIndex < intervals.length && intervals[currentIndex][0] <= newInterval[1]) {
+            newInterval[0] = Math.min(newInterval[0], intervals[currentIndex][0]);
+            newInterval[1] = Math.max(newInterval[1], intervals[currentIndex][1]);
+            currentIndex++;
         }
-
         // add the union of intervals we got
         result.add(newInterval);
-
         // add all the rest
-        while (i < intervals.length){
-            result.add(intervals[i]);
-            i++;
+        while (currentIndex < intervals.length) {
+            result.add(intervals[currentIndex]);
+            currentIndex++;
         }
-
-        return result.toArray(new int[result.size()][]);
+        int[][] output = new int[result.size()][2];
+        for(int i = 0; i < output.length; i++) {
+            output[i] = result.get(i);
+        }
+        return output;
     }
 }

@@ -21,42 +21,55 @@ import java.util.HashMap;
 public class IntersectionOfTwoArraysII implements CodeRunner {
     @Override
     public void run() {
-
+        int[] nums1 = {1, 2, 2, 1};
+        int[] nums2 = {2, 2};
+        int[] res = intersect(nums1, nums2);
+        System.out.println(Arrays.toString(res));
     }
 
     // two linear scans with hashmap
+    // t: n s: n
     public int[] intersect(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length) {
             return intersect(nums2, nums1);
         }
-        HashMap<Integer, Integer> m = new HashMap<>();
-        for (int n : nums1) {
-            m.put(n, m.getOrDefault(n, 0) + 1);
+        // int frequency map
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num1 : nums1) {
+            frequencyMap.merge(num1, 1, (x,y) -> x+y);
         }
-        int k = 0;
+
+        // using larger array, decrement frequency map to determine how many times the duplicate element appears in the larger array
+        int index = 0;
         for (int n : nums2) {
-            int cnt = m.getOrDefault(n, 0);
-            if (cnt > 0) {
-                nums1[k++] = n;
-                m.put(n, cnt - 1);
+            int frequency = frequencyMap.getOrDefault(n, 0);
+            if (frequency > 0) {
+                nums1[index] = n;
+                index++;
+                frequencyMap.put(n, frequency - 1);
             }
         }
-        return Arrays.copyOfRange(nums1, 0, k);
+//        not sure about below line, maybe for certain input this works
+//        return Arrays.copyOfRange(nums1, 0, index);
+        return nums1;
     }
 
     // linear scan using pre-sorting
+    // t: nlogn s: 1
     public int[] intersectSorting(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
-        int i = 0, j = 0, k = 0;
-        while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] < nums2[j]) {
-                ++i;
-            } else if (nums1[i] > nums2[j]) {
-                ++j;
+        int nums1Index = 0;
+        int nums2Index = 0;
+        int k = 0;
+        while (nums1Index < nums1.length && nums2Index < nums2.length) {
+            if (nums1[nums1Index] < nums2[nums2Index]) {
+                nums1Index++;
+            } else if (nums1[nums1Index] > nums2[nums2Index]) {
+                nums2Index++;
             } else {
-                nums1[k++] = nums1[i++];
-                ++j;
+                nums1[k++] = nums1[nums1Index++];
+                nums2Index++;
             }
         }
         return Arrays.copyOfRange(nums1, 0, k);

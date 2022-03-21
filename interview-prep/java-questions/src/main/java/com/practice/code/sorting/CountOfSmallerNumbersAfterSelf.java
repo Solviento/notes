@@ -1,4 +1,5 @@
-/*You are given an integer array nums and you have to return a new counts array. The counts array has
+/*You are given an integer array nums and you
+have to return a new counts array. The counts array has
 the property where counts[i] is the number of smaller elements to the right of nums[i].
 
 Example 1:
@@ -41,7 +42,7 @@ public class CountOfSmallerNumbersAfterSelf implements CodeRunner {
         // sort indices with their corresponding values in nums, i.e., nums[indices[i]]
         mergeSort(indices, 0, n, result, nums);
         // change int[] to List to return
-        List<Integer> resultToReturn = new ArrayList<Integer>(n);
+        List<Integer> resultToReturn = new ArrayList<>(n);
         for (int i : result) {
             resultToReturn.add(i);
         }
@@ -63,7 +64,7 @@ public class CountOfSmallerNumbersAfterSelf implements CodeRunner {
         int i = left; // current index for the left array
         int j = mid; // current index for the right array
         // use temp to temporarily store sorted array
-        List<Integer> temp = new ArrayList<Integer>(right - left);
+        List<Integer> temp = new ArrayList<>(right - left);
         while (i < mid && j < right) {
             if (nums[indices[i]] <= nums[indices[j]]) {
                 // j - mid numbers jump to the left side of indices[i]

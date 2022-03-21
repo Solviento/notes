@@ -34,6 +34,7 @@ public class FirstLastPositionInteger implements CodeRunner {
     // do two binary searches
     // initial binary search is run over the entire array as done in normal binary search
     // if first index is found, use that index to start the next binary search
+    // t: o(logn) s: o(logn)
     public int[] searchRange(int[] nums, int target) {
         // do binary searches for first appearance of target int and final appearance of target int (final i- first i + 1 = number of target element occurences)
         int firstIndex = firstIndex(nums, 0, nums.length - 1, target);

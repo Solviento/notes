@@ -115,6 +115,14 @@ public class TesterTips implements CodeRunner {
         // sort list
         Collections.sort(arrayList);
 
+        /* LINKED LIST */
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(2);
+        linkedList.add(5);
+
+        // get last element added to linkedlist
+        int last = linkedList.getLast();
+
         /* STRINGS */
 
         // print stack using String.valueOf()
@@ -174,7 +182,8 @@ public class TesterTips implements CodeRunner {
         boolean emptyStack = stack.isEmpty();
         System.out.println("Stack popped 1 : " + popped1 + ", stack peek 1 : " + peek1 + ", isEmpty: " + emptyStack);
 
-        // Java division operators
+        /* Java division operators */
+
         int small = 9;
         int big = 18;
         int ten = 10;
@@ -184,7 +193,8 @@ public class TesterTips implements CodeRunner {
         int div4 = big % ten;
         System.out.println("9 / 10 = " + div1 + " | 9 % 10 = " + div2 + " | 18 / 10 = " + div3 + " | 18 % 10 = " + div4);
 
-        // Random
+        /* RANDOM */
+
         Random rand = new Random();
         int numrand = rand.nextInt(100);
         System.out.println("\nRandom number from 0 - 100: " + numrand);

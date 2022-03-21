@@ -1,3 +1,21 @@
+/*Given an array of integers nums sorted in non-decreasing order (increasing),
+find the starting and ending position of a given target value.
+If target is not found in the array, return [-1, -1].
+You must write an algorithm with O(log n) runtime complexity.
+
+Example 1:
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+
+Example 2:
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+
+Example 3:
+Input: nums = [], target = 0
+Output: [-1,-1]
+*/
+
 package com.practice.code.searching;
 
 import com.practice.code.runner.CodeRunner;
@@ -5,9 +23,9 @@ import com.practice.code.runner.CodeRunner;
 public class FindFirstAndLastPositionOfElementInSortedArray implements CodeRunner {
     @Override
     public void run() {
-        int[] arr = {5,7,7,7,7,10}; // 1 -> 4
+        int[] arr = {5, 7, 7, 7, 7, 10}; // 1 -> 4
         int[] out = searchRange(arr, 7);
-        for(int e: out) {
+        for (int e : out) {
             System.out.print(e + " ");
         }
     }
@@ -37,7 +55,6 @@ public class FindFirstAndLastPositionOfElementInSortedArray implements CodeRunne
                 }
                 // Search on the left side for the bound.
                 end = mid - 1;
-
             } else if (nums[mid] > target) {
                 // element found too big, search left subarray
                 end = mid - 1;
