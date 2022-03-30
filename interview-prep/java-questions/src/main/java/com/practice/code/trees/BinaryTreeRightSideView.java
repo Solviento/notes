@@ -61,20 +61,24 @@ public class BinaryTreeRightSideView implements CodeRunner {
     // DFS Approach
     List<Integer> rightside = new ArrayList<>();
 
-    public void helperDFS(TreeNode node, int level) {
-        if (level == rightside.size())
-            rightside.add(node.val);
-
-        if (node.right != null)
-            helperDFS(node.right, level + 1);
-        if (node.left != null)
-            helperDFS(node.left, level + 1);
-    }
-
     public List<Integer> rightSideViewDFS(TreeNode root) {
-        if (root == null) return rightside;
-
+        if (root == null) {
+            return rightside;
+        }
         helperDFS(root, 0);
         return rightside;
+    }
+
+    public void helperDFS(TreeNode node, int level) {
+        if (level == rightside.size()) {
+            rightside.add(node.val);
+        }
+
+        if (node.right != null) {
+            helperDFS(node.right, level + 1);
+        }
+        if (node.left != null) {
+            helperDFS(node.left, level + 1);
+        }
     }
 }

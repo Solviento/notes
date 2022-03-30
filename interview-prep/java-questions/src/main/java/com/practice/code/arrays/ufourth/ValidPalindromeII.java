@@ -13,7 +13,7 @@ Explanation: You could delete the character 'c'.
 Example 3:
 Input: s = "abc"
 Output: false*/
-package com.practice.code.arrays.third;
+package com.practice.code.arrays.ufourth;
 
 import com.practice.code.runner.CodeRunner;
 

@@ -12,7 +12,7 @@ Example 2:
 Input: nums = [0,0,0], target = 1
 Output: 0*/
 
-package com.practice.code.arrays.second;
+package com.practice.code.arrays.third;
 
 import com.practice.code.runner.CodeRunner;
 

@@ -26,6 +26,11 @@ public class FlattenBinaryTreeToLinkedList implements CodeRunner {
     }
 
     // Recursive
+    public void flatten(TreeNode root) {
+
+        this.flattenTree(root);
+    }
+
     private TreeNode flattenTree(TreeNode node) {
 
         // Handle the null scenario
@@ -57,11 +62,6 @@ public class FlattenBinaryTreeToLinkedList implements CodeRunner {
         // We need to return the "rightmost" node after we are
         // done wiring the new connections.
         return rightTail == null ? leftTail : rightTail;
-    }
-
-    public void flatten(TreeNode root) {
-
-        this.flattenTree(root);
     }
 
     // iterative using stack

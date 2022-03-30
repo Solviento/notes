@@ -5,7 +5,7 @@ You have to rotate the image in-place, which means you have to modify the input 
 https://www.youtube.com/watch?v=SA867FvqHrM
 */
 
-package com.practice.code.arrays.second;
+package com.practice.code.arrays.third;
 
 import com.practice.code.runner.CodeRunner;
 

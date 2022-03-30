@@ -29,8 +29,8 @@ public class LeetcodeRunner {
     }
 
     private static void runPracticeClass() {
-//        TesterTips runMe = new TesterTips();
-        MergeIntervals runMe = new MergeIntervals();
+        TesterTips runMe = new TesterTips();
+//        DecodeString runMe = new DecodeString();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

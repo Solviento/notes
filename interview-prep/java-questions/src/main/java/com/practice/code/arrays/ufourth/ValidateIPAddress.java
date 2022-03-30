@@ -25,7 +25,7 @@ Input: queryIP = "2001:0db8:85a3:0:0:8A2E:0370:7334"
 Output: "IPv6"
 Explanation: This is a valid IPv6 address, return "IPv6".*/
 
-package com.practice.code.arrays.third;
+package com.practice.code.arrays.ufourth;
 
 import com.practice.code.runner.CodeRunner;
 

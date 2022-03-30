@@ -31,7 +31,7 @@ public class DecodeString implements CodeRunner {
     public void run() {
         String s = "2[abc]";
         String res = decodeString(s);
-        System.out.println("Decoding: " + res);
+        System.out.println("decided string: " + res);
     }
 
     // keep two stacks for storing the integers and chars
@@ -39,26 +39,28 @@ public class DecodeString implements CodeRunner {
     public String decodeString(String s) {
         Stack<Integer> intStack = new Stack<>();
         Stack<StringBuilder> strStack = new Stack<>();
-        StringBuilder cur = new StringBuilder();
-        int k = 0;
+        StringBuilder decodedString = new StringBuilder();
+        int multiple = 0;
         for (char ch : s.toCharArray()) {
             if (Character.isDigit(ch)) {
-                k = k * 10 + ch - '0';
+//                k = k * 10 + ch - '0';
+                multiple = Character.getNumericValue(ch);
             } else if (ch == '[') {
-                intStack.push(k);
-                strStack.push(cur);
-                cur = new StringBuilder();
-                k = 0;
+                intStack.push(multiple);
+                strStack.push(decodedString);
+                decodedString = new StringBuilder();
+                // reset multiple for next character decoding
+                multiple = 0;
             } else if (ch == ']') {
-                StringBuilder tmp = cur;
-                cur = strStack.pop();
-                for (k = intStack.pop(); k > 0; --k) {
-                    cur.append(tmp);
+                StringBuilder tmpLetter = decodedString;
+                decodedString = strStack.pop();
+                for (multiple = intStack.pop(); multiple > 0; --multiple) {
+                    decodedString.append(tmpLetter);
                 }
             } else {
-                cur.append(ch);
+                decodedString.append(ch);
             }
         }
-        return cur.toString();
+        return decodedString.toString();
     }
 }

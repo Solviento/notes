@@ -34,11 +34,11 @@ public class ReorderLogFiles implements CodeRunner {
 
     }
 
-//1). The letter-logs should be prioritized above all digit-logs.
-//
-//2). Among the letter-logs, we should further sort them firstly based on their contents, and then on their identifiers if the contents are identical.
-//
-//3). Among the digit-logs, they should remain in the same order as they are in the collection.
+    //1) The letter-logs should be prioritized above all digit-logs.
+    //2) Among the letter-logs, we should further sort them firstly based on their contents,
+    // and then on their identifiers if the contents are identical.
+    //3) Among the digit-logs, they should remain in the same order as they are in the collection
+    // t: MNlogN s: MlogN
     public String[] reorderLogFiles(String[] logs) {
 
         Comparator<String> myComp = new Comparator<String>() {

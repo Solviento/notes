@@ -9,7 +9,7 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 https://www.youtube.com/watch?v=2MmGzdiKR9Y
 */
-package com.practice.code.arrays.first;
+package com.practice.code.arrays.second;
 
 import com.practice.code.runner.CodeRunner;
 

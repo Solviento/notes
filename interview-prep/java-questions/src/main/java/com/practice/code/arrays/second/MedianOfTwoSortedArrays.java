@@ -8,7 +8,7 @@ Explanation: merged array = [1,2,3] and median is 2.
 Mind the many corner cases.
 */
 
-package com.practice.code.arrays.first;
+package com.practice.code.arrays.second;
 
 import com.practice.code.runner.CodeRunner;
 

@@ -19,6 +19,11 @@ public class TesterTips implements CodeRunner {
             System.out.print(iterator.next() + " ");
         }
 
+        // retrieving (polling) an element
+        String For = priorityQueue.poll();
+        // peeking at an element
+        String Geeks = priorityQueue.peek();
+
         // priority queue uses min heap as default
         PriorityQueue<Integer> priorityQueueInt = new PriorityQueue<>();
         priorityQueueInt.add(12);
@@ -145,6 +150,8 @@ public class TesterTips implements CodeRunner {
             System.out.print(s + " | ");
         }
 
+        String[] alphaSplit = splitMe.split("[^a-z]+");
+
         // proper way of evaluating string equality
         String compareMe = "this is a long sentence defined by periods and commas";
         boolean comparison = splitMe.equals(compareMe);
@@ -204,8 +211,13 @@ public class TesterTips implements CodeRunner {
         Set<String> bannedWords = new HashSet<>();
         String[] banned = {"bann", "morebanned"};
         Collections.addAll(bannedWords, banned);
+        Set<String> banned2 = new HashSet<>();
+        banned2.add("bann");
 
-        // addAll for Lists
+        // retain only only common elements in both sets
+        bannedWords.retainAll(banned2);
+
+        // addAll for Lists (adding all elements from one list to another)
         List<String> bannedList = new ArrayList<>();
         List<String> moreBan = new ArrayList<>();
         moreBan.add("banme");
@@ -230,6 +242,13 @@ public class TesterTips implements CodeRunner {
         workers.add(ceo);
         Collections.sort(workers);
         System.out.println(workers);
+
+        /* CHARACTER */
+        char ch = '2';
+        int chInt = Character.getNumericValue(ch);
+
+        boolean chDigit = Character.isLetterOrDigit(ch);
+        boolean chAlpha = Character.isAlphabetic(ch);
     }
 
     static class Worker implements Comparable<Worker> {

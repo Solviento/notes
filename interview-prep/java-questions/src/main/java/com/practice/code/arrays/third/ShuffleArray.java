@@ -14,7 +14,7 @@ Input
 Output
 [null, [3, 1, 2], [1, 2, 3], [1, 3, 2]]
 */
-package com.practice.code.arrays.second;
+package com.practice.code.arrays.third;
 
 import java.util.Random;
 

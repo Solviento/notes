@@ -1,4 +1,4 @@
-package com.practice.code.arrays.first;
+package com.practice.code.arrays.second;
 
 import com.practice.code.runner.CodeRunner;
 

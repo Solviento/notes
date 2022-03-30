@@ -89,7 +89,7 @@ public class BinaryTreeZigzagLevelOrderTraversal implements CodeRunner {
 
     public List<List<Integer>> zigzagLevelOrderDFS(TreeNode root) {
         if (root == null) {
-            return new ArrayList<List<Integer>>();
+            return new ArrayList<>();
         }
         List<List<Integer>> results = new ArrayList<>();
         DFS(root, 0, results);

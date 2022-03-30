@@ -17,7 +17,7 @@ Output: [1,2]
 Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]*/
-package com.practice.code.arrays.second;
+package com.practice.code.arrays.ufourth;
 
 import com.practice.code.runner.CodeRunner;
 
