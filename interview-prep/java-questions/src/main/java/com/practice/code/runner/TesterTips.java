@@ -8,12 +8,19 @@ public class TesterTips implements CodeRunner {
     @Override
     public void run() {
 
-        // Priority Queue
+        // TODO TODO
+        // ADD TIME AND SPACE COMPLEXITIYES FOR EACH OPERATION
+
+        // Priority Queue, default is min heap
         PriorityQueue<String> priorityQueue = new PriorityQueue<>();
         priorityQueue.add("Geeks");
         priorityQueue.add("For");
         priorityQueue.add("Geeks");
+        //       FOR
+        // GEEKS     GEEKS
         priorityQueue.remove();
+        //       GEEKS
+        //  GEEKS
         Iterator<String> iterator = priorityQueue.iterator();
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
@@ -140,10 +147,19 @@ public class TesterTips implements CodeRunner {
         System.out.println("String value of stack: " + stackString);
 
         // splitting a string by formatting and delimiting
-        String splitMe = "This is a long sentence. Defined by periods. And commas.";
+        String splitMe = "This is a long sentence. Defined by periods. And commas. Also numbers 12 34 56 78.";
+
         // IMPORTANT, REPLACEALL USES REGEX SO TO REPLACE PERIODS, COMMAS, ETC. MUST PREFIX WITH \\
+
+        // replace periods
         splitMe = splitMe.replaceAll("\\.", "");
+        // replace non digit number
+        splitMe = splitMe.replaceAll("[^\\d]", "");
+
         splitMe = splitMe.toLowerCase();
+        // remove extra spaces at beginning and ending of string
+        splitMe = splitMe.trim();
+
         System.out.println("Formatted string: " + splitMe);
         String[] stringTokens = splitMe.split(" ");
         for (String s : stringTokens) {

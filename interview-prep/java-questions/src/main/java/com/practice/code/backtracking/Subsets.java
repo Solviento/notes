@@ -15,6 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subsets implements CodeRunner {
+
+    @Override
+    public void run() {
+
+    }
+
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         backtrack(result, new ArrayList<>(), nums, 0);
@@ -28,10 +34,5 @@ public class Subsets implements CodeRunner {
             backtrack(result, tmpList, arr, i + 1);
             tmpList.remove(tmpList.size() - 1);
         }
-    }
-
-    @Override
-    public void run() {
-
     }
 }

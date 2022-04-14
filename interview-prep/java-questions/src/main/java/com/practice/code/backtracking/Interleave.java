@@ -16,7 +16,7 @@ package com.practice.code.backtracking;
 
 import com.practice.code.runner.CodeRunner;
 
-class Interleave implements CodeRunner {
+public class Interleave implements CodeRunner {
 
     @Override
     public void run() {
@@ -33,17 +33,27 @@ class Interleave implements CodeRunner {
     // if no more remaining letters count, return
     // else if remaining left letter count is greater than 0, append character and decrease remaining left letter count
     // else if remaining right letter count is greater than 0, append character and decrease remaining right letter count
-    void printInterleave(String remainingLeftString, String remainingRightstring,
-                         String interleave, int remainingLeftLettersCount, int remainingRightLettersCount) {
-        if (remainingLeftLettersCount == 0 && remainingRightLettersCount == 0)
+    void printInterleave(String remainingLeftString,
+                         String remainingRightstring,
+                         String interleave,
+                         int remainingLeftLettersCount,
+                         int remainingRightLettersCount) {
+        if (remainingLeftLettersCount == 0 && remainingRightLettersCount == 0) {
             System.out.println(interleave);
+        }
         if (remainingLeftLettersCount != 0) {
-            printInterleave(remainingLeftString.substring(1), remainingRightstring,
-                    interleave + remainingLeftString.charAt(0), remainingLeftLettersCount - 1, remainingRightLettersCount);
+            printInterleave(remainingLeftString.substring(1),
+                            remainingRightstring,
+                    interleave + remainingLeftString.charAt(0),
+        remainingLeftLettersCount - 1,
+                            remainingRightLettersCount);
         }
         if (remainingRightLettersCount != 0) {
-            printInterleave(remainingLeftString, remainingRightstring.substring(1),
-                    interleave + remainingRightstring.charAt(0), remainingLeftLettersCount, remainingRightLettersCount - 1);
+            printInterleave(remainingLeftString,
+                            remainingRightstring.substring(1),
+                    interleave + remainingRightstring.charAt(0),
+                            remainingLeftLettersCount,
+        remainingRightLettersCount - 1);
         }
     }
 }

@@ -29,8 +29,8 @@ public class LeetcodeRunner {
     }
 
     private static void runPracticeClass() {
-        TesterTips runMe = new TesterTips();
-//        DecodeString runMe = new DecodeString();
+//        TesterTips runMe = new TesterTips();
+        Interleave runMe = new Interleave();
         runMe.run();
         System.out.println("----------------------------------------------------------------------------------\n");
     }

@@ -31,18 +31,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSumI implements CodeRunner {
+
     @Override
     public void run() {
         int[] nums = {2, 3};
         int target = 6;
         List<List<Integer>> output = combinationSum(nums, target);
-        for(List<Integer> e: output) {
+        for (List<Integer> e : output) {
             System.out.println(e);
         }
     }
 
     // sort the array
     // backtrack
+    // t: n^target s: target
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
